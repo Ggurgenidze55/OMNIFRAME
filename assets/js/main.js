@@ -113,8 +113,12 @@
     
             // Menu Show & Hide On Toggle Btn click
             $(opt.menuToggleBtn).each(function () {
+                $(this).attr('aria-expanded', 'false');
                 $(this).on("click", function () {
                     menuToggle();
+                    // reflect expanded state for a11y
+                    var isExpanded = menu.hasClass(opt.bodyToggleClass);
+                    $(this).attr('aria-expanded', isExpanded ? 'true' : 'false');
                 });
             });
     
@@ -134,16 +138,26 @@
     $(".th-menu-wrapper").thmobilemenu();
 
     /*---------- 04. Sticky fix ----------*/
-    $(window).scroll(function () {
-        var topPos = $(this).scrollTop();
-        if (topPos > 1000) {
-            $('.sticky-wrapper').addClass('sticky');
-            $('.category-menu').addClass('close-category');
-        } else {
-            $('.sticky-wrapper').removeClass('sticky')
-            $('.category-menu').removeClass('close-category');
-        }
-    })
+    // Throttled scroll handler to reduce jank
+    (function(){
+        var ticking = false;
+        $(window).on('scroll', function(){
+            if (!ticking) {
+                window.requestAnimationFrame(function(){
+                    var topPos = window.pageYOffset || document.documentElement.scrollTop;
+                    if (topPos > 1000) {
+                        $('.sticky-wrapper').addClass('sticky');
+                        $('.category-menu').addClass('close-category');
+                    } else {
+                        $('.sticky-wrapper').removeClass('sticky')
+                        $('.category-menu').removeClass('close-category');
+                    }
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+    })();
 
     $(".menu-expand").each(function () {
         $(this).on("click", function (e) {
@@ -348,7 +362,7 @@
             if (swiper) {
                 if ($(this).data('slider-prev')) {
                     swiper.slidePrev();
-                } else {navigator, 
+                } else {
                     swiper.slideNext();
                 }
             }
@@ -1196,7 +1210,35 @@ $(document).ready(function() {
                 'all-rights-reserved': 'All Rights Reserved.',
                 'privacy-policy': 'Privacy Policy',
                 'terms-services': 'Terms of services',
-                'disclaimer': 'Disclaimer'
+                'disclaimer': 'Disclaimer',
+
+                // Cart Page
+                'coupon-code': 'Coupon Code...',
+                'apply-coupon': 'Apply Coupon',
+                'update-cart': 'Update cart',
+                'continue-shopping': 'Continue Shopping',
+                'cart-totals': 'Cart Totals',
+                'cart-subtotal': 'Cart Subtotal',
+                'shipping-and-handling': 'Shipping and Handling',
+                'free-shipping': 'Free shipping',
+                'flat-rate': 'Flat rate',
+                'shipping-updated-on-checkout': 'Shipping options will be updated during checkout.',
+                'change-address': 'Change address',
+                'select-an-option': 'Select an option…',
+                'town-city': 'Town / City',
+                'postcode-zip': 'Postcode / ZIP',
+                'update': 'Update',
+                'order-total': 'Order Total',
+                'proceed-to-checkout': 'Proceed to checkout',
+
+                // Shop Details Page
+                'availability': 'Availability:',
+                'in-stock': 'In Stock',
+                'add-to-cart': 'Add to Cart',
+                'customer-reviews': 'customer reviews',
+                'sku': 'SKU:',
+                'category': 'Category:',
+                'tags': 'Tags:'
             },
             ka: {
                 // Hero Section
@@ -1330,11 +1372,52 @@ $(document).ready(function() {
                 'all-rights-reserved': 'ყველა უფლება დაცულია.',
                 'privacy-policy': 'კონფიდენციალურობის პოლიტიკა',
                 'terms-services': 'სერვისის პირობები',
-                'disclaimer': 'განთავისუფლება'
+                'disclaimer': 'განთავისუფლება',
+
+                // Cart Page
+                'coupon-code': 'კუპონის კოდი...',
+                'apply-coupon': 'კუპონის გამოყენება',
+                'update-cart': 'კალათის განახლება',
+                'continue-shopping': 'შოპინგის გაგრძელება',
+                'cart-totals': 'კალათის ჯამი',
+                'cart-subtotal': 'ქვე-ჯამი',
+                'shipping-and-handling': 'მიწოდება და დამუშავება',
+                'free-shipping': 'უფასო მიწოდება',
+                'flat-rate': 'ფიქსირებული ტარიფი',
+                'shipping-updated-on-checkout': 'მიწოდების ოფციები განახლდება ანგარიშსწორებისას.',
+                'change-address': 'მისამართის შეცვლა',
+                'select-an-option': 'აირჩიეთ ვარიანტი…',
+                'town-city': 'ქალაქი',
+                'postcode-zip': 'საფოსტო ინდექსი',
+                'update': 'განახლება',
+                'order-total': 'საბოლოო ჯამი',
+                'proceed-to-checkout': 'გადახდის გაგრძელება',
+
+                // Shop Details Page
+                'availability': 'ხელმისაწვდომობა:',
+                'in-stock': 'მარაგშია',
+                'add-to-cart': 'კალათაში დამატება',
+                'customer-reviews': 'მომხმარებლის მიმოხილვა',
+                'sku': 'SKU:',
+                'category': 'კატეგორია:',
+                'tags': 'ტეგები:'
             }
         };
         
         const t = translations[lang] || translations.en;
+
+        // Update <html lang=".."> for a11y/SEO
+        if (document.documentElement) {
+            document.documentElement.setAttribute('lang', lang);
+        }
+
+        // Generic: translate any element annotated with data-translate
+        document.querySelectorAll('[data-translate]').forEach(function(el){
+            var key = el.getAttribute('data-translate');
+            if (t[key]) {
+                el.textContent = t[key];
+            }
+        });
         
         // Function to translate text content
         function translateTextContent(element, key) {
@@ -1390,7 +1473,7 @@ $(document).ready(function() {
         translateTextContent(document.querySelector('.sub-title.style2.before-none'), 'who-we-are');
         translateTextContent(document.querySelector('.sec-title[data-cue="slideInLeft"][data-delay="300"]'), 'about-text');
         
-        // About feature cards
+        // About feature cards (keep if exists)
         const aboutCards = document.querySelectorAll('.about-feature-card .box-title');
         aboutCards.forEach((card, index) => {
             const keys = ['customers-satisfaction', 'quality-assurance'];
@@ -1398,15 +1481,13 @@ $(document).ready(function() {
                 translateTextContent(card, keys[index]);
             }
         });
-        
+
         const aboutTexts = document.querySelectorAll('.about-feature-card .box-text');
-        aboutTexts.forEach(() => {
-            translateTextContent(this, 'about-feature-text');
+        aboutTexts.forEach((el) => {
+            translateTextContent(el, 'about-feature-text');
         });
         
-        // Services Section
-        translateTextContent(document.querySelector('.sub-title:contains("OUR SERVICES")'), 'our-services');
-        translateTextContent(document.querySelector('.sec-title:contains("Intelligent Innovations")'), 'services-title');
+        // Services Section (handled via data-translate if present)
         
         // Service cards
         const serviceCards = document.querySelectorAll('.service-card');
@@ -1430,10 +1511,7 @@ $(document).ready(function() {
             }
         });
         
-        // Why Choose Us Section
-        translateTextContent(document.querySelector('.sub-title:contains("WHY CHOOSE US")'), 'why-choose-us');
-        translateTextContent(document.querySelector('.sec-title:contains("Our goal is to build")'), 'why-choose-title');
-        translateTextContent(document.querySelector('.counter-text:contains("Years Of Experience")'), 'years-experience');
+        // Why Choose Us Section (handled via data-translate if present)
         
         const whyCards = document.querySelectorAll('.why-card');
         const whyTitles = ['technology-integration', 'certified-experts', 'effortless-engagement', 'future-vision'];
@@ -1444,14 +1522,9 @@ $(document).ready(function() {
             }
         });
         
-        // Project Section
-        translateTextContent(document.querySelector('.sub-title:contains("Case Study")'), 'case-study');
-        translateTextContent(document.querySelector('.sec-title:contains("AI Projects Case Study")'), 'ai-projects-case');
-        translateTextContent(document.querySelector('.sec-text:contains("An AI agency is a specialized")'), 'case-study-text');
+        // Project Section (handled via data-translate if present)
         
-        // Feature Section
-        translateTextContent(document.querySelector('.sub-title:contains("advanced technology")'), 'advanced-technology');
-        translateTextContent(document.querySelector('.sec-title:contains("The Future is Here")'), 'future-is-here');
+        // Feature Section (handled via data-translate if present)
         
         const featureCards = document.querySelectorAll('.feature-card');
         const featureTitles = ['tech-support', 'robo-genius', 'image-generation', 'chatbots'];
@@ -1464,9 +1537,7 @@ $(document).ready(function() {
             }
         });
         
-        // FAQ Section
-        translateTextContent(document.querySelector('.sub-title:contains("Faq\'s")'), 'faqs');
-        translateTextContent(document.querySelector('.sec-title:contains("Frequently asked")'), 'frequently-asked');
+        // FAQ Section (handled via data-translate if present)
         
         const faqQuestions = document.querySelectorAll('.accordion-button');
         const faqKeys = ['faq-question-1', 'faq-question-2', 'faq-question-3', 'faq-question-4', 'faq-question-5'];
@@ -1481,9 +1552,7 @@ $(document).ready(function() {
             translateTextContent(answer, 'faq-answer');
         });
         
-        // Pricing Section
-        translateTextContent(document.querySelector('.sub-title:contains("PRICING PLAN")'), 'pricing-plan');
-        translateTextContent(document.querySelector('.sec-title:contains("Affordable Pricing")'), 'affordable-pricing');
+        // Pricing Section (handled via data-translate if present)
         
         const pricingCards = document.querySelectorAll('.price-card');
         const pricingTitles = ['basic', 'standard', 'premium'];
@@ -1503,77 +1572,123 @@ $(document).ready(function() {
             }
         });
         
-        // Blog Section
-        translateTextContent(document.querySelector('.sub-title:contains("News")'), 'news');
-        translateTextContent(document.querySelector('.sec-title:contains("Our Latest News")'), 'latest-news');
-        translateTextContent(document.querySelector('.th-btn.style-border:contains("View All Post")'), 'view-all-post');
+        // Blog Section (handled via data-translate if present)
         
-        const blogTitles = document.querySelectorAll('.blog-card .box-title a');
-        const blogTitleKeys = ['blog-title-1', 'blog-title-2', 'blog-title-3'];
-        blogTitles.forEach((title, index) => {
-            if (blogTitleKeys[index]) {
-                translateTextContent(title, blogTitleKeys[index]);
+        // Footer (handled via data-translate if present)
+        
+        // --- Helpers ---
+        function translateTextBySelector(selector, key) {
+            var el = document.querySelector(selector);
+            if (el && t[key]) el.textContent = t[key];
+        }
+        function translateHTMLBySelector(selector, key) {
+            var el = document.querySelector(selector);
+            if (el && t[key]) el.innerHTML = t[key];
+        }
+        function translateAttrBySelector(selector, attr, key) {
+            var el = document.querySelector(selector);
+            if (el && t[key]) el.setAttribute(attr, t[key]);
+        }
+        function replaceIfExact(selector, fromKey, toKey) {
+            var el = document.querySelector(selector);
+            if (!el) return;
+            var from = translations.en[fromKey] || '';
+            if (from && el.textContent.trim() === from && t[toKey]) {
+                el.textContent = t[toKey];
             }
-        });
-        
-        const byAdminElements = document.querySelectorAll('.blog-meta a:contains("by admin")');
-        byAdminElements.forEach(element => {
-            translateTextContent(element, 'by-admin');
-        });
-        
-        // Footer
-        translateTextContent(document.querySelector('.sub-title:contains("Get Started")'), 'get-started-footer');
-        translateTextContent(document.querySelector('.sec-title:contains("Let\'s Make Something")'), 'lets-make-great');
-        translateTextContent(document.querySelector('.about-text'), 'footer-about-text');
-        
-        const footerWidgets = {
-            '.widget_title:contains("Useful Links")': 'quick-links',
-            '.widget_title:contains("Company")': 'company',
-            '.widget_title:contains("Our Service")': 'our-service',
-            '.widget_title:contains("Get the app")': 'get-the-app'
-        };
-        
-        Object.keys(footerWidgets).forEach(selector => {
-            const element = document.querySelector(selector);
-            if (element) {
-                translateTextContent(element, footerWidgets[selector]);
+        }
+
+        // --- Page-specific translations ---
+        var path = (window.location && window.location.pathname) ? window.location.pathname : '';
+
+        // Cart Page
+        if (path.indexOf('cart') !== -1) {
+            // Coupon area
+            translateAttrBySelector('.th-cart-coupon input.form-control', 'placeholder', 'coupon-code');
+            var actionButtons = document.querySelectorAll('.actions .th-btn');
+            if (actionButtons && actionButtons.length >= 2) {
+                if (t['apply-coupon']) actionButtons[0].textContent = t['apply-coupon'];
+                if (t['update-cart']) actionButtons[1].textContent = t['update-cart'];
             }
-        });
-        
-        // Footer links
-        const footerLinks = {
-            'a[href="about.html"]:contains("What we Offer")': 'what-we-offer',
-            'a[href="about.html"]:contains("Our Story")': 'our-story',
-            'a[href="blog.html"]:contains("Latest Posts")': 'latest-posts',
-            'a[href="contact.html"]:contains("Help Center")': 'help-center',
-            'a[href="about.html"]:contains("Our Partners")': 'our-partners',
-            'a[href="service.html"]:contains("Robotic Automation")': 'robotic-automation',
-            'a[href="service.html"]:contains("Education & Science")': 'education-science-footer',
-            'a[href="service.html"]:contains("Machine Learning")': 'machine-learning-footer',
-            'a[href="service.html"]:contains("Predictive Analysis")': 'predictive-analysis',
-            'a[href="service.html"]:contains("Data Security")': 'data-security',
-            '.footer-text:contains("We suggest connecting apps")': 'suggest-connecting',
-            '.copyright-text:contains("All Rights Reserved")': 'all-rights-reserved',
-            'a[href="about.html"]:contains("Privacy Policy")': 'privacy-policy',
-            'a[href="about.html"]:contains("Terms of services")': 'terms-services',
-            'a[href="about.html"]:contains("Disclaimer")': 'disclaimer'
-        };
-        
-        Object.keys(footerLinks).forEach(selector => {
-            const elements = document.querySelectorAll(selector);
-            elements.forEach(element => {
-                if (element.textContent.trim() === translations.en[footerLinks[selector]]) {
-                    translateTextContent(element, footerLinks[selector]);
+            translateTextBySelector('.actions a.th-btn.style3', 'continue-shopping');
+            translateTextBySelector('.summary-title', 'cart-totals');
+
+            // Totals table
+            var subtotalLabel = document.querySelector('.cart_totals tbody tr:first-child td:first-child');
+            if (subtotalLabel && t['cart-subtotal']) subtotalLabel.textContent = t['cart-subtotal'];
+            translateTextBySelector('.cart_totals .shipping th', 'shipping-and-handling');
+            replaceIfExact('label[for="free_shipping"]', 'free-shipping', 'free-shipping');
+            replaceIfExact('label[for="flat_rate"]', 'flat-rate', 'flat-rate');
+            translateTextBySelector('.woocommerce-shipping-destination', 'shipping-updated-on-checkout');
+            translateTextBySelector('.shipping-calculator-button', 'change-address');
+            // Calculator placeholders
+            var calcForm = document.querySelector('.shipping-calculator-form');
+            if (calcForm) {
+                var inputs = calcForm.querySelectorAll('input.form-control');
+                if (inputs && inputs.length >= 2) {
+                    inputs[0].setAttribute('placeholder', t['town-city'] || inputs[0].getAttribute('placeholder') || '');
+                    inputs[1].setAttribute('placeholder', t['postcode-zip'] || inputs[1].getAttribute('placeholder') || '');
                 }
+                var updateBtn = calcForm.querySelector('button.th-btn');
+                if (updateBtn && t['update']) updateBtn.textContent = t['update'];
+            }
+            // Order total row label
+            var orderTotalLabel = document.querySelector('.cart_totals tfoot .order-total td:first-child');
+            if (orderTotalLabel && t['order-total']) orderTotalLabel.textContent = t['order-total'];
+            translateTextBySelector('.wc-proceed-to-checkout .th-btn', 'proceed-to-checkout');
+        }
+
+        // Shop Details Page
+        if (path.indexOf('shop-details') !== -1) {
+            // Availability label
+            var availabilityLabel = document.querySelector('.product-about .text-title');
+            if (availabilityLabel && t['availability']) availabilityLabel.textContent = t['availability'];
+            // In-stock text (preserve icon if exists)
+            var stockEl = document.querySelector('.product-about .stock.in-stock');
+            if (stockEl && t['in-stock']) {
+                stockEl.innerHTML = stockEl.innerHTML.replace(/In Stock/i, t['in-stock']);
+            }
+            // Add to cart button
+            translateTextBySelector('.product-about .actions .th-btn', 'add-to-cart');
+            // Reviews link
+            var reviewLink = document.querySelector('.product-about .woocommerce-review-link');
+            if (reviewLink && t['customer-reviews']) {
+                // keep count number if present
+                var countSpan = reviewLink.querySelector('.count');
+                var countText = countSpan ? countSpan.textContent.trim() + ' ' : '';
+                reviewLink.textContent = '(' + countText + t['customer-reviews'] + ')';
+            }
+            // Meta labels
+            var skuWrapper = document.querySelector('.product_meta .sku_wrapper');
+            if (skuWrapper && t['sku']) skuWrapper.innerHTML = skuWrapper.innerHTML.replace(/^\s*SKU:/i, t['sku']);
+            var postedIn = document.querySelector('.product_meta .posted_in');
+            if (postedIn && t['category']) postedIn.innerHTML = postedIn.innerHTML.replace(/^\s*Category:/i, t['category']);
+            var tagsEl = document.querySelector('.product_meta span');
+            if (tagsEl && t['tags']) {
+                // replace first occurrence of 'Tags:' in meta block
+                var meta = document.querySelector('.product_meta');
+                if (meta) meta.innerHTML = meta.innerHTML.replace(/Tags:/i, t['tags']);
+            }
+        }
+
+        // Contact Page
+        if (path.indexOf('contact') !== -1) {
+            // Replace common info box titles only if they match EN defaults
+            document.querySelectorAll('.contact-info .box-title').forEach(function(el){
+                var txt = el.textContent.trim();
+                if (txt === (translations.en['location'] || 'Location')) el.textContent = t['location'] || txt;
+                if (txt === (translations.en['email-us'] || 'Email us')) el.textContent = t['email-us'] || txt;
+                if (txt === (translations.en['free-call'] || 'Free Call')) el.textContent = t['free-call'] || txt;
+                if (txt === (translations.en['opening-hour'] || 'Opening hour')) el.textContent = t['opening-hour'] || txt;
             });
-        });
+        }
     }
 });
 
 // scrollCue
 scrollCue.init({
-    percentage: 0.99,
-    duration : 900,
+    percentage: 0.5,
+    duration : 600,
 });
 
 

@@ -1,13 +1,13 @@
 <!doctype html>
-<html class="no-js" lang="zxx" dir="ltr">
+<html class="no-js" lang="en" dir="ltr">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Robor - AI and Automation Integration HTML Template - Home One</title>
-    <meta name="author" content="Robor">
-    <meta name="description" content="Robor - AI and Automation Integration HTML Template">
-    <meta name="keywords" content="Robor - AI and Automation Integration HTML Template">
+    <title>OMNIframe — Modern Web Development & AI Integration</title>
+    <meta name="author" content="OMNIframe">
+    <meta name="description" content="OMNIframe crafts fast, beautiful web solutions with modern stacks and AI integrations tailored to your business goals.">
+    <meta name="keywords" content="OMNIframe, web development, AI integration, modern websites, Next.js, Tailwind">
     <meta name="robots" content="INDEX,FOLLOW">
 
     <!-- Mobile Specific Metas -->
@@ -72,16 +72,16 @@
 
     <!--==============================
      Preloader
-  ==============================-->
+   ==============================-->
     <div class="preloader ">
         <button class="th-btn preloaderCls">Cancel Preloader </button>
         <div class="preloader-inner">
             <div class="bounce">
-                <img src="assets/img/logo-icon.svg" alt="img">
+                <img src="assets/img/logo.png" alt="OMNIframe">
             </div>
             <span class="loader">
-                Robor
-                <span class="loading-text">Robor</span>
+                OMNIframe
+                <span class="loading-text">OMNIframe</span>
             </span>
         </div>
     </div>
@@ -94,7 +94,7 @@
         <div class="th-menu-area text-center">
             <button class="th-menu-toggle"><i class="fal fa-times"></i></button>
             <div class="mobile-logo">
-                <a href="index.html"><img src="assets/img/logo2.svg" alt="Robor"></a>
+                <a href="index.html"><img src="assets/img/logo.png" alt="OMNIframe"></a>
             </div>
             <div class="th-mobile-menu">
                 <ul>
@@ -351,7 +351,7 @@ About Area
                             <div class="img2" data-cue="slideInUp" data-delay="300">
                                 <img src="assets/img/normal/about-thumb1-3.jpg" alt="About">
                             </div>
-                            <div class="shadow-text">Robor</div>
+                            <div class="shadow-text">OMNIframe</div>
                         </div>
                     </div>
                     <div class="col-xxl-4 col-md-6" data-cue="slideInUp">
@@ -646,7 +646,7 @@ Why Choose Us Area
                     </div>
                     <div class="why-card-wrap">
                         <div class="circle-tag" data-cue="slideInUp">
-                            <span class="circle-title-anime">ROBOR - AI AND AUTOMATION INTEGRATION.</span>
+                            <span class="circle-title-anime">OMNIframe - AI AND AUTOMATION INTEGRATION.</span>
                             <a href="#" class="icon-btn">
                                 <i class="fal fa-long-arrow-right"></i>
                             </a>
@@ -1005,7 +1005,7 @@ Faq Area
                         <div class="img2" data-cue="slideInUp">
                             <img src="assets/img/normal/about-thumb1-3.jpg" alt="About">
                         </div>
-                        <div class="shadow-text">Robor</div>
+                        <div class="shadow-text">OMNIframe</div>
                     </div>
                 </div>
             </div>
@@ -1265,37 +1265,37 @@ Blog Area
     All Js File
 ============================== -->
     <!-- Jquery -->
-    <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
+    <script defer src="assets/js/vendor/jquery-3.7.1.min.js"></script>
     <!-- Swiper Js -->
-    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script defer src="assets/js/swiper-bundle.min.js"></script>
     <!-- Bootstrap -->
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script defer src="assets/js/bootstrap.min.js"></script>
     <!-- Magnific Popup -->
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script defer src="assets/js/jquery.magnific-popup.min.js"></script>
     <!-- Counter Up -->
-    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script defer src="assets/js/jquery.counterup.min.js"></script>
     <!-- Range Slider -->
-    <script src="assets/js/jquery-ui.min.js"></script>
+    <script defer src="assets/js/jquery-ui.min.js"></script>
     <!-- Isotope Filter -->
-    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script defer src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script defer src="assets/js/isotope.pkgd.min.js"></script>
     <!-- Cue Js -->
-    <script src="assets/js/scrollCue.min.js"></script>
+    <script defer src="assets/js/scrollCue.min.js"></script>
     <!-- Gsap -->
-    <script src="assets/js/gsap.min.js"></script>
+    <script defer src="assets/js/gsap.min.js"></script>
     <!-- Scroll Trigger -->
-    <script src="assets/js/ScrollTrigger.min.js"></script>
+    <script defer src="assets/js/ScrollTrigger.min.js"></script>
     <!-- Split Text -->
-    <script src="assets/js/SplitText.min.js"></script>
+    <script defer src="assets/js/SplitText.min.js"></script>
     <!-- Lenis Js -->
-    <script src="assets/js/lenis.min.js"></script>
+    <script defer src="assets/js/lenis.min.js"></script>
 
     <!-- Perticle Js -->
-    <script src="assets/js/particles.min.js"></script>
-    <script src="assets/js/particles-config.js"></script>
+    <script defer src="assets/js/particles.min.js"></script>
+    <script defer src="assets/js/particles-config.js"></script>
 
     <!-- Main Js File -->
-    <script src="assets/js/main.js"></script>
+    <script defer src="assets/js/main.js"></script>
 </body>
 
 </html>
