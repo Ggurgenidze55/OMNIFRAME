@@ -1,0 +1,1583 @@
+(function ($) {
+    "use strict";
+    /*=================================
+        JS Index Here
+    ==================================*/
+    /*
+    01. On Load Function
+    02. Preloader
+    03. Mobile Menu
+    04. Sticky fix
+    05. Scroll To Top
+    06. Set Background Image Color & Mask
+    07. Global Slider
+    08. Ajax Contact Form
+    09. Search Box Popup
+    10. Popup Sidemenu
+    11. Magnific Popup
+    12. Section Position
+    13. Filter
+    14. Counter Up
+    15. Shape Mockup
+    16. Progress Bar Animation
+    17. Countdown
+    18. Image to SVG Code
+    00. Woocommerce Toggle
+    00. Color Scheme
+    00. Right Click Disable
+    */
+    /*=================================
+        JS Index End
+    ==================================*/
+    /*
+
+  /*---------- 01. On Load Function ----------*/
+    $(window).on("load", function () {
+        $(".preloader").fadeOut();
+    });
+
+    /*---------- 02. Preloader ----------*/
+    if ($(".preloader").length > 0) {
+        $(".preloaderCls").each(function () {
+            $(this).on("click", function (e) {
+                e.preventDefault();
+                $(".preloader").css("display", "none");
+            });
+        });
+    }
+
+    /*---------- 03. Mobile Menu ----------*/
+    $.fn.thmobilemenu = function (options) {
+        var opt = $.extend(
+            {
+                menuToggleBtn: ".th-menu-toggle",
+                bodyToggleClass: "th-body-visible",
+                subMenuClass: "th-submenu",
+                subMenuParent: "menu-item-has-children",
+                thSubMenuParent: "th-item-has-children",
+                subMenuParentToggle: "th-active",
+                meanExpandClass: "th-mean-expand",
+                appendElement: '<span class="th-mean-expand"></span>',
+                subMenuToggleClass: "th-open",
+                toggleSpeed: 400,
+            },
+            options
+        );
+    
+        return this.each(function () {
+            var menu = $(this); // Select menu
+    
+            // Menu Show & Hide
+            function menuToggle() {
+                menu.toggleClass(opt.bodyToggleClass);
+    
+                // collapse submenu on menu hide or show
+                var subMenu = "." + opt.subMenuClass;
+                $(subMenu).each(function () {
+                    if ($(this).hasClass(opt.subMenuToggleClass)) {
+                        $(this).removeClass(opt.subMenuToggleClass);
+                        $(this).css("display", "none");
+                        $(this).parent().removeClass(opt.subMenuParentToggle);
+                    }
+                });
+            }
+    
+            // Class Set Up for every submenu
+            menu.find("." + opt.subMenuParent).each(function () {
+                var submenu = $(this).find("ul");
+                submenu.addClass(opt.subMenuClass);
+                submenu.css("display", "none");
+                $(this).addClass(opt.subMenuParent);
+                $(this).addClass(opt.thSubMenuParent); // Add th-item-has-children class
+                $(this).children("a").append(opt.appendElement);
+            });
+    
+            // Toggle Submenu
+            function toggleDropDown($element) {
+                var submenu = $element.children("ul");
+                if (submenu.length > 0) {
+                    $element.toggleClass(opt.subMenuParentToggle);
+                    submenu.slideToggle(opt.toggleSpeed);
+                    submenu.toggleClass(opt.subMenuToggleClass);
+                }
+            }
+    
+            // Submenu toggle Button
+            var itemHasChildren = "." + opt.thSubMenuParent + " > a";
+            $(itemHasChildren).each(function () {
+                $(this).on("click", function (e) {
+                    e.preventDefault();
+                    toggleDropDown($(this).parent());
+                });
+            });
+    
+            // Menu Show & Hide On Toggle Btn click
+            $(opt.menuToggleBtn).each(function () {
+                $(this).on("click", function () {
+                    menuToggle();
+                });
+            });
+    
+            // Hide Menu On outside click
+            menu.on("click", function (e) {
+                e.stopPropagation();
+                menuToggle();
+            });
+    
+            // Stop Hide full menu on menu click
+            menu.find("div").on("click", function (e) {
+                e.stopPropagation();
+            });
+        });
+    };
+    
+    $(".th-menu-wrapper").thmobilemenu();
+
+    /*---------- 04. Sticky fix ----------*/
+    $(window).scroll(function () {
+        var topPos = $(this).scrollTop();
+        if (topPos > 1000) {
+            $('.sticky-wrapper').addClass('sticky');
+            $('.category-menu').addClass('close-category');
+        } else {
+            $('.sticky-wrapper').removeClass('sticky')
+            $('.category-menu').removeClass('close-category');
+        }
+    })
+
+    $(".menu-expand").each(function () {
+        $(this).on("click", function (e) {
+            e.preventDefault();
+            $('.category-menu').toggleClass('open-category');
+        });
+    });
+
+    /*----------- One Page Nav ----------*/
+    function onePageNav(element) {
+        if ($(element).length > 0) {
+            $(element).each(function () {
+            var link = $(this).find('a');
+            $(this).find(link).each(function () {
+                $(this).on('click', function () {
+                var target = $(this.getAttribute('href'));
+                if (target.length) {
+                    event.preventDefault();
+                    $('html, body').stop().animate({
+                    scrollTop: target.offset().top - 10
+                    }, 1000);
+                };
+    
+                });
+            });
+            })
+        }
+    };
+    onePageNav('.onepage-nav');
+    onePageNav('.scroll-down');
+
+    /*---------- 05. Scroll To Top ----------*/
+    if ($('.scroll-top').length > 0) {
+        
+        var scrollTopbtn = document.querySelector('.scroll-top');
+        var progressPath = document.querySelector('.scroll-top path');
+        var pathLength = progressPath.getTotalLength();
+        progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
+        progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
+        progressPath.style.strokeDashoffset = pathLength;
+        progressPath.getBoundingClientRect();
+        progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';		
+        var updateProgress = function () {
+            var scroll = $(window).scrollTop();
+            var height = $(document).height() - $(window).height();
+            var progress = pathLength - (scroll * pathLength / height);
+            progressPath.style.strokeDashoffset = progress;
+        }
+        updateProgress();
+        $(window).scroll(updateProgress);	
+        var offset = 50;
+        var duration = 750;
+        jQuery(window).on('scroll', function() {
+            if (jQuery(this).scrollTop() > offset) {
+                jQuery(scrollTopbtn).addClass('show');
+            } else {
+                jQuery(scrollTopbtn).removeClass('show');
+            }
+        });				
+        jQuery(scrollTopbtn).on('click', function(event) {
+            event.preventDefault();
+            jQuery('html, body').animate({scrollTop: 0}, duration);
+            return false;
+        })
+    }
+
+    /*---------- 06. Set Background Image Color & Mask ----------*/
+    if ($("[data-bg-src]").length > 0) {
+        $("[data-bg-src]").each(function () {
+            var src = $(this).attr("data-bg-src");
+            $(this).css("background-image", "url(" + src + ")");
+            $(this).removeAttr("data-bg-src").addClass("background-image");
+        });
+    }
+
+    if ($('[data-bg-color]').length > 0) {
+        $('[data-bg-color]').each(function () {
+          var color = $(this).attr('data-bg-color');
+          $(this).css('background-color', color);
+          $(this).removeAttr('data-bg-color');
+        });
+    };
+
+    if ($('[data-theme-color]').length > 0) {
+        $('[data-theme-color]').each(function () {
+          var $color = $(this).attr('data-theme-color');
+          $(this).get(0).style.setProperty('--theme-color', $color);
+          $(this).removeAttr('data-theme-color');
+        });
+    };
+
+    $('[data-border]').each(function() {
+        var borderColor = $(this).data('border');
+        $(this).css('--th-border-color', borderColor);
+    });
+      
+    if ($('[data-mask-src]').length > 0) {
+        $('[data-mask-src]').each(function () {
+          var mask = $(this).attr('data-mask-src');
+          $(this).css({
+            'mask-image': 'url(' + mask + ')',
+            '-webkit-mask-image': 'url(' + mask + ')'
+          });
+          $(this).addClass('bg-mask');
+          $(this).removeAttr('data-mask-src');
+        });
+    };
+
+    /*----------- 07. Global Slider ----------*/   
+    $('.th-slider').each(function () {
+        var thSlider = $(this);
+        var settings = $(this).data('slider-options') || {};
+        
+        // Store references to the navigation buttons
+        var prevArrow = thSlider.find('.slider-prev');
+        var nextArrow = thSlider.find('.slider-next');
+        var paginationEl1 = thSlider.find('.slider-pagination').get(0);
+        var paginationEl2 = thSlider.find('.slider-pagination2');
+        var progressBarEl = thSlider.find('.slider-pagination-progressbar2 .slider-progressbar-fill');
+    
+        var sliderDefault = {
+            slidesPerView: 1,
+            spaceBetween: settings.spaceBetween || 24,
+            loop: settings.loop !== false,
+            speed: settings.speed || 1000,
+            autoplay: settings.autoplay || { delay: 6000, disableOnInteraction: false },
+            navigation: {
+                prevEl: prevArrow.get(0),
+                nextEl: nextArrow.get(0),
+            },
+            pagination: {
+                el: paginationEl1,
+                type: settings.paginationType || 'bullets',
+                clickable: true,
+                renderBullet: function (index, className) {
+                    var number = index + 1;
+                    var formattedNumber = number < 10 ? '0' + number : number;
+                    return '<span class="' + className + '" aria-label="Go to Slide ' + formattedNumber + '"></span>';
+                },
+            },
+            on: {
+                init: function () {
+                    updatePagination(this);
+                    updateProgressBar(this);
+                },
+                slideChange: function () {
+                    updatePagination(this);
+                    updateProgressBar(this);
+                },
+            },
+        };
+    
+        var options = $.extend({}, sliderDefault, settings);
+        var swiperInstance = new Swiper(thSlider.get(0), options);
+    
+        // Update Pagination and other UI elements
+        function updatePagination(swiper) {
+            var activeIndex = swiper.realIndex + 1; 
+            var totalSlides = swiper.slides.length;
+            paginationEl2.html(
+                '<span class="current-slide">' +
+                (activeIndex < 10 ? '0' + activeIndex : activeIndex) +
+                '</span> <span class="divider">/</span> <span class="total-slides">' +
+                (totalSlides < 10 ? '0' + totalSlides : totalSlides) +
+                '</span>'
+            );
+        }
+    
+        function updateProgressBar(swiper) {
+            var progress = ((swiper.realIndex + 1) / swiper.slides.length) * 100;
+            progressBarEl.css('height', progress + '%');
+        }
+
+        if ($('.slider-area').length > 0) {
+            $('.slider-area').closest(".container").parent().addClass("arrow-wrap");
+        }
+    
+    });
+    
+    // Function to add animation classes
+    function animationProperties() {
+        $('[data-ani]').each(function () {
+            var animationName = $(this).data('ani');
+            $(this).addClass(animationName);
+        });
+    
+        $('[data-ani-delay]').each(function () {
+            var delayTime = $(this).data('ani-delay');
+            $(this).css('animation-delay', delayTime);
+        });
+    }
+    animationProperties();
+    
+    // Add click event handlers for external slider arrows based on data attributes
+    $('[data-slider-prev], [data-slider-next]').on('click', function () {
+        var sliderSelector = $(this).data('slider-prev') || $(this).data('slider-next');
+        var targetSlider = $(sliderSelector);
+    
+        if (targetSlider.length) {
+            var swiper = targetSlider[0].swiper;
+    
+            if (swiper) {
+                if ($(this).data('slider-prev')) {
+                    swiper.slidePrev();
+                } else {navigator, 
+                    swiper.slideNext();
+                }
+            }
+        }
+    }); 
+
+    /*----------- 08. Ajax Contact Form ----------*/
+    var form = ".ajax-contact";
+    var invalidCls = "is-invalid";
+    var $email = '[name="email"]';
+    var $validation =
+        '[name="name"],[name="email"],[name="subject"],[name="number"],[name="message"]'; // Must be use (,) without any space
+    var formMessages = $(".form-messages");
+
+    function sendContact() {
+        var formData = $(form).serialize();
+        var valid;
+        valid = validateContact();
+        if (valid) {
+            jQuery
+            .ajax({
+                url: $(form).attr("action"),
+                data: formData,
+                type: "POST",
+            })
+            .done(function (response) {
+                // Make sure that the formMessages div has the 'success' class.
+                formMessages.removeClass("error");
+                formMessages.addClass("success");
+                // Set the message text.
+                formMessages.text(response);
+                // Clear the form.
+                $(
+                    form +
+                        ' input:not([type="submit"]),' +
+                        form +
+                        " textarea"
+                ).val("");
+            })
+            .fail(function (data) {
+                // Make sure that the formMessages div has the 'error' class.
+                formMessages.removeClass("success");
+                formMessages.addClass("error");
+                // Set the message text.
+                if (data.responseText !== "") {
+                    formMessages.html(data.responseText);
+                } else {
+                    formMessages.html(
+                        "Oops! An error occured and your message could not be sent."
+                    );
+                }
+            });
+        }
+    }
+
+    function validateContact() {
+        var valid = true;
+        var formInput;
+
+        function unvalid($validation) {
+            $validation = $validation.split(",");
+            for (var i = 0; i < $validation.length; i++) {
+                formInput = form + " " + $validation[i];
+                if (!$(formInput).val()) {
+                    $(formInput).addClass(invalidCls);
+                    valid = false;
+                } else {
+                    $(formInput).removeClass(invalidCls);
+                    valid = true;
+                }
+            }
+        }
+        unvalid($validation);
+
+        if (
+            !$($email).val() ||
+            !$($email)
+                .val()
+                .match(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/)
+        ) {
+            $($email).addClass(invalidCls);
+            valid = false;
+        } else {
+            $($email).removeClass(invalidCls);
+            valid = true;
+        }
+        return valid;
+    }
+
+    $(form).on("submit", function (element) {
+        element.preventDefault();
+        sendContact();
+    });
+
+    /*---------- 09. Search Box Popup ----------*/
+    function popupSarchBox($searchBox, $searchOpen, $searchCls, $toggleCls) {
+        $($searchOpen).on("click", function (e) {
+            e.preventDefault();
+            $($searchBox).addClass($toggleCls);
+        });
+        $($searchBox).on("click", function (e) {
+            e.stopPropagation();
+            $($searchBox).removeClass($toggleCls);
+        });
+        $($searchBox)
+            .find("form")
+            .on("click", function (e) {
+                e.stopPropagation();
+                $($searchBox).addClass($toggleCls);
+            });
+        $($searchCls).on("click", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            $($searchBox).removeClass($toggleCls);
+        });
+    }
+    popupSarchBox( ".popup-search-box", ".searchBoxToggler", ".searchClose", "show" );
+
+    /*---------- 10. Popup Sidemenu ----------*/
+    function popupSideMenu($sideMenu, $sideMunuOpen, $sideMenuCls, $toggleCls) {
+        // Sidebar Popup
+        $($sideMunuOpen).on('click', function (e) {
+        e.preventDefault();
+        $($sideMenu).addClass($toggleCls);
+        });
+        $($sideMenu).on('click', function (e) {
+        e.stopPropagation();
+        $($sideMenu).removeClass($toggleCls)
+        });
+        var sideMenuChild = $sideMenu + ' > div';
+        $(sideMenuChild).on('click', function (e) {
+        e.stopPropagation();
+        $($sideMenu).addClass($toggleCls)
+        });
+        $($sideMenuCls).on('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $($sideMenu).removeClass($toggleCls);
+        });
+    };
+    popupSideMenu('.sidemenu-cart', '.sideMenuToggler', '.sideMenuCls', 'show');
+    popupSideMenu('.sidemenu-info', '.sideMenuInfo', '.sideMenuCls', 'show');
+
+    /*----------- 11. Magnific Popup ----------*/
+    /* magnificPopup img view */
+    $(".popup-image").magnificPopup({
+        type: "image",
+        mainClass: 'mfp-zoom-in', 
+        removalDelay: 260,
+        gallery: {
+            enabled: true,
+        },
+        image: {
+            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+            titleSrc: function(item) {
+                return item.el.attr('title');
+            }
+        }
+    });
+    
+
+    /* magnificPopup video view */
+    $(".popup-video").magnificPopup({
+        type: "iframe",
+        mainClass: 'mfp-zoom-in', 
+    });
+
+    /* magnificPopup video view */
+    $(".popup-content").magnificPopup({
+        type: "inline",
+        midClick: true,
+    });
+
+    /*---------- 12. Section Position ----------*/
+    // Interger Converter
+    function convertInteger(str) {
+        return parseInt(str, 10);
+    }
+
+    $.fn.sectionPosition = function (mainAttr, posAttr) {
+        $(this).each(function () {
+            var section = $(this);
+
+            function setPosition() {
+                var sectionHeight = Math.floor(section.height() / 2), // Main Height of section
+                    posData = section.attr(mainAttr), // where to position
+                    posFor = section.attr(posAttr), // On Which section is for positioning
+                    topMark = "top-half", // Pos top
+                    bottomMark = "bottom-half", // Pos Bottom
+                    parentPT = convertInteger($(posFor).css("padding-top")), // Default Padding of  parent
+                    parentPB = convertInteger($(posFor).css("padding-bottom")); // Default Padding of  parent
+
+                if (posData === topMark) {
+                    $(posFor).css(
+                        "padding-bottom",
+                        parentPB + sectionHeight + "px"
+                    );
+                    section.css("margin-top", "-" + sectionHeight + "px");
+                } else if (posData === bottomMark) {
+                    $(posFor).css(
+                        "padding-top",
+                        parentPT + sectionHeight + "px"
+                    );
+                    section.css("margin-bottom", "-" + sectionHeight + "px");
+                }
+            }
+            setPosition(); // Set Padding On Load
+        });
+    };
+
+    var postionHandler = "[data-sec-pos]";
+    if ($(postionHandler).length) {
+        $(postionHandler).imagesLoaded(function () {
+            $(postionHandler).sectionPosition("data-sec-pos", "data-pos-for");
+        });
+    }
+
+    /*----------- 14. Filter ----------*/
+    $(".filter-active").imagesLoaded(function () {
+        var $filter = ".filter-active",
+            $filterItem = ".filter-item",
+            $filterMenu = ".filter-menu-active";
+
+        if ($($filter).length > 0) {
+            var $grid = $($filter).isotope({
+                itemSelector: $filterItem,
+                filter: "*",
+                masonry: {
+                    // use outer width of grid-sizer for columnWidth
+                    // columnWidth: 1,
+                },
+            });
+
+            // filter items on button click
+            $($filterMenu).on("click", "button", function () {
+                var filterValue = $(this).attr("data-filter");
+                $grid.isotope({
+                    filter: filterValue,
+                });
+            });
+
+            // Menu Active Class
+            $($filterMenu).on("click", "button", function (event) {
+                event.preventDefault();
+                $(this).addClass("active");
+                $(this).siblings(".active").removeClass("active");
+            });
+        }
+    });
+
+    $(".masonary-active, .woocommerce-Reviews .comment-list").imagesLoaded(function () {
+        var $filter = ".masonary-active, .woocommerce-Reviews .comment-list",
+            $filterItem = ".filter-item, .woocommerce-Reviews .comment-list li";
+
+        if ($($filter).length > 0) {
+            $($filter).isotope({
+                itemSelector: $filterItem,
+                filter: "*",
+                masonry: {
+                    // use outer width of grid-sizer for columnWidth
+                    columnWidth: 1,
+                },
+            });
+        }
+        $('[data-bs-toggle="tab"]').on('shown.bs.tab', function (e) {
+            $($filter).isotope({
+                filter: "*",
+            });
+        });
+    });
+
+    /*----------- 14. Counter Up ----------*/
+    $(".counter-number").counterUp({
+        delay: 10,
+        time: 1000,
+    });
+
+    /*----------- 15. Shape Mockup ----------*/
+    $.fn.shapeMockup = function () {
+        var $shape = $(this);
+        $shape.each(function () {
+            var $currentShape = $(this),
+                shapeTop = $currentShape.data("top"),
+                shapeRight = $currentShape.data("right"),
+                shapeBottom = $currentShape.data("bottom"),
+                shapeLeft = $currentShape.data("left");
+            $currentShape
+                .css({
+                    top: shapeTop,
+                    right: shapeRight,
+                    bottom: shapeBottom,
+                    left: shapeLeft,
+                })
+                .removeAttr("data-top")
+                .removeAttr("data-right")
+                .removeAttr("data-bottom")
+                .removeAttr("data-left")
+                .parent()
+                .addClass("shape-mockup-wrap");
+        });
+    };
+
+    if ($(".shape-mockup")) {
+        $(".shape-mockup").shapeMockup();
+    }
+
+    /*----------- 16. Progress Bar Animation ----------*/
+    $('.progress-bar').waypoint(function() {
+        $('.progress-bar').css({
+        animation: "animate-positive 1.8s",
+        opacity: "1"
+        });
+    }, { offset: '100%' });
+
+    /*---------- 18. Image to SVG Code ----------*/
+    const cache = {};
+
+    $.fn.inlineSvg = function fnInlineSvg() {
+        this.each(imgToSvg);
+
+        return this;
+    };
+
+    function imgToSvg() {
+        const $img = $(this);
+        const src = $img.attr("src");
+
+        // fill cache by src with promise
+        if (!cache[src]) {
+            const d = $.Deferred();
+            $.get(src, (data) => {
+                d.resolve($(data).find("svg"));
+            });
+            cache[src] = d.promise();
+        }
+
+        // replace img with svg when cached promise resolves
+        cache[src].then((svg) => {
+            const $svg = $(svg).clone();
+
+            if ($img.attr("id")) $svg.attr("id", $img.attr("id"));
+            if ($img.attr("class")) $svg.attr("class", $img.attr("class"));
+            if ($img.attr("style")) $svg.attr("style", $img.attr("style"));
+
+            if ($img.attr("width")) {
+                $svg.attr("width", $img.attr("width"));
+                if (!$img.attr("height")) $svg.removeAttr("height");
+            }
+            if ($img.attr("height")) {
+                $svg.attr("height", $img.attr("height"));
+                if (!$img.attr("width")) $svg.removeAttr("width");
+            }
+
+            $svg.insertAfter($img);
+            $img.trigger("svgInlined", $svg[0]);
+            $img.remove();
+        });
+    }
+
+    $(".svg-img").inlineSvg();
+    
+    /*---------- 19. Circle Progress ----------*/
+    document.addEventListener("DOMContentLoaded", function () {
+        const progressBars = document.querySelectorAll('.circular-progress');
+    
+        progressBars.forEach(progressBar => {
+            const circle = progressBar.querySelector('.circle');
+            const percentageDisplay = progressBar.querySelector('.percentage');
+            const target = parseInt(progressBar.getAttribute('data-target'), 10);
+            let progressValue = 0;
+    
+            const animateProgress = () => {
+                if (progressValue <= target) {
+                    const offset = 100 - (progressValue * 100) / 100;
+                    circle.style.strokeDashoffset = offset;
+                    percentageDisplay.textContent = progressValue + "%";
+                    progressValue++;
+                    requestAnimationFrame(animateProgress);
+                }
+            };
+    
+            animateProgress();
+        });
+    });
+
+    /*----------- 00. Woocommerce Toggle ----------*/
+    // Ship To Different Address
+    $(document).on("change", "#ship-to-different-address-checkbox", function () {
+        const $shippingAddress = $("#ship-to-different-address").next(".shipping_address");
+        $(this).is(":checked") ? $shippingAddress.slideDown() : $shippingAddress.slideUp();
+    });
+
+    // Login Toggle
+    $(document).on("click", ".woocommerce-form-login-toggle a", function (e) {
+        e.preventDefault();
+        $(".woocommerce-form-login").slideToggle();
+    });
+
+    // Coupon Toggle
+    $(document).on("click", ".woocommerce-form-coupon-toggle a", function (e) {
+        e.preventDefault();
+        $(".woocommerce-form-coupon").slideToggle();
+    });
+
+    // Shipping Calculator Toggle
+    $(document).on("click", ".shipping-calculator-button", function (e) {
+        e.preventDefault();
+        $(this).next(".shipping-calculator-form").slideToggle();
+    });
+
+    // Payment Method Toggle
+    $(".wc_payment_methods input[type='radio']:checked").siblings(".payment_box").show();
+
+    $(document).on("change", ".wc_payment_methods input[type='radio']", function () {
+        $(".payment_box").slideUp();
+        $(this).siblings(".payment_box").slideDown();
+    });
+
+    // Rating Stars Toggle
+    $(document).on("click", ".rating-select .stars a", function (e) {
+        e.preventDefault();
+        $(this).siblings().removeClass("active");
+        $(this).parent().parent().addClass("selected");
+        $(this).addClass("active");
+    });
+
+    // Quantity Plus Minus ---------------------------
+    $(document).on("click", ".quantity-plus", function (e) {
+        e.preventDefault();
+        const $qty = $(this).siblings(".qty-input");
+        const currentVal = parseInt($qty.val(), 10); // radix specified
+        if (!isNaN(currentVal)) {
+            $qty.val(currentVal + 1);
+        }
+    });
+
+    $(document).on("click", ".quantity-minus", function (e) {
+        e.preventDefault();
+        const $qty = $(this).siblings(".qty-input");
+        const currentVal = parseInt($qty.val(), 10); // radix specified
+        if (!isNaN(currentVal) && currentVal > 1) {
+            $qty.val(currentVal - 1);
+        }
+    });
+
+    // /*----------- 00.Color Scheme ----------*/
+    $('.color-switch-btns button').each(function () {
+        // Get color for button
+        const button = $(this);
+        const color = button.data('color');
+        button.css('--theme-color', color);
+
+        // Change theme color on click
+        button.on('click', function () {
+            const clickedColor = $(this).data('color');
+            $(':root').css('--theme-color', clickedColor);
+        });
+    });
+
+    $(document).on('click','.switchIcon',function() {
+        $('.color-scheme-wrap').toggleClass('active');
+    });
+
+    // /*----------- lettering js ----------*/
+    function injector(t, splitter, klass, after) {
+		var a = t.text().split(splitter), inject = '';
+		if (a.length) {
+			$(a).each(function(i, item) {
+				inject += '<span class="'+klass+(i+1)+'">'+item+'</span>'+after;
+			});	
+			t.empty().append(inject);
+		}
+	}
+	
+	var methods = {
+		init : function() {
+
+			return this.each(function() {
+				injector($(this), '', 'char', '');
+			});
+
+		},
+
+		words : function() {
+
+			return this.each(function() {
+				injector($(this), ' ', 'word', ' ');
+			});
+
+		},
+		
+		lines : function() {
+
+			return this.each(function() {
+				var r = "eefec303079ad17405c889e092e105b0";
+				// Because it's hard to split a <br/> tag consistently across browsers,
+				// (*ahem* IE *ahem*), we replaces all <br/> instances with an md5 hash 
+				// (of the word "split").  If you're trying to use this plugin on that 
+				// md5 hash string, it will fail because you're being ridiculous.
+				injector($(this).children("br").replaceWith(r).end(), r, 'line', '');
+			});
+
+		}
+	};
+
+	$.fn.lettering = function( method ) {
+		// Method calling logic
+		if ( method && methods[method] ) {
+			return methods[ method ].apply( this, [].slice.call( arguments, 1 ));
+		} else if ( method === 'letters' || ! method ) {
+			return methods.init.apply( this, [].slice.call( arguments, 0 ) ); // always pass an array
+		}
+		$.error( 'Method ' +  method + ' does not exist on jQuery.lettering' );
+		return this;
+	};
+    $(".circle-title-anime").lettering();
+
+
+    // ---------- Smooth Scroll ----------
+    gsap.registerPlugin(ScrollTrigger);
+
+    let lenis;
+
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    function initializeLenis() {
+        lenis = new Lenis({
+            lerp: 0.07, // Smoothing factor
+        });
+
+        lenis.on("scroll", ScrollTrigger.update);
+
+        // Use GSAP's ticker to sync with animations
+        gsap.ticker.add((time) => {
+            lenis.raf(time * 1000);
+        });
+
+        // Allow native scroll inside specified elements
+        document.querySelectorAll(".allow-natural-scroll").forEach((el) => {
+            el.addEventListener("wheel", (e) => e.stopPropagation(), { passive: true });
+            el.addEventListener("touchmove", (e) => e.stopPropagation(), { passive: true });
+        });
+    }
+
+    function enableOrDisableLenis() {
+        if (prefersReducedMotion) return;
+
+        if (window.innerWidth > 991) {
+            if (!lenis) initializeLenis();
+            lenis.start();
+        } else {
+            if (lenis) {
+                lenis.stop();
+                lenis = null;
+            }
+        }
+    }
+
+    // Initial call
+    enableOrDisableLenis();
+    window.addEventListener("resize", enableOrDisableLenis);
+
+
+    // ---------- GSAP Text Animation ----------
+    function animateText(selector, config) {
+        const elements = document.querySelectorAll(selector);
+        if (!elements.length) return;
+
+        elements.forEach((el) => {
+            const split = new SplitText(el, { type: "chars, words" });
+            gsap.from(split.chars, {
+                duration: config.duration,
+                delay: config.delay,
+                x: config.x,
+                autoAlpha: 0,
+                stagger: config.stagger,
+                ease: config.ease,
+                scrollTrigger: {
+                    trigger: el,
+                    start: "top 85%",
+                },
+            });
+        });
+    }
+
+    animateText(".text-anim", {
+        duration: 1,
+        delay: 0.5,
+        x: 20,
+        stagger: 0.05,
+        ease: "power2.out",
+    });
+
+    animateText(".text-anim2", {
+        duration: 1,
+        delay: 0.1,
+        x: 20,
+        stagger: 0.03,
+        ease: "power2.out",
+    });
+
+    /*---------- Hover Item Active Class ----------*/
+    $(document).on('mouseover', '.hover-item', function () {
+        $(this).addClass('item-active').siblings('.hover-item').removeClass('item-active');
+    });
+
+    /*----------- Price Slider ----------*/
+    $(".price_slider").slider({
+        range: true,
+        min: 0,
+        max: 350,
+        values: [0, 350],
+        slide: function (event, ui) {
+          $(".from").text("$" + ui.values[0]);
+          $(".to").text("$" + ui.values[1]);
+        }
+    });
+    $(".from").text("$" + $(".price_slider").slider("values", 0));
+    $(".to").text("$" + $(".price_slider").slider("values", 1));
+    
+    // /*----------- 00. Right Click Disable ----------*/
+    //   window.addEventListener('contextmenu', function (e) {
+    //     // do something here...
+    //     e.preventDefault();
+    //   }, false);
+
+    // /*----------- 00. Inspect Element Disable ----------*/
+    //   document.onkeydown = function (e) {
+    //     if (event.keyCode == 123) {
+    //       return false;
+    //     }
+    //     if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+    //       return false;
+    //     }
+    //     if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+    //       return false;
+    //     }
+    //     if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+    //       return false;
+    //     }
+    //     if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+    //       return false;
+    //     }
+    //   }
+    
+})(jQuery);
+
+// Language Switcher Functionality
+$(document).ready(function() {
+    const languageToggle = document.getElementById('languageToggle');
+    const languageDropdown = document.getElementById('languageDropdown');
+    const currentLang = document.querySelector('.current-lang');
+    const mobileLanguageToggle = document.getElementById('mobileLanguageToggle');
+    const mobileLanguageDropdown = document.getElementById('mobileLanguageDropdown');
+    const currentLangMobile = document.querySelector('.current-lang-mobile');
+    
+    // Function to handle language switching
+    function handleLanguageSwitch(lang) {
+        // Update current language display
+        if (currentLang) currentLang.textContent = lang.toUpperCase();
+        if (currentLangMobile) currentLangMobile.textContent = lang.toUpperCase();
+        
+        // Store language preference
+        localStorage.setItem('selectedLanguage', lang);
+        
+        // Translate content
+        translateContent(lang);
+        
+        // Close all dropdowns
+        if (languageDropdown) languageDropdown.classList.remove('active');
+        if (mobileLanguageDropdown) mobileLanguageDropdown.classList.remove('active');
+    }
+    
+    // Desktop language switcher
+    if (languageToggle && languageDropdown) {
+        languageToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            languageDropdown.classList.toggle('active');
+        });
+    }
+    
+    // Mobile language switcher
+    if (mobileLanguageToggle && mobileLanguageDropdown) {
+        mobileLanguageToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            mobileLanguageDropdown.classList.toggle('active');
+        });
+    }
+    
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', function() {
+        if (languageDropdown) languageDropdown.classList.remove('active');
+        if (mobileLanguageDropdown) mobileLanguageDropdown.classList.remove('active');
+    });
+    
+    // Language selection for both desktop and mobile
+    document.querySelectorAll('.lang-option').forEach(option => {
+        option.addEventListener('click', function(e) {
+            e.preventDefault();
+            const lang = this.getAttribute('data-lang');
+            handleLanguageSwitch(lang);
+        });
+    });
+    
+    // Load saved language preference
+    const savedLang = localStorage.getItem('selectedLanguage');
+    if (savedLang) {
+        if (currentLang) currentLang.textContent = savedLang.toUpperCase();
+        if (currentLangMobile) currentLangMobile.textContent = savedLang.toUpperCase();
+        translateContent(savedLang);
+    }
+    
+    // Translation function
+    function translateContent(lang) {
+        const translations = {
+            en: {
+                // Hero Section
+                'hero-title': 'Transform Ideas into High-Impact Digital Products',
+                'hero-text': 'From concept to code — we craft fast and beautifully designed web solutions tailored to your business goals.',
+                'discover-more': 'Services',
+                'contact-us': 'Contact Us',
+                
+                // Navigation
+                'home': 'Home',
+                'about-us': 'About Us',
+                'services': 'Services',
+                'pages': 'Pages',
+                'blog': 'Blog',
+                'get-started': 'Get Started Now',
+                'contact-us-nav': 'Contact Us',
+                
+                // About Section
+                'who-we-are': 'Who We Are?',
+                'about-text': 'OMNIframe is your tech partner for building modern websites that are fast, beautiful, and tailored to your goals.',
+                'customers-satisfaction': '100% Customers Satisfaction',
+                'quality-assurance': 'Quality Assurance Guarantee',
+                'about-feature-text': 'We bring a team of experienced AI specialists, data scientists, and industry experts committed to pushing boundaries.',
+                
+                // Services Section
+                'our-services': 'OUR SERVICES',
+                'services-title': 'Intelligent Innovations: Tailored AI Solutions',
+                'ai-development': 'AI Development',
+                'ai-development-text': 'Creating & optimizing models using proprietary or customer data. AI model tailored to specific business.',
+                'data-analytics': 'Data Analytics',
+                'data-analytics-text': 'Providing insights for time-sensitive decisions. Forecasting trends, risks, and opportunities.',
+                'machine-learning': 'Machine Learning',
+                'machine-learning-text': 'Building algorithms tailored to specific needs. Using advanced techniques to improve accuracy and efficiency.',
+                'ai-consulting': 'AI Consulting Services',
+                'ai-consulting-text': 'Helping businesses identify the most impactful AI applications. Evaluating a business\'s preparedness.',
+                'automation-process': 'Automation and Process',
+                'automation-process-text': 'Automating repetitive tasks like data entry or invoice processing. Enhancing customer support.',
+                'education-science': 'Education & Science',
+                'education-science-text': 'Diagnostic tools, patient management systems, and predictive care. Fraud detection, algorithmic trading,',
+                'ai-research': 'AI Research',
+                'ai-research-text': 'Automating repetitive tasks like data entry or invoice processing. Enhancing efficiency by integrating.',
+                'ai-cybersecurity': 'AI in Cybersecurity',
+                'ai-cybersecurity-text': 'Ensuring system integrity through AI-driven oversight. Using AI to detect anomalies and prevent.',
+                'read-more': 'Read More',
+                
+                // Why Choose Us Section
+                'why-choose-us': 'WHY CHOOSE US',
+                'why-choose-title': 'Our goal is to build a world where technology serves humanity.',
+                'years-experience': 'Years Of Experience',
+                'technology-integration': 'Technology Integration',
+                'certified-experts': 'Certified Experts',
+                'effortless-engagement': 'Effortless Engagement',
+                'future-vision': 'Future Vision and Mission',
+                
+                // Project Section
+                'case-study': 'Case Study',
+                'ai-projects-case': 'AI Projects Case Study',
+                'case-study-text': 'An AI agency is a specialized organization dedicated to helping businesses and organizations leverage artificial intelligence to achieve their goals.',
+                'robotics-program': 'Robotics, Program',
+                'ai-machine-learning': 'AI Machine Learning',
+                'user-research': 'User Research',
+                'speech-recognizer': 'Speech recognizer using deep learning',
+                
+                // Testimonial Section
+                'testimonials': 'Testimonials',
+                'what-clients-say': 'What Our Clients Say About us',
+                'co-founder': 'Co-founder',
+                'co-founder-xyz': 'Co-founder, XYZ',
+                
+                // Feature Section
+                'advanced-technology': 'advanced technology',
+                'future-is-here': 'The Future is Here: Advance AI Technology',
+                'tech-support': 'Tech support',
+                'robo-genius': 'Robo Genius',
+                'image-generation': 'Image Generation',
+                'chatbots': 'Chatbots',
+                'feature-text': 'To empower businesses with intelligent, scalable, and impactful solutions that drive progress',
+                
+                // FAQ Section
+                'faqs': 'Faq\'s',
+                'frequently-asked': 'Frequently asked questions',
+                'faq-question-1': 'What is an AI startup, and what services do you offer?',
+                'faq-question-2': 'Do you offer pre-built AI models or create everything from scratch?',
+                'faq-question-3': 'What is the process for developing an AI solution for my business?',
+                'faq-question-4': 'What is an AI startup, and what services do you offer?',
+                'faq-question-5': 'How do you ensure data privacy and compliance with regulations?',
+                'faq-answer': 'An AI Software as a Service startup combines the scalability of cloud-based platforms with the power of artificial intelligence to deliver innovative, on-demand solutions. These startups cater to a wide range of industries by offering AI-driven tools and applications that solve specific business challenges, enhance efficiency, and drive data-informed decisions. The AI industry is rapidly expanding, with opportunities to disrupt traditional industries and create entirely new markets. Continuous advancements in hardware and algorithms position AI startups to play a pivotal role in shaping the future.',
+                
+                // Pricing Section
+                'pricing-plan': 'PRICING PLAN',
+                'affordable-pricing': 'Affordable Pricing Plan',
+                'basic': 'Basic',
+                'standard': 'Standard',
+                'premium': 'Premium',
+                'pricing-text': 'This is an excellent option for people & small businesses who are starting out.',
+                'per-month': '/Per month',
+                'up-to-10-members': 'Up to 10 Members per month',
+                'cultivation-plans': 'Cultivation plans and field boundaries',
+                'scouting-app': 'Scouting app/module',
+                'satellite-moisture': 'Satellite relative crop moisture',
+                'choose-your-plan': 'Choose Your plan',
+                
+                // Blog Section
+                'news': 'News',
+                'latest-news': 'Our Latest News & Blog',
+                'view-all-post': 'View All Post',
+                'by-admin': 'by admin',
+                'blog-title-1': 'The rise of AI and Robotics in retail customer experiences',
+                'blog-title-2': 'How AI is Transforming Businesses Across Industries',
+                'blog-title-3': 'Understanding Deep Learning and Neural Networks in AI',
+                
+                // Footer
+                'get-started-footer': 'Get Started',
+                'lets-make-great': 'Let\'s Make Something Great Together',
+                'footer-about-text': 'Data privacy and security are at the core of our operations, ensuring compliance with global standards like GDPR and HIPAA.',
+                'quick-links': 'Useful Links',
+                'company': 'Company',
+                'what-we-offer': 'What we Offer',
+                'our-story': 'Our Story',
+                'latest-posts': 'Latest Posts',
+                'help-center': 'Help Center',
+                'our-partners': 'Our Partners',
+                'our-service': 'Our Service',
+                'robotic-automation': 'Robotic Automation',
+                'education-science-footer': 'Education & Science',
+                'machine-learning-footer': 'Machine Learning',
+                'predictive-analysis': 'Predictive Analysis',
+                'data-security': 'Data Security',
+                'get-the-app': 'Get the app',
+                'suggest-connecting': 'We suggest connecting apps',
+                'all-rights-reserved': 'All Rights Reserved.',
+                'privacy-policy': 'Privacy Policy',
+                'terms-services': 'Terms of services',
+                'disclaimer': 'Disclaimer'
+            },
+            ka: {
+                // Hero Section
+                'hero-title': 'გარდაქმენი იდეები მაღალეფექტურ ციფრულ პროდუქტებად',
+                'hero-text': 'იდეიდან კოდამდე — ვქმნით სწრაფ და ესთეტიკურ ვებგადაწყვეტილებებს, მორგებულს შენს ბიზნეს მიზნებზე.',
+                'discover-more': 'სერვისები',
+                'contact-us': 'კონტაქტი',
+                
+                // Navigation
+                'home': 'მთავარი',
+                'about-us': 'ჩვენს შესახებ',
+                'services': 'სერვისები',
+                'pages': 'გვერდები',
+                'blog': 'ბლოგი',
+                'get-started': 'დავიწყოთ ახლა',
+                'contact-us-nav': 'კონტაქტი',
+                
+                // About Section
+                'who-we-are': 'ვინ ვართ ჩვენ?',
+                'about-text': 'OMNIframe არის შენი ტექნოლოგიური პარტნიორი თანამედროვე ვებსაიტების შესაქმნელად — სწრაფი, ლამაზი და ზუსტად მიზნებზე მორგებული.',
+                'customers-satisfaction': '100% მომხმარებელთა კმაყოფილება',
+                'quality-assurance': 'ხარისხის გარანტია',
+                'about-feature-text': 'ჩვენ ვმუშაობთ გამოცდილი AI სპეციალისტების, მონაცემთა მეცნიერების და ინდუსტრიის ექსპერტების გუნდთან, რომლებიც მზად არიან საზღვრების გადასალახად.',
+                
+                // Services Section
+                'our-services': 'ჩვენი სერვისები',
+                'services-title': 'ინტელექტუალური ინოვაციები: მორგებული AI გადაწყვეტილებები',
+                'ai-development': 'AI განვითარება',
+                'ai-development-text': 'შექმნა და ოპტიმიზაცია მოდელების, გამოყენებით საკუთარი ან მომხმარებლის მონაცემების. AI მოდელი მორგებული კონკრეტულ ბიზნესზე.',
+                'data-analytics': 'მონაცემთა ანალიტიკა',
+                'data-analytics-text': 'შეხედულებების მიწოდება დროებითი გადაწყვეტილებებისთვის. ტენდენციების, რისკების და შესაძლებლობების პროგნოზირება.',
+                'machine-learning': 'მანქანური სწავლება',
+                'machine-learning-text': 'ალგორითმების შექმნა მორგებული კონკრეტულ საჭიროებებზე. მოწინავე ტექნიკის გამოყენება სიზუსტისა და ეფექტურობის გასაუმჯობესებლად.',
+                'ai-consulting': 'AI კონსულტაციის სერვისები',
+                'ai-consulting-text': 'ბიზნესების დახმარება ყველაზე ეფექტური AI აპლიკაციების იდენტიფიცირებაში. ბიზნესის მზადყოფნის შეფასება.',
+                'automation-process': 'ავტომატიზაცია და პროცესი',
+                'automation-process-text': 'განმეორებითი ამოცანების ავტომატიზაცია, როგორიცაა მონაცემთა შეყვანა ან ინვოისების დამუშავება. მომხმარებელთა მხარდაჭერის გაუმჯობესება.',
+                'education-science': 'განათლება და მეცნიერება',
+                'education-science-text': 'დიაგნოსტიკური ინსტრუმენტები, პაციენტების მართვის სისტემები და პროგნოზირებადი მოვლა. თაღლითობის აღმოჩენა, ალგორითმული ვაჭრობა,',
+                'ai-research': 'AI კვლევა',
+                'ai-research-text': 'განმეორებითი ამოცანების ავტომატიზაცია, როგორიცაა მონაცემთა შეყვანა ან ინვოისების დამუშავება. ეფექტურობის გაუმჯობესება ინტეგრაციით.',
+                'ai-cybersecurity': 'AI კიბერ უსაფრთხოებაში',
+                'ai-cybersecurity-text': 'სისტემის მთლიანობის უზრუნველყოფა AI-ზე დაფუძნებული ზედამხედველობით. AI-ის გამოყენება ანომალიების აღმოსაჩენად და პრევენციისთვის.',
+                'read-more': 'მეტის ნახვა',
+                
+                // Why Choose Us Section
+                'why-choose-us': 'რატომ აირჩიოთ ჩვენ',
+                'why-choose-title': 'ჩვენი მიზანია ვაშენოთ სამყარო, სადაც ტექნოლოგია ემსახურება კაცობრიობას.',
+                'years-experience': 'წლის გამოცდილება',
+                'technology-integration': 'ტექნოლოგიების ინტეგრაცია',
+                'certified-experts': 'სერტიფიცირებული ექსპერტები',
+                'effortless-engagement': 'უმარტივესი ურთიერთობა',
+                'future-vision': 'მომავლის ხედვა და მისია',
+                
+                // Project Section
+                'case-study': 'ქეისის შესწავლა',
+                'ai-projects-case': 'AI პროექტების ქეისის შესწავლა',
+                'case-study-text': 'AI სააგენტო არის სპეციალიზებული ორგანიზაცია, რომელიც ეძღვნება ბიზნესებისა და ორგანიზაციების დახმარებას ხელოვნური ინტელექტის გამოყენებით მათი მიზნების მისაღწევად.',
+                'robotics-program': 'რობოტიკა, პროგრამა',
+                'ai-machine-learning': 'AI მანქანური სწავლება',
+                'user-research': 'მომხმარებელთა კვლევა',
+                'speech-recognizer': 'საუბრის ამომცნობი ღრმა სწავლების გამოყენებით',
+                
+                // Testimonial Section
+                'testimonials': 'მიმოხილვები',
+                'what-clients-say': 'რას ამბობენ ჩვენი კლიენტები',
+                'co-founder': 'თანადამფუძნებელი',
+                'co-founder-xyz': 'თანადამფუძნებელი, XYZ',
+                
+                // Feature Section
+                'advanced-technology': 'მოწინავე ტექნოლოგია',
+                'future-is-here': 'მომავალი აქ არის: მოწინავე AI ტექნოლოგია',
+                'tech-support': 'ტექნიკური მხარდაჭერა',
+                'robo-genius': 'რობო გენიუსი',
+                'image-generation': 'სურათის გენერაცია',
+                'chatbots': 'ჩატბოტები',
+                'feature-text': 'ბიზნესების უფლებამოსილების გაზრდა ინტელექტუალური, მასშტაბური და ეფექტური გადაწყვეტილებებით, რომლებიც ხელს უწყობენ პროგრესს',
+                
+                // FAQ Section
+                'faqs': 'ხშირი კითხვები',
+                'frequently-asked': 'ხშირად დასმული კითხვები',
+                'faq-question-1': 'რა არის AI სტარტაპი და რა სერვისებს გთავაზობთ?',
+                'faq-question-2': 'გთავაზობთ წინასწარ შექმნილ AI მოდელებს თუ ყველაფერს ნულიდან ქმნით?',
+                'faq-question-3': 'რა არის AI გადაწყვეტილების შემუშავების პროცესი ჩემი ბიზნესისთვის?',
+                'faq-question-4': 'რა არის AI სტარტაპი და რა სერვისებს გთავაზობთ?',
+                'faq-question-5': 'როგორ უზრუნველყოფთ მონაცემთა კონფიდენციალურობას და შესაბამისობას რეგულაციებთან?',
+                'faq-answer': 'AI Software as a Service სტარტაპი აერთიანებს ღრუბლოვანი პლატფორმების მასშტაბურობას ხელოვნური ინტელექტის ძალასთან, რათა მიაწოდოს ინოვაციური, მოთხოვნაზე დაფუძნებული გადაწყვეტილებები. ეს სტარტაპები ემსახურება ფართო სპექტრის ინდუსტრიებს AI-ზე დაფუძნებული ინსტრუმენტებისა და აპლიკაციების შეთავაზებით, რომლებიც წყვეტენ კონკრეტულ ბიზნეს გამოწვევებს, აუმჯობესებენ ეფექტურობას და ხელს უწყობენ მონაცემებზე დაფუძნებულ გადაწყვეტილებებს. AI ინდუსტრია სწრაფად ფართოვდება, შესაძლებლობებით ტრადიციული ინდუსტრიების დარღვევისა და სრულიად ახალი ბაზრების შექმნის. უწყვეტი წინსვლა ჰარდვერში და ალგორითმებში AI სტარტაპებს საშუალებას აძლევს მნიშვნელოვან როლს ითამაშონ მომავლის ჩამოყალიბებაში.',
+                
+                // Pricing Section
+                'pricing-plan': 'ფასების გეგმა',
+                'affordable-pricing': 'ხელმისაწვდომი ფასების გეგმა',
+                'basic': 'ძირითადი',
+                'standard': 'სტანდარტული',
+                'premium': 'პრემიუმი',
+                'pricing-text': 'ეს არის შესანიშნავი ვარიანტი ადამიანებისთვის და მცირე ბიზნესებისთვის, რომლებიც იწყებენ.',
+                'per-month': '/თვეში',
+                'up-to-10-members': '10 წევრამდე თვეში',
+                'cultivation-plans': 'მოყვანის გეგმები და ველის საზღვრები',
+                'scouting-app': 'შეგროვების აპლიკაცია/მოდული',
+                'satellite-moisture': 'სატელიტური ფარდობითი კულტურის ტენიანობა',
+                'choose-your-plan': 'აირჩიეთ თქვენი გეგმა',
+                
+                // Blog Section
+                'news': 'სიახლეები',
+                'latest-news': 'ჩვენი უახლესი სიახლეები და ბლოგი',
+                'view-all-post': 'ყველა პოსტის ნახვა',
+                'by-admin': 'ადმინისტრატორის მიერ',
+                'blog-title-1': 'AI-ისა და რობოტიკის აღმავლობა საცალო ვაჭრობის მომხმარებელთა გამოცდილებაში',
+                'blog-title-2': 'როგორ ცვლის AI ბიზნესებს ყველა ინდუსტრიაში',
+                'blog-title-3': 'ღრმა სწავლებისა და ნეირონული ქსელების გაგება AI-ში',
+                
+                // Footer
+                'get-started-footer': 'დავიწყოთ',
+                'lets-make-great': 'მოდი რაღაც დიდი შევქმნათ ერთად',
+                'footer-about-text': 'მონაცემთა კონფიდენციალურობა და უსაფრთხოება ჩვენი ოპერაციების ბირთვშია, რაც უზრუნველყოფს შესაბამისობას გლობალურ სტანდარტებთან, როგორიცაა GDPR და HIPAA.',
+                'quick-links': 'სასარგებლო ბმულები',
+                'company': 'კომპანია',
+                'what-we-offer': 'რას ვთავაზობთ',
+                'our-story': 'ჩვენი ისტორია',
+                'latest-posts': 'ბოლო პოსტები',
+                'help-center': 'დახმარების ცენტრი',
+                'our-partners': 'ჩვენი პარტნიორები',
+                'our-service': 'ჩვენი სერვისი',
+                'robotic-automation': 'რობოტული ავტომატიზაცია',
+                'education-science-footer': 'განათლება და მეცნიერება',
+                'machine-learning-footer': 'მანქანური სწავლება',
+                'predictive-analysis': 'პროგნოზირებადი ანალიზი',
+                'data-security': 'მონაცემთა უსაფრთხოება',
+                'get-the-app': 'ჩამოტვირთეთ აპლიკაცია',
+                'suggest-connecting': 'ჩვენ ვთავაზობთ აპლიკაციების დაკავშირებას',
+                'all-rights-reserved': 'ყველა უფლება დაცულია.',
+                'privacy-policy': 'კონფიდენციალურობის პოლიტიკა',
+                'terms-services': 'სერვისის პირობები',
+                'disclaimer': 'განთავისუფლება'
+            }
+        };
+        
+        const t = translations[lang] || translations.en;
+        
+        // Function to translate text content
+        function translateTextContent(element, key) {
+            if (element && t[key]) {
+                element.textContent = t[key];
+            }
+        }
+        
+        // Function to translate HTML content
+        function translateHTMLContent(element, key) {
+            if (element && t[key]) {
+                element.innerHTML = t[key];
+            }
+        }
+        
+        // Hero Section
+        translateTextContent(document.querySelector('.hero-title'), 'hero-title');
+        translateTextContent(document.querySelector('.hero-text'), 'hero-text');
+        
+        // Navigation
+        const navLinks = {
+            'a[href="index.html"]': 'home',
+            'a[href="about.html"]': 'about-us',
+            'a[href="service.html"]': 'services',
+            'a[href="blog.html"]': 'blog',
+            'a[href="contact.html"]': 'contact-us-nav'
+        };
+        
+        Object.keys(navLinks).forEach(selector => {
+            const elements = document.querySelectorAll(selector);
+            elements.forEach(element => {
+                if (element.textContent.trim() === translations.en[navLinks[selector]]) {
+                    translateTextContent(element, navLinks[selector]);
+                }
+            });
+        });
+        
+        // Hero buttons
+        const heroButtons = {
+            '.th-btn.style2[href="service.html"]': 'discover-more',
+            '.th-btn.style-border2[href="contact.html"]': 'contact-us',
+            '.th-btn.style2[href="contact.html"]': 'get-started'
+        };
+        
+        Object.keys(heroButtons).forEach(selector => {
+            const element = document.querySelector(selector);
+            if (element) {
+                translateTextContent(element, heroButtons[selector]);
+            }
+        });
+        
+        // About Section
+        translateTextContent(document.querySelector('.sub-title.style2.before-none'), 'who-we-are');
+        translateTextContent(document.querySelector('.sec-title[data-cue="slideInLeft"][data-delay="300"]'), 'about-text');
+        
+        // About feature cards
+        const aboutCards = document.querySelectorAll('.about-feature-card .box-title');
+        aboutCards.forEach((card, index) => {
+            const keys = ['customers-satisfaction', 'quality-assurance'];
+            if (keys[index]) {
+                translateTextContent(card, keys[index]);
+            }
+        });
+        
+        const aboutTexts = document.querySelectorAll('.about-feature-card .box-text');
+        aboutTexts.forEach(() => {
+            translateTextContent(this, 'about-feature-text');
+        });
+        
+        // Services Section
+        translateTextContent(document.querySelector('.sub-title:contains("OUR SERVICES")'), 'our-services');
+        translateTextContent(document.querySelector('.sec-title:contains("Intelligent Innovations")'), 'services-title');
+        
+        // Service cards
+        const serviceCards = document.querySelectorAll('.service-card');
+        const serviceKeys = [
+            'ai-development', 'data-analytics', 'machine-learning', 
+            'ai-consulting', 'automation-process', 'education-science',
+            'ai-research', 'ai-cybersecurity'
+        ];
+        
+        serviceCards.forEach((card, index) => {
+            const titleElement = card.querySelector('.box-title a');
+            const textElement = card.querySelector('.box-text');
+            const readMoreElement = card.querySelector('.link-btn');
+            
+            if (titleElement && serviceKeys[index]) {
+                translateTextContent(titleElement, serviceKeys[index]);
+                translateTextContent(textElement, serviceKeys[index] + '-text');
+                if (readMoreElement) {
+                    translateHTMLContent(readMoreElement, 'read-more');
+                }
+            }
+        });
+        
+        // Why Choose Us Section
+        translateTextContent(document.querySelector('.sub-title:contains("WHY CHOOSE US")'), 'why-choose-us');
+        translateTextContent(document.querySelector('.sec-title:contains("Our goal is to build")'), 'why-choose-title');
+        translateTextContent(document.querySelector('.counter-text:contains("Years Of Experience")'), 'years-experience');
+        
+        const whyCards = document.querySelectorAll('.why-card');
+        const whyTitles = ['technology-integration', 'certified-experts', 'effortless-engagement', 'future-vision'];
+        whyCards.forEach((card, index) => {
+            const titleElement = card.querySelector('.box-title');
+            if (titleElement && whyTitles[index]) {
+                translateTextContent(titleElement, whyTitles[index]);
+            }
+        });
+        
+        // Project Section
+        translateTextContent(document.querySelector('.sub-title:contains("Case Study")'), 'case-study');
+        translateTextContent(document.querySelector('.sec-title:contains("AI Projects Case Study")'), 'ai-projects-case');
+        translateTextContent(document.querySelector('.sec-text:contains("An AI agency is a specialized")'), 'case-study-text');
+        
+        // Feature Section
+        translateTextContent(document.querySelector('.sub-title:contains("advanced technology")'), 'advanced-technology');
+        translateTextContent(document.querySelector('.sec-title:contains("The Future is Here")'), 'future-is-here');
+        
+        const featureCards = document.querySelectorAll('.feature-card');
+        const featureTitles = ['tech-support', 'robo-genius', 'image-generation', 'chatbots'];
+        featureCards.forEach((card, index) => {
+            const titleElement = card.querySelector('.box-title');
+            const textElement = card.querySelector('.box-text');
+            if (titleElement && featureTitles[index]) {
+                translateTextContent(titleElement, featureTitles[index]);
+                translateTextContent(textElement, 'feature-text');
+            }
+        });
+        
+        // FAQ Section
+        translateTextContent(document.querySelector('.sub-title:contains("Faq\'s")'), 'faqs');
+        translateTextContent(document.querySelector('.sec-title:contains("Frequently asked")'), 'frequently-asked');
+        
+        const faqQuestions = document.querySelectorAll('.accordion-button');
+        const faqKeys = ['faq-question-1', 'faq-question-2', 'faq-question-3', 'faq-question-4', 'faq-question-5'];
+        faqQuestions.forEach((question, index) => {
+            if (faqKeys[index]) {
+                translateTextContent(question, faqKeys[index]);
+            }
+        });
+        
+        const faqAnswers = document.querySelectorAll('.faq-text');
+        faqAnswers.forEach(answer => {
+            translateTextContent(answer, 'faq-answer');
+        });
+        
+        // Pricing Section
+        translateTextContent(document.querySelector('.sub-title:contains("PRICING PLAN")'), 'pricing-plan');
+        translateTextContent(document.querySelector('.sec-title:contains("Affordable Pricing")'), 'affordable-pricing');
+        
+        const pricingCards = document.querySelectorAll('.price-card');
+        const pricingTitles = ['basic', 'standard', 'premium'];
+        pricingCards.forEach((card, index) => {
+            const titleElement = card.querySelector('.box-title');
+            const textElement = card.querySelector('.box-text');
+            const durationElement = card.querySelector('.duration');
+            const subtitleElement = card.querySelector('.box-subtitle');
+            const planButton = card.querySelector('.th-btn');
+            
+            if (titleElement && pricingTitles[index]) {
+                translateTextContent(titleElement, pricingTitles[index]);
+                translateTextContent(textElement, 'pricing-text');
+                translateTextContent(durationElement, 'per-month');
+                translateTextContent(subtitleElement, 'up-to-10-members');
+                translateTextContent(planButton, 'choose-your-plan');
+            }
+        });
+        
+        // Blog Section
+        translateTextContent(document.querySelector('.sub-title:contains("News")'), 'news');
+        translateTextContent(document.querySelector('.sec-title:contains("Our Latest News")'), 'latest-news');
+        translateTextContent(document.querySelector('.th-btn.style-border:contains("View All Post")'), 'view-all-post');
+        
+        const blogTitles = document.querySelectorAll('.blog-card .box-title a');
+        const blogTitleKeys = ['blog-title-1', 'blog-title-2', 'blog-title-3'];
+        blogTitles.forEach((title, index) => {
+            if (blogTitleKeys[index]) {
+                translateTextContent(title, blogTitleKeys[index]);
+            }
+        });
+        
+        const byAdminElements = document.querySelectorAll('.blog-meta a:contains("by admin")');
+        byAdminElements.forEach(element => {
+            translateTextContent(element, 'by-admin');
+        });
+        
+        // Footer
+        translateTextContent(document.querySelector('.sub-title:contains("Get Started")'), 'get-started-footer');
+        translateTextContent(document.querySelector('.sec-title:contains("Let\'s Make Something")'), 'lets-make-great');
+        translateTextContent(document.querySelector('.about-text'), 'footer-about-text');
+        
+        const footerWidgets = {
+            '.widget_title:contains("Useful Links")': 'quick-links',
+            '.widget_title:contains("Company")': 'company',
+            '.widget_title:contains("Our Service")': 'our-service',
+            '.widget_title:contains("Get the app")': 'get-the-app'
+        };
+        
+        Object.keys(footerWidgets).forEach(selector => {
+            const element = document.querySelector(selector);
+            if (element) {
+                translateTextContent(element, footerWidgets[selector]);
+            }
+        });
+        
+        // Footer links
+        const footerLinks = {
+            'a[href="about.html"]:contains("What we Offer")': 'what-we-offer',
+            'a[href="about.html"]:contains("Our Story")': 'our-story',
+            'a[href="blog.html"]:contains("Latest Posts")': 'latest-posts',
+            'a[href="contact.html"]:contains("Help Center")': 'help-center',
+            'a[href="about.html"]:contains("Our Partners")': 'our-partners',
+            'a[href="service.html"]:contains("Robotic Automation")': 'robotic-automation',
+            'a[href="service.html"]:contains("Education & Science")': 'education-science-footer',
+            'a[href="service.html"]:contains("Machine Learning")': 'machine-learning-footer',
+            'a[href="service.html"]:contains("Predictive Analysis")': 'predictive-analysis',
+            'a[href="service.html"]:contains("Data Security")': 'data-security',
+            '.footer-text:contains("We suggest connecting apps")': 'suggest-connecting',
+            '.copyright-text:contains("All Rights Reserved")': 'all-rights-reserved',
+            'a[href="about.html"]:contains("Privacy Policy")': 'privacy-policy',
+            'a[href="about.html"]:contains("Terms of services")': 'terms-services',
+            'a[href="about.html"]:contains("Disclaimer")': 'disclaimer'
+        };
+        
+        Object.keys(footerLinks).forEach(selector => {
+            const elements = document.querySelectorAll(selector);
+            elements.forEach(element => {
+                if (element.textContent.trim() === translations.en[footerLinks[selector]]) {
+                    translateTextContent(element, footerLinks[selector]);
+                }
+            });
+        });
+    }
+});
+
+// scrollCue
+scrollCue.init({
+    percentage: 0.99,
+    duration : 900,
+});
+
+
+
+
+
+
