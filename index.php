@@ -1,0 +1,1301 @@
+<!doctype html>
+<html class="no-js" lang="zxx" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Robor - AI and Automation Integration HTML Template - Home One</title>
+    <meta name="author" content="Robor">
+    <meta name="description" content="Robor - AI and Automation Integration HTML Template">
+    <meta name="keywords" content="Robor - AI and Automation Integration HTML Template">
+    <meta name="robots" content="INDEX,FOLLOW">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicons - Place favicon.ico in the root directory -->
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="assets/img/favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/img/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!--==============================
+	  Google Fonts
+	============================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+    <!--==============================
+	    All CSS File
+	============================== -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Fontawesome Icon -->
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <!-- Theme Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body class="">
+
+    <!--[if lte IE 9]>
+    	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  	<![endif]-->
+
+
+    <!--********************************
+   		Code Start From Here 
+	******************************** -->
+    <div class="cursor-follower"></div>
+
+    <!-- slider drag cursor -->
+    <!-- <div class="slider-drag-cursor"> DRAG </div> -->
+
+    <!--==============================
+     Preloader
+  ==============================-->
+    <div class="preloader ">
+        <button class="th-btn preloaderCls">Cancel Preloader </button>
+        <div class="preloader-inner">
+            <div class="bounce">
+                <img src="assets/img/logo-icon.svg" alt="img">
+            </div>
+            <span class="loader">
+                Robor
+                <span class="loading-text">Robor</span>
+            </span>
+        </div>
+    </div>
+
+
+    <!--==============================
+    Mobile Menu
+  ============================== -->
+    <div class="th-menu-wrapper">
+        <div class="th-menu-area text-center">
+            <button class="th-menu-toggle"><i class="fal fa-times"></i></button>
+            <div class="mobile-logo">
+                <a href="index.html"><img src="assets/img/logo2.svg" alt="Robor"></a>
+            </div>
+            <div class="th-mobile-menu">
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li class="menu-item-has-children">
+                        <a href="#">Services</a>
+                        <ul class="sub-menu">
+                            <li><a href="service.html">Services</a></li>
+                            <li><a href="service-details.html">Service Details</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="#">Pages</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item-has-children">
+                                <a href="#">Shop</a>
+                                <ul class="sub-menu">
+                                    <li><a href="shop.html">Shop</a></li>
+                                    <li><a href="shop-details.html">Shop Details</a></li>
+                                    <li><a href="cart.html">Cart Page</a></li>
+                                    <li><a href="checkout.html">Checkout</a></li>
+                                    <li><a href="wishlist.html">Wishlist</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="project.html">Project</a></li>
+                            <li><a href="project-details.html">Project Details</a></li>
+                            <li><a href="team.html">Our Team</a></li>
+                            <li><a href="team-details.html">Team Details</a></li>
+                            <li><a href="chatbot.html">Chatbot Integration</a></li>
+                            <li><a href="pricing.html">Pricing</a></li>
+                            <li><a href="testimonial.html">Testimonial</a></li>
+                            <li><a href="faq.html">FAQ'S Page</a></li>
+                            <li><a href="ai-consulting.html">AI Consulting</a></li>
+                            <li><a href="error.html">Error Page</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="#">Blog</a>
+                        <ul class="sub-menu">
+                            <li><a href="blog.html">Blog Standard</a></li>
+                            <li><a href="blog-2.html">Blog Grid</a></li>
+                            <li><a href="blog-details.html">Blog Details</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="color-scheme-wrap active">
+        <button class="switchIcon"><i class="fa-solid fa-palette"></i></button>
+        <h3 class="color-scheme-wrap-title text-center">Color Switcher</h3>
+        <div class="color-switch-btns">
+            <button data-color="#FF4F38"><i class="fa-solid fa-droplet"></i></button>
+            <button data-color="#3282FB"><i class="fa-solid fa-droplet"></i></button>
+            <button data-color="#6D30FB"><i class="fa-solid fa-droplet"></i></button>
+            <button data-color="#27AE60"><i class="fa-solid fa-droplet"></i></button>
+            <button data-color="#FF7E02"><i class="fa-solid fa-droplet"></i></button>
+        </div>
+    </div>    <!--==============================
+	Header Area
+==============================-->
+    <?php include 'includes/header.html'; ?>
+
+
+
+    <!--==============================
+Hero Area
+==============================-->
+    <div class="th-hero-wrapper hero-1 bg-attachment" id="hero">
+        <!-- Video Background -->
+        <video autoplay muted loop class="hero-video-bg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+            <source src="assets/video/abstract-swirling-energy-vortex-with-neon-light-tr-2025-06-12-01-20-09-utc.mp4" type="video/mp4">
+        </video>
+        <!-- Overlay for better text readability -->
+        <div class="hero-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4); z-index: -1;"></div>
+        <div class="hero-inner">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-10">
+                        <div class="hero-style1 text-center">
+                            <h1 class="hero-title text-white text-anim2" data-cue="slideInUp" data-delay="100">
+                                Transform Ideas into High-Impact Digital Products
+                            </h1>
+                            <p class="hero-text text-white text-anim2" data-cue="slideInUp" data-delay="300">From concept to code — we craft fast and beautifully designed web solutions tailored to your business goals.</p>
+                            <div class="btn-wrap justify-content-center" data-cue="slideInUp" data-delay="500">
+                                <a href="service.html" class="th-btn style2">Services <i class="far fa-long-arrow-right ms-2"></i></a>
+                                <a href="contact.html" class="th-btn style-border2">Contact Us <i class="far fa-long-arrow-right ms-2"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <a href="#about-sec" class="hero-scroll-wrap"></a>
+        </div>
+    </div>
+    <!--======== / Hero Section ========-->
+    <!--==============================
+Brand Area  
+==============================-->
+    <div class="bg-theme pt-60 pb-60 overflow-hidden brand-area-1">
+        <div class="container-fluid p-0">
+            <div class="brand-wrap1 text-center">
+                <div class="swiper th-slider" data-cue="slideInUp" id="brandSlider1" data-slider-options='{"breakpoints":{"0":{"slidesPerView":"auto"}},"autoplay":{"delay":0,"disableOnInteraction":false},"noSwiping":"true","speed":8000,"spaceBetween":145}'>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="blog.html" class="brand-box">
+                                <img src="assets/img/brand/brand1-1.svg" alt="Brand Logo">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="blog.html" class="brand-box">
+                                <img src="assets/img/brand/brand1-2.svg" alt="Brand Logo">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="blog.html" class="brand-box">
+                                <img src="assets/img/brand/brand1-3.svg" alt="Brand Logo">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="blog.html" class="brand-box">
+                                <img src="assets/img/brand/brand1-4.svg" alt="Brand Logo">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="blog.html" class="brand-box">
+                                <img src="assets/img/brand/brand1-5.svg" alt="Brand Logo">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="blog.html" class="brand-box">
+                                <img src="assets/img/brand/brand1-6.svg" alt="Brand Logo">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="blog.html" class="brand-box">
+                                <img src="assets/img/brand/brand1-1.svg" alt="Brand Logo">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="blog.html" class="brand-box">
+                                <img src="assets/img/brand/brand1-2.svg" alt="Brand Logo">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="blog.html" class="brand-box">
+                                <img src="assets/img/brand/brand1-3.svg" alt="Brand Logo">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="blog.html" class="brand-box">
+                                <img src="assets/img/brand/brand1-4.svg" alt="Brand Logo">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="blog.html" class="brand-box">
+                                <img src="assets/img/brand/brand1-5.svg" alt="Brand Logo">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="blog.html" class="brand-box">
+                                <img src="assets/img/brand/brand1-6.svg" alt="Brand Logo">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="blog.html" class="brand-box">
+                                <img src="assets/img/brand/brand1-1.svg" alt="Brand Logo">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="blog.html" class="brand-box">
+                                <img src="assets/img/brand/brand1-2.svg" alt="Brand Logo">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="blog.html" class="brand-box">
+                                <img src="assets/img/brand/brand1-3.svg" alt="Brand Logo">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="blog.html" class="brand-box">
+                                <img src="assets/img/brand/brand1-4.svg" alt="Brand Logo">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="blog.html" class="brand-box">
+                                <img src="assets/img/brand/brand1-5.svg" alt="Brand Logo">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="blog.html" class="brand-box">
+                                <img src="assets/img/brand/brand1-6.svg" alt="Brand Logo">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="blog.html" class="brand-box">
+                                <img src="assets/img/brand/brand1-1.svg" alt="Brand Logo">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="blog.html" class="brand-box">
+                                <img src="assets/img/brand/brand1-2.svg" alt="Brand Logo">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="blog.html" class="brand-box">
+                                <img src="assets/img/brand/brand1-3.svg" alt="Brand Logo">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="blog.html" class="brand-box">
+                                <img src="assets/img/brand/brand1-4.svg" alt="Brand Logo">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="blog.html" class="brand-box">
+                                <img src="assets/img/brand/brand1-5.svg" alt="Brand Logo">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="blog.html" class="brand-box">
+                                <img src="assets/img/brand/brand1-6.svg" alt="Brand Logo">
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div><!--==============================
+About Area  
+==============================-->
+    <div class="overflow-hidden space overflow-hidden" id="about-sec" data-bg-src="assets/img/bg/about-bg-1-1.png">
+        <div class="container">
+            <div class="about-wrap1">
+                <div class="row gy-40">
+                    <div class="col-xxl-8">
+                        <div class="title-area mb-10">
+                            <span class="sub-title style2 before-none text-anim" data-cue="slideInLeft" data-delay="200">Who We Are?</span>
+                            <h2 class="sec-title mb-0 text-anim2" data-cue="slideInLeft" data-delay="300">At our AI startup, we follow a streamlined approach to ensure the best outcomes for your business.</h2>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 align-self-center">
+                        <div class="img-box1">
+                            <div class="img2" data-cue="slideInUp" data-delay="300">
+                                <img src="assets/img/normal/about-thumb1-3.jpg" alt="About">
+                            </div>
+                            <div class="shadow-text">Robor</div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-md-6" data-cue="slideInUp">
+                        <div class="img-box1">
+                            <div class="img1">
+                                <img src="assets/img/normal/about-thumb1-1.jpg" alt="About">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-md-6" data-cue="slideInUp">
+                        <div class="img-box1">
+                            <div class="img1">
+                                <img src="assets/img/normal/about-thumb1-2.jpg" alt="About">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4">
+                        <div class="about-feature-card-wrap">
+                            <div class="about-feature-card" data-cue="slideInUp">
+                                <div class="box-icon">
+                                    <div class="color-masking">
+                                        <div class="masking-src" data-mask-src="assets/img/icon/about-feature-icon1-1.svg"></div>
+                                        <img src="assets/img/icon/about-feature-icon1-1.svg" alt="icon">
+                                    </div>
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="box-title">100% Customers Satisfaction</h4>
+                                    <p class="box-text">We bring a team of experienced AI specialists, data scientists, and industry experts committed to pushing boundaries.</p>
+                                </div>
+                            </div>
+                            <div class="about-feature-card" data-cue="slideInUp" data-delay="300">
+                                <div class="box-icon">
+                                    <div class="color-masking">
+                                        <div class="masking-src" data-mask-src="assets/img/icon/about-feature-icon1-2.svg"></div>
+                                        <img src="assets/img/icon/about-feature-icon1-2.svg" alt="icon">
+                                    </div>
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="box-title">Quality Assurance Guarantee</h4>
+                                    <p class="box-text">We bring a team of experienced AI specialists, data scientists, and industry experts committed to pushing boundaries.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--==============================
+Marquee Area  
+==============================-->
+    <div class="space-bottom" data-cue="slideInUp">
+        <div class="bg-gray4 overflow-hidden pt-40 pb-30">
+            <div class="container-fluid p-0">
+                <div class="swiper th-slider marquee-slider1" data-slider-options='{"breakpoints":{"0":{"slidesPerView":"auto"}},"autoplay":{"delay":0,"disableOnInteraction":false},"noSwiping":"true","speed":10000,"spaceBetween":30}'>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="marquee-card">
+                                <div class="marquee-icon color-masking">
+                                    <div class="masking-src" data-mask-src="assets/img/shape/star-shape1.png"></div>
+                                    <img src="assets/img/shape/star-shape1.png" alt="img">
+                                </div>
+                                <a target="_blank" href="#">
+                                    Content Generator </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="marquee-card">
+                                <div class="marquee-icon color-masking">
+                                    <div class="masking-src" data-mask-src="assets/img/shape/star-shape1.png"></div>
+                                    <img src="assets/img/shape/star-shape1.png" alt="img">
+                                </div>
+                                <a target="_blank" href="#">
+                                    AI Image Generator </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="marquee-card">
+                                <div class="marquee-icon color-masking">
+                                    <div class="masking-src" data-mask-src="assets/img/shape/star-shape1.png"></div>
+                                    <img src="assets/img/shape/star-shape1.png" alt="img">
+                                </div>
+                                <a target="_blank" href="#">
+                                    AI Technology </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="marquee-card">
+                                <div class="marquee-icon color-masking">
+                                    <div class="masking-src" data-mask-src="assets/img/shape/star-shape1.png"></div>
+                                    <img src="assets/img/shape/star-shape1.png" alt="img">
+                                </div>
+                                <a target="_blank" href="#">
+                                    Generate With Ease </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="marquee-card">
+                                <div class="marquee-icon color-masking">
+                                    <div class="masking-src" data-mask-src="assets/img/shape/star-shape1.png"></div>
+                                    <img src="assets/img/shape/star-shape1.png" alt="img">
+                                </div>
+                                <a target="_blank" href="#">
+                                    Content Generator </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="marquee-card">
+                                <div class="marquee-icon color-masking">
+                                    <div class="masking-src" data-mask-src="assets/img/shape/star-shape1.png"></div>
+                                    <img src="assets/img/shape/star-shape1.png" alt="img">
+                                </div>
+                                <a target="_blank" href="#">
+                                    AI Image Generator </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="marquee-card">
+                                <div class="marquee-icon color-masking">
+                                    <div class="masking-src" data-mask-src="assets/img/shape/star-shape1.png"></div>
+                                    <img src="assets/img/shape/star-shape1.png" alt="img">
+                                </div>
+                                <a target="_blank" href="#">
+                                    AI Technology </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="marquee-card">
+                                <div class="marquee-icon color-masking">
+                                    <div class="masking-src" data-mask-src="assets/img/shape/star-shape1.png"></div>
+                                    <img src="assets/img/shape/star-shape1.png" alt="img">
+                                </div>
+                                <a target="_blank" href="#">
+                                    Generate With Ease </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--==============================
+Service Area  
+==============================-->
+    <section class="space bg-smoke overflow-hidden" id="service-sec">
+        <div class="service-bg-shape1-1 shape-mockup" data-bottom="0" data-left="50%">
+            <img src="assets/img/shape/bg-shape1.png" alt="img">
+        </div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xxl-8 col-xl-9 col-lg-8 col-md-10">
+                    <div class="title-area text-center">
+                        <div class="shadow-title">Services</div>
+                        <span class="sub-title text-anim" data-cue="slideInUp">OUR SERVICES</span>
+                        <h2 class="sec-title text-anim2" data-cue="slideInUp">Intelligent Innovations: Tailored AI Solutions</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row gy-4 justify-content-center">
+                <div class="col-xxl-3 col-xl-4 col-md-6" data-cue="slideInUp">
+                    <div class="service-card">
+                        <div class="box-icon">
+                            <div class="color-masking">
+                                <div class="masking-src" data-mask-src="assets/img/icon/service/service_icon_1_1.svg"></div>
+                                <img src="assets/img/icon/service/service_icon_1_1.svg" alt="icon">
+                            </div>
+                        </div>
+                        <h3 class="box-title"><a href="service.html">AI Development</a></h3>
+                        <p class="box-text">Creating & optimizing models using proprietary or customer data. AI model tailored to specific business.</p>
+                        <a href="service-details.html" class="link-btn style4">Read More <i class="fas fa-long-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+                <div class="col-xxl-3 col-xl-4 col-md-6" data-cue="slideInUp">
+                    <div class="service-card">
+                        <div class="box-icon">
+                            <div class="color-masking">
+                                <div class="masking-src" data-mask-src="assets/img/icon/service/service_icon_1_2.svg"></div>
+                                <img src="assets/img/icon/service/service_icon_1_2.svg" alt="icon">
+                            </div>
+                        </div>
+                        <h3 class="box-title"><a href="service.html">Data Analytics</a></h3>
+                        <p class="box-text">Providing insights for time-sensitive decisions. Forecasting trends, risks, and opportunities.</p>
+                        <a href="service-details.html" class="link-btn style4">Read More <i class="fas fa-long-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+                <div class="col-xxl-3 col-xl-4 col-md-6" data-cue="slideInUp">
+                    <div class="service-card">
+                        <div class="box-icon">
+                            <div class="color-masking">
+                                <div class="masking-src" data-mask-src="assets/img/icon/service/service_icon_1_3.svg"></div>
+                                <img src="assets/img/icon/service/service_icon_1_3.svg" alt="icon">
+                            </div>
+                        </div>
+                        <h3 class="box-title"><a href="service.html">Machine Learning</a></h3>
+                        <p class="box-text">Building algorithms tailored to specific needs. Using advanced techniques to improve accuracy and efficiency.</p>
+                        <a href="service-details.html" class="link-btn style4">Read More <i class="fas fa-long-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+                <div class="col-xxl-3 col-xl-4 col-md-6" data-cue="slideInUp">
+                    <div class="service-card">
+                        <div class="box-icon">
+                            <div class="color-masking">
+                                <div class="masking-src" data-mask-src="assets/img/icon/service/service_icon_1_4.svg"></div>
+                                <img src="assets/img/icon/service/service_icon_1_4.svg" alt="icon">
+                            </div>
+                        </div>
+                        <h3 class="box-title"><a href="service.html">AI Consulting Services</a></h3>
+                        <p class="box-text">Helping businesses identify the most impactful AI applications. Evaluating a business’s preparedness.</p>
+                        <a href="service-details.html" class="link-btn style4">Read More <i class="fas fa-long-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+                <div class="col-xxl-3 col-xl-4 col-md-6" data-cue="slideInUp">
+                    <div class="service-card">
+                        <div class="box-icon">
+                            <div class="color-masking">
+                                <div class="masking-src" data-mask-src="assets/img/icon/service/service_icon_1_5.svg"></div>
+                                <img src="assets/img/icon/service/service_icon_1_5.svg" alt="icon">
+                            </div>
+                        </div>
+                        <h3 class="box-title"><a href="service.html">Automation and Process</a></h3>
+                        <p class="box-text">Automating repetitive tasks like data entry or invoice processing. Enhancing customer support.</p>
+                        <a href="service-details.html" class="link-btn style4">Read More <i class="fas fa-long-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+                <div class="col-xxl-3 col-xl-4 col-md-6" data-cue="slideInUp">
+                    <div class="service-card">
+                        <div class="box-icon">
+                            <div class="color-masking">
+                                <div class="masking-src" data-mask-src="assets/img/icon/service/service_icon_1_6.svg"></div>
+                                <img src="assets/img/icon/service/service_icon_1_6.svg" alt="icon">
+                            </div>
+                        </div>
+                        <h3 class="box-title"><a href="service.html">Education & Science</a></h3>
+                        <p class="box-text">Diagnostic tools, patient management systems, and predictive care. Fraud detection, algorithmic trading,</p>
+                        <a href="service-details.html" class="link-btn style4">Read More <i class="fas fa-long-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+                <div class="col-xxl-3 col-xl-4 col-md-6" data-cue="slideInUp">
+                    <div class="service-card">
+                        <div class="box-icon">
+                            <div class="color-masking">
+                                <div class="masking-src" data-mask-src="assets/img/icon/service/service_icon_1_7.svg"></div>
+                                <img src="assets/img/icon/service/service_icon_1_7.svg" alt="icon">
+                            </div>
+                        </div>
+                        <h3 class="box-title"><a href="service.html">AI Research</a></h3>
+                        <p class="box-text">Automating repetitive tasks like data entry or invoice processing. Enhancing efficiency by integrating.</p>
+                        <a href="service-details.html" class="link-btn style4">Read More <i class="fas fa-long-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+                <div class="col-xxl-3 col-xl-4 col-md-6" data-cue="slideInUp">
+                    <div class="service-card">
+                        <div class="box-icon">
+                            <div class="color-masking">
+                                <div class="masking-src" data-mask-src="assets/img/icon/service/service_icon_1_8.svg"></div>
+                                <img src="assets/img/icon/service/service_icon_1_8.svg" alt="icon">
+                            </div>
+                        </div>
+                        <h3 class="box-title"><a href="service.html">AI in Cybersecurity</a></h3>
+                        <p class="box-text">Ensuring system integrity through AI-driven oversight. Using AI to detect anomalies and prevent.</p>
+                        <a href="service-details.html" class="link-btn style4">Read More <i class="fas fa-long-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--==============================
+Why Choose Us Area  
+==============================-->
+    <div class="why-sec-1 overflow-hidden space bg-black2 overflow-hidden">
+        <div class="container">
+            <div class="row gy-40 gx-80">
+                <div class="col-xxl-7">
+                    <div class="title-area mb-60">
+                        <span class="sub-title text-anim before-none" data-cue="slideInLeft">WHY CHOOSE US</span>
+                        <h2 class="sec-title text-white text-anim2" data-cue="slideInLeft">Our goal is to build a world where technology serves humanity.</h2>
+                    </div>
+                    <div class="why-img-box1" data-cue="slideInUp">
+                        <img src="assets/img/normal/why-thumb1-1.jpg" alt="img">
+                    </div>
+                </div>
+                <div class="col-xxl-5">
+                    <div class="why-counter-wrap-1">
+                        <div class="why-counter-card">
+                            <h2 class="box-number text-white" data-cue="slideInUp"><span class="counter-number">24</span><span class="counter-marker">+</span></h2>
+                            <h4 class="counter-text text-white" data-cue="slideInUp">Years Of Experience</h4>
+                        </div>
+                    </div>
+                    <div class="why-card-wrap">
+                        <div class="circle-tag" data-cue="slideInUp">
+                            <span class="circle-title-anime">ROBOR - AI AND AUTOMATION INTEGRATION.</span>
+                            <a href="#" class="icon-btn">
+                                <i class="fal fa-long-arrow-right"></i>
+                            </a>
+                        </div>
+                        <div class="why-card" data-cue="slideInUp">
+                            <div class="box-number">
+                                01.
+                            </div>
+                            <div class="box-details">
+                                <h4 class="box-title">Technology Integration</h4>
+                                <p class="box-text">We bring a team of experienced AI specialists, data scientists, and industry experts committed to pushing.</p>
+                            </div>
+                        </div>
+                        <div class="why-card" data-cue="slideInUp">
+                            <div class="box-number">
+                                02.
+                            </div>
+                            <div class="box-details">
+                                <h4 class="box-title">Certified Experts</h4>
+                                <p class="box-text">We bring a team of experienced AI specialists, data scientists, and industry experts committed to pushing.</p>
+                            </div>
+                        </div>
+                        <div class="why-card" data-cue="slideInUp">
+                            <div class="box-number">
+                                03.
+                            </div>
+                            <div class="box-details">
+                                <h4 class="box-title">Effortless Engagement</h4>
+                                <p class="box-text">We bring a team of experienced AI specialists, data scientists, and industry experts committed to pushing.</p>
+                            </div>
+                        </div>
+                        <div class="why-card" data-cue="slideInUp">
+                            <div class="box-number">
+                                04.
+                            </div>
+                            <div class="box-details">
+                                <h4 class="box-title">Future Vision and Mission</h4>
+                                <p class="box-text">We bring a team of experienced AI specialists, data scientists, and industry experts committed to pushing.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div><!--==============================
+Project Area  
+==============================-->
+    <section class="space overflow-hidden" id="project-sec">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xxl-6 col-xl-8">
+                    <div class="title-area text-center">
+                        <div class="shadow-title style2">Case</div>
+                        <span class="sub-title text-anim" data-cue="slideInUp">Case Study</span>
+                        <h2 class="sec-title text-anim2" data-cue="slideInUp">AI Projects Case Study</h2>
+                        <p class="sec-text" data-cue="slideInUp">An AI agency is a specialized organization dedicated to helping businesses and organizations leverage artificial intelligence to achieve their goals.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container th-container">
+            <div class="slider-area">
+                <div class="swiper th-slider project-slider1" id="projectSlider1" data-slider-options='{"paginationType":"progressbar","breakpoints":{"0":{"slidesPerView":1},"1000":{"slidesPerView":"2"}}}'>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="project-card">
+                                <div class="box-img">
+                                    <img src="assets/img/project/project1-1.jpg" alt="project image">
+                                </div>
+                                <div class="box-content">
+                                    <p class="box-subtitle">Robotics, Program</p>
+                                    <h3 class="box-title"><a href="project-details.html">AI Machine Learning</a></h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="project-card">
+                                <div class="box-img">
+                                    <img src="assets/img/project/project1-2.jpg" alt="project image">
+                                </div>
+                                <div class="box-content">
+                                    <p class="box-subtitle">User Research</p>
+                                    <h3 class="box-title"><a href="project-details.html">Speech recognizer using deep learning</a></h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="project-card">
+                                <div class="box-img">
+                                    <img src="assets/img/project/project1-1.jpg" alt="project image">
+                                </div>
+                                <div class="box-content">
+                                    <p class="box-subtitle">Robotics, Program</p>
+                                    <h3 class="box-title"><a href="project-details.html">AI Machine Learning</a></h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="project-card">
+                                <div class="box-img">
+                                    <img src="assets/img/project/project1-2.jpg" alt="project image">
+                                </div>
+                                <div class="box-content">
+                                    <p class="box-subtitle">User Research</p>
+                                    <h3 class="box-title"><a href="project-details.html">Speech recognizer using deep learning</a></h3>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- pagination -->
+                    <div class="slider-pagination-wrap mt-60">
+                        <div class="slider-pagination2"></div>
+                        <div class="slider-pagination"></div>
+                        <div class="icon-box">
+                            <button data-slider-prev="#projectSlider1" class="slider-arrow style2 default"><i class="far fa-arrow-left"></i></button>
+                            <button data-slider-next="#projectSlider1" class="slider-arrow style2 default"><i class="far fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--==============================
+Testimonial Area  
+==============================-->
+    <section class="testi-area-1 space overflow-hidden bg-smoke" id="testi-sec">
+        <div class="container">
+            <div class="row gy-50 flex-row-reverse">
+                <div class="col-xl-7">
+                    <div class="testi-thumb1-1">
+                        <div class="img1" data-cue="slideInRight">
+                            <img src="assets/img/testimonial/testi-thumb1-1.jpg" alt="img">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-5">
+                    <div class="title-area">
+                        <span class="sub-title style2 before-none text-anim" data-cue="slideInUp">Testimonials</span>
+                        <h2 class="sec-title text-anim2" data-cue="slideInUp">What Our Clients Say About us</h2>
+                    </div>
+                    <div class="slider-area testi-slider1" data-cue="slideInUp">
+                        <div class="swiper th-slider has-shadow" id="testiSlide1" data-slider-options='{"autoHeight": "true","breakpoints":{"0":{"slidesPerView":1},"768":{"slidesPerView":"2"},"992":{"slidesPerView":"2"},"1200":{"slidesPerView":"2"},"1600":{"slidesPerView":"2"}}}'>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="testi-card">
+                                        <div class="testi-card_review">
+                                            <i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i>
+                                        </div>
+                                        <p class="box-text">“Sit molestie orci a lacus. Consectetur eu accumsan aliquet nisi. Eget mauris commodo dis sed arcu integer fringilla. Egestas vitae non cum sit. Tellus nec in sapien maecenas in vel.”</p>
+                                        <div class="testi-card-profile">
+                                            <div class="testi-card-avater">
+                                                <img src="assets/img/testimonial/testi1-1.jpg" alt="img">
+                                            </div>
+                                            <div class="testi-card-profile-detaile">
+                                                <h3 class="box-title">Michael Lacefield</h3>
+                                                <p class="box-desig">Co-founder, XYZ</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="testi-card">
+                                        <div class="testi-card_review">
+                                            <i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i>
+                                        </div>
+                                        <p class="box-text">“Eget mauris commodo dis sed arcu integer fringilla. Sit molestie orci a lacus. Consectetur eu accumsan aliquet nisi. Egestas vitae non cum sit. Tellus nec in sapien maecenas in vel.”</p>
+                                        <div class="testi-card-profile">
+                                            <div class="testi-card-avater">
+                                                <img src="assets/img/testimonial/testi1-2.jpg" alt="img">
+                                            </div>
+                                            <div class="testi-card-profile-detaile">
+                                                <h3 class="box-title">Harry Callum</h3>
+                                                <p class="box-desig">Co-founder</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="testi-card">
+                                        <div class="testi-card_review">
+                                            <i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i>
+                                        </div>
+                                        <p class="box-text">“Consectetur eu accumsan aliquet nisi. Sit molestie orci a lacus. Eget mauris commodo dis sed arcu integer fringilla. Egestas vitae non cum sit. Tellus nec in sapien maecenas in vel.”</p>
+                                        <div class="testi-card-profile">
+                                            <div class="testi-card-avater">
+                                                <img src="assets/img/testimonial/testi1-3.jpg" alt="img">
+                                            </div>
+                                            <div class="testi-card-profile-detaile">
+                                                <h3 class="box-title">Mason Robert</h3>
+                                                <p class="box-desig">Co-founder, XYZ</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="testi-card">
+                                        <div class="testi-card_review">
+                                            <i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i>
+                                        </div>
+                                        <p class="box-text">“Tellus nec in sapien maecenas in vel. Sit molestie orci a lacus. Consectetur eu accumsan aliquet nisi. Eget mauris commodo dis sed arcu integer fringilla. Egestas vitae non cum sit.”</p>
+                                        <div class="testi-card-profile">
+                                            <div class="testi-card-avater">
+                                                <img src="assets/img/testimonial/testi1-4.jpg" alt="img">
+                                            </div>
+                                            <div class="testi-card-profile-detaile">
+                                                <h3 class="box-title">Amelia Margaret</h3>
+                                                <p class="box-desig">Co-founder</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="testi-card">
+                                        <div class="testi-card_review">
+                                            <i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i>
+                                        </div>
+                                        <p class="box-text">“Egestas vitae non cum sit. Sit molestie orci a lacus. Consectetur eu accumsan aliquet nisi. Eget mauris commodo dis sed arcu integer fringilla. Tellus nec in sapien maecenas in vel.”</p>
+                                        <div class="testi-card-profile">
+                                            <div class="testi-card-avater">
+                                                <img src="assets/img/testimonial/testi1-5.jpg" alt="img">
+                                            </div>
+                                            <div class="testi-card-profile-detaile">
+                                                <h3 class="box-title">Sophia Jennifer</h3>
+                                                <p class="box-desig">Co-founder, XYZ</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="testi-card">
+                                        <div class="testi-card_review">
+                                            <i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i>
+                                        </div>
+                                        <p class="box-text">“Mauris eget commodo dis sed arcu integer fringilla. Sit molestie orci a lacus. Consectetur eu accumsan aliquet nisi. Egestas vitae non cum sit. Tellus nec in sapien maecenas in vel.”</p>
+                                        <div class="testi-card-profile">
+                                            <div class="testi-card-avater">
+                                                <img src="assets/img/testimonial/testi1-6.jpg" alt="img">
+                                            </div>
+                                            <div class="testi-card-profile-detaile">
+                                                <h3 class="box-title">Daniel Thomas</h3>
+                                                <p class="box-desig">Co-founder</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-pagination-wrap mt-15">
+                                <button data-slider-prev="#testiSlide1" class="slider-arrow default"><i class="far fa-arrow-left"></i></button>
+                                <div class="slider-pagination"></div>
+                                <button data-slider-next="#testiSlide1" class="slider-arrow default"><i class="far fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!--==============================
+Feature Area  
+==============================-->
+    <section class="feature-area-1 position-relative space overflow-hidden" data-bg-src="assets/img/bg/feature-bg-1.jpg" data-overlay="theme" id="feature-sec">
+        <div class="feature-bg-img1 bg-repeat" data-bg-src="assets/img/bg/jiji-bg-shape.png" data-overlay="black" data-opacity="6"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-8 col-lg-10">
+                    <div class="title-area text-center">
+                        <span class="sub-title text-white text-anim" data-cue="slideInUp">advanced technology</span>
+                        <h2 class="sec-title text-white text-anim2" data-cue="slideInUp">The Future is Here: Advance
+                            AI Technology</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row gy-4 justify-content-center">
+                <div class="col-xl-3 col-lg-4 col-sm-6">
+                    <div class="feature-card">
+                        <div class="feature-card-details">
+                            <div class="box-icon">
+                                <img src="assets/img/icon/feature-icon1-1.svg" alt="icon">
+                            </div>
+                            <h3 class="box-title">Tech support</h3>
+                            <p class="box-text">To empower businesses with intelligent, scalable, and impactful solutions that drive progress</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-sm-6">
+                    <div class="feature-card">
+                        <div class="feature-card-details">
+                            <div class="box-icon">
+                                <img src="assets/img/icon/feature-icon1-2.svg" alt="icon">
+                            </div>
+                            <h3 class="box-title">Robo Genius</h3>
+                            <p class="box-text">To empower businesses with intelligent, scalable, and impactful solutions that drive progress</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-sm-6">
+                    <div class="feature-card">
+                        <div class="feature-card-details">
+                            <div class="box-icon">
+                                <img src="assets/img/icon/feature-icon1-3.svg" alt="icon">
+                            </div>
+                            <h3 class="box-title">Image Generation</h3>
+                            <p class="box-text">To empower businesses with intelligent, scalable, and impactful solutions that drive progress</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-sm-6">
+                    <div class="feature-card">
+                        <div class="feature-card-details">
+                            <div class="box-icon">
+                                <img src="assets/img/icon/feature-icon1-4.svg" alt="icon">
+                            </div>
+                            <h3 class="box-title">Chatbots</h3>
+                            <p class="box-text">To empower businesses with intelligent, scalable, and impactful solutions that drive progress</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> <!--==============================
+Video Area  
+==============================-->
+    <div class="video-area-1 overflow-hidden" data-sec-pos="top-half" data-pos-for="#feature-sec">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="video-thumb1-1 video-box-center" data-cue="slideInUp" data-overlay="black" data-opacity="3">
+                        <img src="assets/img/normal/video1-1.jpg" alt="img">
+                        <a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="play-btn style2 popup-video"><i class="fa-sharp fa-solid fa-play"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--==============================
+Faq Area
+==============================-->
+    <div class="overflow-hidden space overflow-hidden">
+        <div class="container">
+            <div class="row gy-40">
+                <div class="col-xxl-6">
+                    <div class="title-area">
+                        <span class="sub-title style2 before-none text-anim" data-cue="slideInUp">Faq’s</span>
+                        <h2 class="sec-title text-anim2" data-cue="slideInLeft">Frequently asked
+                            questions</h2>
+                    </div>
+                </div>
+                <div class="col-xxl-6 align-self-center">
+                    <div class="img-box1">
+                        <div class="img2" data-cue="slideInUp">
+                            <img src="assets/img/normal/about-thumb1-3.jpg" alt="About">
+                        </div>
+                        <div class="shadow-text">Robor</div>
+                    </div>
+                </div>
+            </div>
+
+            <!--==============================
+Faq Area
+==============================-->
+            <div class="faq-wrap1">
+                <div class="accordion" id="faqAccordion">
+
+
+                    <div class="accordion-card" data-cue="slideInUp">
+                        <div class="accordion-header" id="collapse-item-1">
+                            <button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1">What is an AI startup, and what services do you offer?</button>
+                        </div>
+                        <div id="collapse-1" class="accordion-collapse collapse show" aria-labelledby="collapse-item-1" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <p class="faq-text">An AI Software as a Service startup combines the scalability of cloud-based platforms with the power of artificial intelligence to deliver innovative, on-demand solutions. These startups cater to a wide range of industries by offering AI-driven tools and applications that solve specific business challenges, enhance efficiency, and drive data-informed decisions. The AI industry is rapidly expanding, with opportunities to disrupt traditional industries and create entirely new markets. Continuous advancements in hardware and algorithms position AI startups to play a pivotal role in shaping the future.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="accordion-card" data-cue="slideInUp">
+                        <div class="accordion-header" id="collapse-item-2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="false" aria-controls="collapse-2">Do you offer pre-built AI models or create everything from scratch?</button>
+                        </div>
+                        <div id="collapse-2" class="accordion-collapse collapse " aria-labelledby="collapse-item-2" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <p class="faq-text">An AI Software as a Service startup combines the scalability of cloud-based platforms with the power of artificial intelligence to deliver innovative, on-demand solutions. These startups cater to a wide range of industries by offering AI-driven tools and applications that solve specific business challenges, enhance efficiency, and drive data-informed decisions. The AI industry is rapidly expanding, with opportunities to disrupt traditional industries and create entirely new markets. Continuous advancements in hardware and algorithms position AI startups to play a pivotal role in shaping the future.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="accordion-card" data-cue="slideInUp">
+                        <div class="accordion-header" id="collapse-item-3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-3" aria-expanded="false" aria-controls="collapse-3">What is the process for developing an AI solution for my business?</button>
+                        </div>
+                        <div id="collapse-3" class="accordion-collapse collapse " aria-labelledby="collapse-item-3" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <p class="faq-text">An AI Software as a Service startup combines the scalability of cloud-based platforms with the power of artificial intelligence to deliver innovative, on-demand solutions. These startups cater to a wide range of industries by offering AI-driven tools and applications that solve specific business challenges, enhance efficiency, and drive data-informed decisions. The AI industry is rapidly expanding, with opportunities to disrupt traditional industries and create entirely new markets. Continuous advancements in hardware and algorithms position AI startups to play a pivotal role in shaping the future.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="accordion-card" data-cue="slideInUp">
+                        <div class="accordion-header" id="collapse-item-4">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-4" aria-expanded="false" aria-controls="collapse-4">What is an AI startup, and what services do you offer?</button>
+                        </div>
+                        <div id="collapse-4" class="accordion-collapse collapse " aria-labelledby="collapse-item-4" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <p class="faq-text">An AI Software as a Service startup combines the scalability of cloud-based platforms with the power of artificial intelligence to deliver innovative, on-demand solutions. These startups cater to a wide range of industries by offering AI-driven tools and applications that solve specific business challenges, enhance efficiency, and drive data-informed decisions. The AI industry is rapidly expanding, with opportunities to disrupt traditional industries and create entirely new markets. Continuous advancements in hardware and algorithms position AI startups to play a pivotal role in shaping the future.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="accordion-card" data-cue="slideInUp">
+                        <div class="accordion-header" id="collapse-item-5">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-5" aria-expanded="false" aria-controls="collapse-5">How do you ensure data privacy and compliance with regulations?</button>
+                        </div>
+                        <div id="collapse-5" class="accordion-collapse collapse " aria-labelledby="collapse-item-5" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <p class="faq-text">An AI Software as a Service startup combines the scalability of cloud-based platforms with the power of artificial intelligence to deliver innovative, on-demand solutions. These startups cater to a wide range of industries by offering AI-driven tools and applications that solve specific business challenges, enhance efficiency, and drive data-informed decisions. The AI industry is rapidly expanding, with opportunities to disrupt traditional industries and create entirely new markets. Continuous advancements in hardware and algorithms position AI startups to play a pivotal role in shaping the future.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--==============================
+Price Area  
+==============================-->
+    <section class="overflow-hidden">
+        <div class="price-wrap1 bg-smoke space">
+            <div class="price-bg-shape1-1 shape-mockup" data-bottom="0" data-left="50%">
+                <img src="assets/img/shape/bg-shape1.png" alt="img">
+            </div>
+            <div class="container">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-xxl-12">
+                        <div class="title-area text-center">
+                            <span class="sub-title text-anim" data-cue="slideInUp">PRICING PLAN</span>
+                            <h2 class="sec-title text-anim2" data-cue="slideInUp">Affordable Pricing Plan</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row gy-30 justify-content-center">
+
+                    <div class="col-xl-4 col-md-6" data-cue="slideInUp">
+                        <div class="price-card">
+                            <h3 class="box-title">Basic</h3>
+                            <p class="box-text">This is an excellent option for people & small businesses who are starting out.</p>
+                            <div class="price_card-wrap">
+                                <h4 class="price-card_price">$25.95<span class="duration">/Per month</span>
+                                </h4>
+                                <p class="box-subtitle">Up to 10 Members per month</p>
+                            </div>
+
+                            <div class="checklist">
+                                <ul>
+                                    <li><i class="fas fa-circle-check"></i> Cultivation plans and field boundaries</li>
+                                    <li class="unavailable"><i class="fas fa-circle-check"></i> Scouting app/module</li>
+                                    <li class="unavailable"><i class="fas fa-circle-check"></i> Satellite relative crop moisture</li>
+                                </ul>
+                            </div>
+                            <div class="btn-wrap">
+                                <a href="contact.html" class="th-btn w-100">Choose Your plan</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-md-6" data-cue="slideInUp">
+                        <div class="price-card">
+                            <h3 class="box-title">Standard</h3>
+                            <p class="box-text">This is an excellent option for people & small businesses who are starting out.</p>
+                            <div class="price_card-wrap">
+                                <h4 class="price-card_price">$85.95<span class="duration">/Per month</span>
+                                </h4>
+                                <p class="box-subtitle">Up to 10 Members per month</p>
+                            </div>
+
+                            <div class="checklist">
+                                <ul>
+                                    <li><i class="fas fa-circle-check"></i> Cultivation plans and field boundaries</li>
+                                    <li><i class="fas fa-circle-check"></i> Scouting app/module</li>
+                                    <li class="unavailable"><i class="fas fa-circle-check"></i> Satellite relative crop moisture</li>
+                                </ul>
+                            </div>
+                            <div class="btn-wrap">
+                                <a href="contact.html" class="th-btn w-100">Choose Your plan</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-md-6" data-cue="slideInUp">
+                        <div class="price-card">
+                            <h3 class="box-title">Premium</h3>
+                            <p class="box-text">This is an excellent option for people & small businesses who are starting out.</p>
+                            <div class="price_card-wrap">
+                                <h4 class="price-card_price">$165.95<span class="duration">/Per month</span>
+                                </h4>
+                                <p class="box-subtitle">Up to 10 Members per month</p>
+                            </div>
+
+                            <div class="checklist">
+                                <ul>
+                                    <li><i class="fas fa-circle-check"></i> Cultivation plans and field boundaries</li>
+                                    <li><i class="fas fa-circle-check"></i> Scouting app/module</li>
+                                    <li><i class="fas fa-circle-check"></i> Satellite relative crop moisture</li>
+                                </ul>
+                            </div>
+                            <div class="btn-wrap">
+                                <a href="contact.html" class="th-btn w-100">Choose Your plan</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--==============================
+Blog Area  
+==============================-->
+    <section class="space overflow-hidden" id="blog-sec">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-xl-6 col-lg-8">
+                    <div class="title-area">
+                        <span class="sub-title style2 before-none text-anim" data-cue="slideInLeft">News</span>
+                        <h2 class="sec-title text-anim" data-cue="slideInLeft">Our Latest News & Blog</h2>
+                    </div>
+                </div>
+                <div class="col-auto align-self-end">
+                    <div class="sec-btn" data-cue="slideInRight">
+                        <a href="blog.html" class="th-btn style-border">View All Post <i class="far fa-long-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row gy-40 justify-content-center">
+                <div class="col-xl-4 col-lg-6" data-cue="slideInUp">
+                    <div class="blog-card">
+                        <div class="blog-img">
+                            <a href="blog-details.html">
+                                <img src="assets/img/blog/blog_1_1.jpg" alt="blog image">
+                            </a>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <a href="blog.html"><i class="far fa-calendar"></i>24 Jan, 2025</a>
+                                <a href="blog.html"><i class="far fa-user"></i>by admin</a>
+                            </div>
+                            <h3 class="box-title"><a href="blog-details.html">The rise of AI and Robotics in retail customer experiences </a></h3>
+                            <a href="blog-details.html" class="link-btn style4">Read More <i class="fas fa-long-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-6" data-cue="slideInUp">
+                    <div class="blog-card">
+                        <div class="blog-img">
+                            <a href="blog-details.html">
+                                <img src="assets/img/blog/blog_1_2.jpg" alt="blog image">
+                            </a>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <a href="blog.html"><i class="far fa-calendar"></i>16 Jul, 2025</a>
+                                <a href="blog.html"><i class="far fa-user"></i>by admin</a>
+                            </div>
+                            <h3 class="box-title"><a href="blog-details.html">How AI is Transforming Businesses Across Industries</a></h3>
+                            <a href="blog-details.html" class="link-btn style4">Read More <i class="fas fa-long-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-6" data-cue="slideInUp">
+                    <div class="blog-card">
+                        <div class="blog-img">
+                            <a href="blog-details.html">
+                                <img src="assets/img/blog/blog_1_3.jpg" alt="blog image">
+                            </a>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <a href="blog.html"><i class="far fa-calendar"></i>30 Jun, 2025</a>
+                                <a href="blog.html"><i class="far fa-user"></i>by admin</a>
+                            </div>
+                            <h3 class="box-title"><a href="blog-details.html">Understanding Deep Learning and Neural Networks in AI</a></h3>
+                            <a href="blog-details.html" class="link-btn style4">Read More <i class="fas fa-long-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!--==============================
+	Footer Area
+==============================-->
+    <?php include 'includes/footer.html'; ?>
+
+    <!--********************************
+			Code End  Here 
+	******************************** -->
+
+    <!-- Scroll To Top -->
+    <div class="scroll-top">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path>
+        </svg>
+    </div>
+
+    <!--==============================
+    All Js File
+============================== -->
+    <!-- Jquery -->
+    <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
+    <!-- Swiper Js -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Magnific Popup -->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <!-- Counter Up -->
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <!-- Range Slider -->
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <!-- Isotope Filter -->
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <!-- Cue Js -->
+    <script src="assets/js/scrollCue.min.js"></script>
+    <!-- Gsap -->
+    <script src="assets/js/gsap.min.js"></script>
+    <!-- Scroll Trigger -->
+    <script src="assets/js/ScrollTrigger.min.js"></script>
+    <!-- Split Text -->
+    <script src="assets/js/SplitText.min.js"></script>
+    <!-- Lenis Js -->
+    <script src="assets/js/lenis.min.js"></script>
+
+    <!-- Perticle Js -->
+    <script src="assets/js/particles.min.js"></script>
+    <script src="assets/js/particles-config.js"></script>
+
+    <!-- Main Js File -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
