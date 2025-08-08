@@ -155,19 +155,36 @@
   grid-template-columns: repeat(4, minmax(200px, 1fr)) !important;
   width: 1080px; /* 4 cols */
   max-width: calc(100vw - 64px);
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
 }
 .sub-menu.services-grid > li {
   background: #ffffff;
   border: 1px solid rgba(0,0,0,0.08);
-  border-radius: 10px;
+  border-radius: 12px;
   padding: 10px 12px;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
 }
 .sub-menu.services-grid > li:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+  border-color: rgba(0,0,0,0.12);
 }
 .sub-menu.services-grid > li:hover .menu-icon {
   transform: none !important;
+}
+
+/* Remove default theme hover bullet/arrow from services grid links */
+.menu-area .services-dropdown > .sub-menu.services-grid li a:before,
+.menu-area .services-dropdown > .sub-menu.services-grid li a::before {
+  display: none !important;
+  content: none !important;
+}
+.menu-area .services-dropdown > .sub-menu.services-grid li a:hover {
+  padding-left: 0 !important;
 }
 .sub-menu.services-grid a.menu-item-icon {
   align-items: flex-start;
