@@ -1152,16 +1152,16 @@ $(document).ready(function() {
                 'co-founder-xyz': 'Co-founder, XYZ',
                 
                 // Feature Section
-                'advanced-technology': 'Technology',
+                'advanced-technology': 'What We Offer',
                 'future-is-here': 'The Future is Here: Advance AI Technology',
                 'tech-support': 'Tech Support',
                 'robo-genius': 'Custom Automations',
                 'image-generation': 'UI Design Systems',
                 'chatbots': 'Chat Integrations',
-                'feature-text-1': 'Technical assistance that keeps your website secure, fast, and up to date: monitoring, updates, backups, and fixes.',
-                'feature-text-2': 'Automated workflows and integrations that remove repetitive tasks (data sync, notifications, scheduled jobs).',
-                'feature-text-3': 'Reusable components, tokens, and guidelines that ensure a consistent UI across pages and products.',
-                'feature-text-4': 'Chat widgets/bots embedded into your site, CRM connections, and conversation tracking to improve support and conversions.',
+                'feature-text-1': 'Ongoing website updates, bug fixes, hosting, and client-side assistance included.',
+                'feature-text-2': 'Integrate smart workflows that save time and reduce human repetition.',
+                'feature-text-3': 'We design scalable, consistent, and modern interfaces tailored to brands.',
+                'feature-text-4': 'Build custom chat experiences that engage, guide, and convert users.',
                 
                 // FAQ Section
                 'faqs': 'Faq\'s',
@@ -1326,16 +1326,16 @@ $(document).ready(function() {
                 'co-founder-xyz': 'თანადამფუძნებელი, XYZ',
                 
                 // Feature Section
-                'advanced-technology': 'ტექნოლოგია',
+                'advanced-technology': 'რას ვთავაზობთ',
                 'future-is-here': 'მომავალი აქ არის: მოწინავე AI ტექნოლოგია',
                 'tech-support': 'ტექნიკური მხარდაჭერა',
                 'robo-genius': 'მორგებული ავტომატიზაციები',
                 'image-generation': 'UI დიზაინის სისტემები',
                 'chatbots': 'ჩატის ინტეგრაციები',
-                'feature-text-1': 'ტექნიკური დახმარება, რომელიც საიტს უსაფრთხოს, სწრაფს და განახლებადს აჩენს: მონიტორინგი, განახლებები, ბექაფები და შეცდომების გამოსწორება.',
-                'feature-text-2': 'авტომატიზებული სამუშაო ნაკადები და ინტეგრაციები განმეორებითი ამოცანების მოსაშორებლად (მონაცემების სინქი, შეტყობინებები, დაგეგმილი პროცესები).',
-                'feature-text-3': 'გადამხმარი კომპონენტები, ტოკენები და წესები, რომ UI ყველა გვერდსა და პროდუქტში თანმიმდევრული იყოს.',
-                'feature-text-4': 'ჩათ ვიჯეტების/ბოტების ინტეგრაცია, CRM-ებთან დაკავშირება და დიალოგების ტრეკინგი მხარდაჭერისა და კონვერსიის გასაუმჯობესებლად.',
+                'feature-text-1': 'ვებსაიტის მუდმივი განახლებები, ბაგების გამოსწორება, ჰოსტინგი და მომხმარებლის მხარეს დახმარება.',
+                'feature-text-2': 'ჭკვიანი სამუშაო ნაკადების ინტეგრაცია, რომლებიც დროს ზოგავენ და ამცირებენ განმეორებით ქმედებებს.',
+                'feature-text-3': 'ვქმნით მასშტაბირებად, თანმიმდევრულ და თანამედროვე ინტერფეისებს, თქვენს ბრენდზე მორგებულს.',
+                'feature-text-4': 'ვქმნით მორგებულ ჩათ გამოცდილებებს, რომლებიც რთავენ, მიმართულებას აძლევენ და ზრდიან კონვერსიას.',
                 
                 // FAQ Section
                 'faqs': 'ხშირად დასმული კითხვები',
