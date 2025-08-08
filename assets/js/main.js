@@ -1166,16 +1166,22 @@ $(document).ready(function() {
                 // FAQ Section
                 'faqs': 'Faq\'s',
                 'frequently-asked': 'Frequently asked questions',
-                'faq-question-1': 'What web development services do you offer?',
-                'faq-question-2': 'Do you build with WordPress, Shopify, or custom frameworks?',
-                'faq-question-3': 'How long does a typical website project take?',
-                'faq-question-4': 'Can you migrate my existing website to a new platform?',
-                'faq-question-5': 'Do you provide ongoing maintenance and SEO?',
-                'faq-answer-1': 'We build modern, fast websites using Next.js/React, WordPress, and Shopify—tailored to your goals and budget.',
-                'faq-answer-2': 'Yes. We choose the right stack per project: WordPress for content-driven sites, Shopify for e-commerce, or custom React/Next.js for full flexibility.',
-                'faq-answer-3': 'Most small–medium sites take 2–6 weeks depending on scope, content readiness, and feedback speed.',
-                'faq-answer-4': 'Yes. We safely migrate content, URLs, and tracking, preserving SEO and improving performance.',
-                'faq-answer-5': 'Yes. We offer support plans covering updates, backups, monitoring, and technical SEO.',
+                'faq-question-1': 'How long does it take to build a website?',
+                'faq-question-2': 'Do you offer website maintenance after launch?',
+                'faq-question-3': 'Can I update the website myself?',
+                'faq-question-4': 'Is SEO included in your websites?',
+                'faq-question-5': 'Do you work with e-commerce platforms like Shopify or WooCommerce?',
+                'faq-question-6': 'Can you redesign my existing website?',
+                'faq-question-7': 'Do you offer custom development, or just templates?',
+                'faq-question-8': 'What technologies do you use?',
+                'faq-answer-1': 'Typical websites take 2–6 weeks depending on features and content readiness.',
+                'faq-answer-2': 'Yes, we provide ongoing support, updates, and performance monitoring.',
+                'faq-answer-3': 'Absolutely. We integrate CMS (like WordPress or Headless) for easy editing.',
+                'faq-answer-4': 'Yes, we build websites with SEO best practices from the ground up.',
+                'faq-answer-5': 'Yes, we build and customize online stores on Shopify, WooCommerce, or custom stacks.',
+                'faq-answer-6': 'Definitely! We modernize websites for better UX, speed, and mobile usability.',
+                'faq-answer-7': 'We specialize in fully custom solutions — no generic templates used.',
+                'faq-answer-8': 'Next.js, React, Tailwind CSS, WordPress, Headless CMS, REST APIs, and more.',
                 
                 // Pricing Section
                 'pricing-plan': 'PRICING PLAN',
@@ -1340,16 +1346,22 @@ $(document).ready(function() {
                 // FAQ Section
                 'faqs': 'ხშირად დასმული კითხვები',
                 'frequently-asked': 'ხშირად დასმული კითხვები',
-                'faq-question-1': 'რა ვებ დეველოპმენტ სერვისებს სთავაზობთ?',
-                'faq-question-2': 'მუშაობთ WordPress‑ით, Shopify‑ით თუ კასტომ ფრეიმვორკებით?',
-                'faq-question-3': 'რამდენ ხანში მზადდება ვებ პროექტი?',
-                'faq-question-4': 'შეგიძლიათ არსებული საიტის ახალი პლატფორმაზე გადატანა?',
-                'faq-question-5': 'გთავაზობთ ტექნიკურ მომსახურებას და SEO‑ს?',
-                'faq-answer-1': 'ვქმნით თანამედროვე, სწრაფ ვებსაიტებს Next.js/React‑ზე, WordPress‑ზე და Shopify‑ზე — თქვენს მიზნებზე და ბიუჯეტზე მორგებულად.',
-                'faq-answer-2': 'კი. პროექტის მიხედვით ვირჩევთ სტეკს: კონტენტზე ორიენტირებულისთვის — WordPress, ე‑ქომერციისთვის — Shopify, სრული მოქნილობისთვის — React/Next.js.',
-                'faq-answer-3': 'მცირე და საშუალო საიტები ჩვეულებრივ 2–6 კვირაში სრულდება — მოცულობაზე, კონტენტზე და ფიდბექის სისწრაფეზეა დამოკიდებული.',
-                'faq-answer-4': 'კი. უსაფრთხოდ გადავიტანთ კონტენტს, URL‑ებს და ანალიტიკას, შევინარჩუნებთ SEO‑ს და გავაუმჯობესებთ სიჩქარეს.',
-                'faq-answer-5': 'კი. გვაქვს სერვის გეგმები, სადაც შედის განახლებები, ბექაფები, მონიტორინგი და ტექნიკური SEO.',
+                'faq-question-1': 'რამდენ ხანში მზადდება ვებსაიტი?',
+                'faq-question-2': 'ვთავაზობთ თუ არა მომსახურებას გაშვების შემდეგ?',
+                'faq-question-3': 'შემიძლია თუ არა თვითონ განვაახლო საიტის კონტენტი?',
+                'faq-question-4': 'თქვენს ვებსაიტებში SEO შედის?',
+                'faq-question-5': 'მუშაობთ Shopify‑ზე ან WooCommerce‑ზე?',
+                'faq-question-6': 'შეგიძლიათ ჩემი არსებული საიტის რედიზაინი?',
+                'faq-question-7': 'კასტომ დეველოპმენტს აკეთებთ თუ მხოლოდ შაბლონებით?',
+                'faq-question-8': 'რა ტექნოლოგიებს იყენებთ?',
+                'faq-answer-1': 'სტანდარტული ვებსაიტი მზად არის 2–6 კვირაში, ფუნქციურობაზე დამოკიდებით.',
+                'faq-answer-2': 'დიახ, გთავაზობთ ტექნიკურ მხარდაჭერას, განახლებებს და მონიტორინგს გაშვების შემდეგ.',
+                'faq-answer-3': 'რა თქმა უნდა – ვნერგავთ CMS‑სისტემებს, რომ მარტივად მართო კონტენტი.',
+                'faq-answer-4': 'დიახ, ვებსაიტები აგებულია საძიებო სისტემებისთვის ოპტიმიზაციის სტანდარტებით.',
+                'faq-answer-5': 'დიახ, ვაშენებთ და ვაოპტიმიზირებთ მაღაზიებს Shopify‑სა და WooCommerce‑ზე.',
+                'faq-answer-6': 'რა თქმა უნდა! განვაახლებთ საიტს UX‑ის, სიჩქარის და მობილური ვერსიისთვის.',
+                'faq-answer-7': 'ვაკეთებთ მხოლოდ მორგებულ ვებსაიტებს — მზა შაბლონებს არ ვიყენებთ.',
+                'faq-answer-8': 'Next.js, React, Tailwind CSS, WordPress, Headless CMS და სხვა ტექნოლოგიები.',
                 
                 // Pricing Section
                 'pricing-plan': 'ფასების გეგმა',
@@ -1566,7 +1578,7 @@ $(document).ready(function() {
         // FAQ Section (handled via data-translate if present)
         
         const faqQuestions = document.querySelectorAll('.accordion-button');
-        const faqKeys = ['faq-question-1', 'faq-question-2', 'faq-question-3', 'faq-question-4', 'faq-question-5'];
+        const faqKeys = ['faq-question-1','faq-question-2','faq-question-3','faq-question-4','faq-question-5','faq-question-6','faq-question-7','faq-question-8'];
         faqQuestions.forEach((question, index) => {
             if (faqKeys[index]) {
                 translateTextContent(question, faqKeys[index]);
@@ -1575,8 +1587,8 @@ $(document).ready(function() {
         
         const faqAnswers = document.querySelectorAll('.faq-text');
         faqAnswers.forEach((answer, index) => {
-            const answerKeys = ['faq-answer-1','faq-answer-2','faq-answer-3','faq-answer-4','faq-answer-5'];
-            translateTextContent(answer, answerKeys[index]);
+            const answerKeys = ['faq-answer-1','faq-answer-2','faq-answer-3','faq-answer-4','faq-answer-5','faq-answer-6','faq-answer-7','faq-answer-8'];
+            if (answerKeys[index]) translateTextContent(answer, answerKeys[index]);
         });
         
         // Pricing Section (handled via data-translate if present)
