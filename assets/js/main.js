@@ -1127,10 +1127,11 @@ $(document).ready(function() {
                 'why-choose-us': 'WHY CHOOSE US',
                 'why-choose-title': 'Our goal is to build a world where technology serves humanity.',
                 'years-experience': 'Years Of Experience',
-                'technology-integration': 'Technology Integration',
+                'technology-integration': 'Reliability',
                 'certified-experts': 'Certified Experts',
                 'effortless-engagement': 'Effortless Engagement',
                 'future-vision': 'Future Vision and Mission',
+                'why-text-1': 'Trusted by teams who need stability, quality, and long-term partnerships.',
                 
                 // Project Section
                 'case-study': 'Case Study',
@@ -1290,10 +1291,11 @@ $(document).ready(function() {
                 'why-choose-us': 'რატომ აირჩიოთ ჩვენ',
                 'why-choose-title': 'ჩვენი მიზანია ვაშენოთ სამყარო, სადაც ტექნოლოგია ემსახურება კაცობრიობას.',
                 'years-experience': 'წლის გამოცდილება',
-                'technology-integration': 'ტექნოლოგიების ინტეგრაცია',
+                'technology-integration': 'სანდოობა',
                 'certified-experts': 'სერტიფიცირებული ექსპერტები',
                 'effortless-engagement': 'უმარტივესი ურთიერთობა',
                 'future-vision': 'მომავლის ხედვა და მისია',
+                'why-text-1': 'გვენდობიან მათ, ვისაც სჭირდება სტაბილურობა და ხარისხი.',
                 
                 // Project Section
                 'case-study': 'ქეისის შესწავლა',
