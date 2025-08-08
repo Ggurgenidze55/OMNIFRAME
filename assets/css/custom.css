@@ -150,6 +150,8 @@
   left: 50% !important;
   transform: translateX(-50%);
   right: auto !important;
+  grid-template-columns: repeat(4, minmax(180px, 1fr));
+  min-width: 820px; /* ensure 4 columns fit */
 }
 .sub-menu.services-grid > li {
   background: #ffffff;
@@ -166,8 +168,8 @@
 }
 
 @media (min-width: 1400px) {
-  .sub-menu.services-grid {
-    grid-template-columns: repeat(3, minmax(200px, 1fr));
+  .menu-area .services-dropdown > .sub-menu.services-grid {
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
   }
 }
 
