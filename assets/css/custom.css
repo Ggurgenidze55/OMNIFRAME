@@ -124,3 +124,16 @@
   object-fit: contain;
 }
 
+.sub-menu .menu-item-icon .menu-labels {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+.sub-menu .menu-item-icon .menu-title {
+  font-weight: 600;
+}
+.sub-menu .menu-item-icon .menu-desc {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
