@@ -1134,7 +1134,7 @@ $(document).ready(function() {
                 'why-text-1': 'Trusted by teams who need stability, quality, and long-term partnerships.',
                 'why-text-2': 'We minimize complexity and deliver results with focused precision.',
                 'why-text-3': 'Our work reflects your goals, timelines, and internal standards.',
-                // 'why-text-4' intentionally omitted in EN to keep HTML default text
+                'why-text-4': 'Need something changed? We adapt quickly and with a smile.',
                 
                 // Project Section
                 'case-study': 'Case Study',
