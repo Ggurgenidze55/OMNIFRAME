@@ -112,3 +112,15 @@
   margin-top: auto; /* push bottom to align cards */
 }
 
+/* Header dropdown service items with icons */
+.sub-menu .menu-item-icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.sub-menu .menu-item-icon .menu-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
