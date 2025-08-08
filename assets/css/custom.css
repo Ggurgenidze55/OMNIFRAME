@@ -137,3 +137,37 @@
   opacity: 0.8;
 }
 
+/* Grid layout for services dropdown as tiles */
+.sub-menu.services-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  gap: 10px 14px;
+  padding: 12px;
+}
+.sub-menu.services-grid > li {
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+.sub-menu.services-grid > li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+}
+.sub-menu.services-grid a.menu-item-icon {
+  align-items: flex-start;
+}
+
+@media (min-width: 1400px) {
+  .sub-menu.services-grid {
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 1199.98px) {
+  /* fallback for mobile menu if it reuses sub-menu */
+  .th-menu-area .sub-menu.services-grid {
+    display: block !important;
+  }
+}
+
