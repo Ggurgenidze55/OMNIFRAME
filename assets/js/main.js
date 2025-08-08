@@ -1119,8 +1119,8 @@ $(document).ready(function() {
                 'education-science-text': 'Content systems connected to custom frontends or admin panels.',
                 'ai-research': 'API Integration & Automation',
                 'ai-research-text': 'Connect external services like CRMs, payments, or emails.',
-                'ai-cybersecurity': 'AI in Cybersecurity',
-                'ai-cybersecurity-text': 'Ensuring system integrity through AI-driven oversight. Using AI to detect anomalies and prevent.',
+                'ai-cybersecurity': 'Website Migration & Redesign',
+                'ai-cybersecurity-text': 'Move from old platforms or redesign for better UX and speed.',
                 'read-more': 'Read More',
                 
                 // Why Choose Us Section
@@ -1282,8 +1282,8 @@ $(document).ready(function() {
                 'education-science-text': 'კონტენტ მენეჯმენტი WordPress ან Headless ინტეგრაციით.',
                 'ai-research': 'API ინტეგრაცია და ავტომატიზაცია',
                 'ai-research-text': 'API-ებით CRM, გადახდებისა და მეილის სისტემების ინტეგრაცია.',
-                'ai-cybersecurity': 'AI კიბერ უსაფრთხოებაში',
-                'ai-cybersecurity-text': 'სისტემის მთლიანობის უზრუნველყოფა AI-ზე დაფუძნებული ზედამხედველობით. AI-ის გამოყენება ანომალიების აღმოსაჩენად და პრევენციისთვის.',
+                'ai-cybersecurity': 'ვებსაიტის მიგრაცია და რედიზაინი',
+                'ai-cybersecurity-text': 'პლატფორმიდან პლატფორმაზე გადატანა და UX-ზე მორგებული რედიზაინი.',
                 'read-more': 'მეტის ნახვა',
                 
                 // Why Choose Us Section
