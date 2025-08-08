@@ -11,15 +11,27 @@
   align-items: center;
 }
 
-.about-two-col .about-feature-card-wrap { margin: 0; }
-.about-two-col .about-feature-card { margin-bottom: 20px; }
-.about-two-col .about-feature-card:last-child { margin-bottom: 0; }
+.about-two-col .about-feature-card-wrap {
+  margin: 0;
+}
+.about-two-col .about-feature-card {
+  margin-bottom: 20px;
+}
+.about-two-col .about-feature-card:last-child {
+  margin-bottom: 0;
+}
 
 @media (max-width: 1199.98px) {
-  .about-two-col { grid-template-columns: 1fr; }
+  .about-two-col {
+    grid-template-columns: 1fr;
+  }
 }
-.about-feature-card.mb-0 .box-title { margin-bottom: 6px; }
-.about-feature-card.mb-0 .box-text { margin-bottom: 0; }
+.about-feature-card.mb-0 .box-title {
+  margin-bottom: 6px;
+}
+.about-feature-card.mb-0 .box-text {
+  margin-bottom: 0;
+}
 /* Page-specific overrides */
 
 /* Who We Are? image shrink (match FAQ scale) */
@@ -31,16 +43,27 @@
   margin: 0 auto;
 }
 /* Align image-feature pairs vertically centered and tighten spacing */
-.about-feature-card.mb-0 { margin-bottom: 0; align-items: center; display: flex; gap: 16px; }
-.img-box1.mb-0 { margin-bottom: 0; }
-.about-wrap1 .row.align-items-center { --pair-gap: 24px; }
-.about-wrap1 .row.align-items-center > [class*="col-"] { margin-bottom: var(--pair-gap); }
-
-
-@media (max-width: 575.98px) {
-  .about-small-img { max-width: 260px !important; }
+.about-feature-card.mb-0 {
+  margin-bottom: 0;
+  align-items: center;
+  display: flex;
+  gap: 16px;
+}
+.img-box1.mb-0 {
+  margin-bottom: 0;
+}
+.about-wrap1 .row.align-items-center {
+  --pair-gap: 24px;
+}
+.about-wrap1 .row.align-items-center > [class*="col-"] {
+  margin-bottom: var(--pair-gap);
 }
 
+@media (max-width: 575.98px) {
+  .about-small-img {
+    max-width: 260px !important;
+  }
+}
 
 /* Who We Are? main line: make it smaller and balanced */
 #about-sec .sec-title.mb-0 {
@@ -48,7 +71,9 @@
   line-height: 1.25;
 }
 @media (max-width: 767.98px) {
-  #about-sec .sec-title.mb-0 { font-size: 24px; }
+  #about-sec .sec-title.mb-0 {
+    font-size: 24px;
+  }
 }
 
 /* Marquee: make OMNIframe text #8d908b and keep strong size */
@@ -64,7 +89,9 @@
 
 /* Marquee star icon to black */
 .marquee-card .marquee-icon img {
-  filter: brightness(0) !important; /* make icon black while keeping transparency */
+  filter: brightness(
+    0
+  ) !important; /* make icon black while keeping transparency */
 }
 
 /* --- Services grid: equal card heights across languages --- */
@@ -156,22 +183,23 @@
   width: 1080px; /* 4 cols */
   max-width: calc(100vw - 64px);
   background: #ffffff;
-  border: 1px solid rgba(0,0,0,0.08);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
 }
 .sub-menu.services-grid > li {
   background: #ffffff;
-  border: 1px solid rgba(0,0,0,0.08);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 12px;
   padding: 10px 12px;
-  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+  transition: transform 180ms ease, box-shadow 180ms ease,
+    border-color 180ms ease;
 }
 .sub-menu.services-grid > li:hover {
   transform: translateY(-1px);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
-  border-color: rgba(0,0,0,0.12);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+  border-color: rgba(0, 0, 0, 0.12);
 }
 .sub-menu.services-grid > li:hover .menu-icon {
   transform: none !important;
@@ -203,3 +231,23 @@
   }
 }
 
+/* Make logos/images appear white via CSS filter */
+.img-white {
+  filter: brightness(0) invert(1) !important;
+}
+
+/* Ensure white filter wins inside team card wrappers */
+.th-team .team-img img.img-white {
+  mix-blend-mode: normal !important;
+  opacity: 1 !important;
+}
+
+/* About > Advanced Technology: nudge first image down for symmetry with text */
+.feature-img-box4 .img1 {
+  margin-top: 24px;
+}
+@media (max-width: 767.98px) {
+  .feature-img-box4 .img1 {
+    margin-top: 0;
+  }
+}

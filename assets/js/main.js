@@ -63,14 +63,14 @@
             },
             options
         );
-    
+
         return this.each(function () {
             var menu = $(this); // Select menu
-    
+
             // Menu Show & Hide
             function menuToggle() {
                 menu.toggleClass(opt.bodyToggleClass);
-    
+
                 // collapse submenu on menu hide or show
                 var subMenu = "." + opt.subMenuClass;
                 $(subMenu).each(function () {
@@ -81,7 +81,7 @@
                     }
                 });
             }
-    
+
             // Class Set Up for every submenu
             menu.find("." + opt.subMenuParent).each(function () {
                 var submenu = $(this).find("ul");
@@ -91,7 +91,7 @@
                 $(this).addClass(opt.thSubMenuParent); // Add th-item-has-children class
                 $(this).children("a").append(opt.appendElement);
             });
-    
+
             // Toggle Submenu
             function toggleDropDown($element) {
                 var submenu = $element.children("ul");
@@ -101,7 +101,7 @@
                     submenu.toggleClass(opt.subMenuToggleClass);
                 }
             }
-    
+
             // Submenu toggle Button
             var itemHasChildren = "." + opt.thSubMenuParent + " > a";
             $(itemHasChildren).each(function () {
@@ -110,7 +110,7 @@
                     toggleDropDown($(this).parent());
                 });
             });
-    
+
             // Menu Show & Hide On Toggle Btn click
             $(opt.menuToggleBtn).each(function () {
                 $(this).attr('aria-expanded', 'false');
@@ -121,20 +121,20 @@
                     $(this).attr('aria-expanded', isExpanded ? 'true' : 'false');
                 });
             });
-    
+
             // Hide Menu On outside click
             menu.on("click", function (e) {
                 e.stopPropagation();
                 menuToggle();
             });
-    
+
             // Stop Hide full menu on menu click
             menu.find("div").on("click", function (e) {
                 e.stopPropagation();
             });
         });
     };
-    
+
     $(".th-menu-wrapper").thmobilemenu();
 
     /*---------- 04. Sticky fix ----------*/
@@ -180,7 +180,7 @@
                     scrollTop: target.offset().top - 10
                     }, 1000);
                 };
-    
+
                 });
             });
             })
@@ -191,7 +191,7 @@
 
     /*---------- 05. Scroll To Top ----------*/
     if ($('.scroll-top').length > 0) {
-        
+
         var scrollTopbtn = document.querySelector('.scroll-top');
         var progressPath = document.querySelector('.scroll-top path');
         var pathLength = progressPath.getTotalLength();
@@ -199,7 +199,7 @@
         progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
         progressPath.style.strokeDashoffset = pathLength;
         progressPath.getBoundingClientRect();
-        progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';		
+        progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';
         var updateProgress = function () {
             var scroll = $(window).scrollTop();
             var height = $(document).height() - $(window).height();
@@ -207,7 +207,7 @@
             progressPath.style.strokeDashoffset = progress;
         }
         updateProgress();
-        $(window).scroll(updateProgress);	
+        $(window).scroll(updateProgress);
         var offset = 50;
         var duration = 750;
         jQuery(window).on('scroll', function() {
@@ -216,7 +216,7 @@
             } else {
                 jQuery(scrollTopbtn).removeClass('show');
             }
-        });				
+        });
         jQuery(scrollTopbtn).on('click', function(event) {
             event.preventDefault();
             jQuery('html, body').animate({scrollTop: 0}, duration);
@@ -253,7 +253,7 @@
         var borderColor = $(this).data('border');
         $(this).css('--th-border-color', borderColor);
     });
-      
+
     if ($('[data-mask-src]').length > 0) {
         $('[data-mask-src]').each(function () {
           var mask = $(this).attr('data-mask-src');
@@ -266,18 +266,18 @@
         });
     };
 
-    /*----------- 07. Global Slider ----------*/   
+    /*----------- 07. Global Slider ----------*/
     $('.th-slider').each(function () {
         var thSlider = $(this);
         var settings = $(this).data('slider-options') || {};
-        
+
         // Store references to the navigation buttons
         var prevArrow = thSlider.find('.slider-prev');
         var nextArrow = thSlider.find('.slider-next');
         var paginationEl1 = thSlider.find('.slider-pagination').get(0);
         var paginationEl2 = thSlider.find('.slider-pagination2');
         var progressBarEl = thSlider.find('.slider-pagination-progressbar2 .slider-progressbar-fill');
-    
+
         var sliderDefault = {
             slidesPerView: 1,
             spaceBetween: settings.spaceBetween || 24,
@@ -309,13 +309,13 @@
                 },
             },
         };
-    
+
         var options = $.extend({}, sliderDefault, settings);
         var swiperInstance = new Swiper(thSlider.get(0), options);
-    
+
         // Update Pagination and other UI elements
         function updatePagination(swiper) {
-            var activeIndex = swiper.realIndex + 1; 
+            var activeIndex = swiper.realIndex + 1;
             var totalSlides = swiper.slides.length;
             paginationEl2.html(
                 '<span class="current-slide">' +
@@ -325,7 +325,7 @@
                 '</span>'
             );
         }
-    
+
         function updateProgressBar(swiper) {
             var progress = ((swiper.realIndex + 1) / swiper.slides.length) * 100;
             progressBarEl.css('height', progress + '%');
@@ -334,31 +334,31 @@
         if ($('.slider-area').length > 0) {
             $('.slider-area').closest(".container").parent().addClass("arrow-wrap");
         }
-    
+
     });
-    
+
     // Function to add animation classes
     function animationProperties() {
         $('[data-ani]').each(function () {
             var animationName = $(this).data('ani');
             $(this).addClass(animationName);
         });
-    
+
         $('[data-ani-delay]').each(function () {
             var delayTime = $(this).data('ani-delay');
             $(this).css('animation-delay', delayTime);
         });
     }
     animationProperties();
-    
+
     // Add click event handlers for external slider arrows based on data attributes
     $('[data-slider-prev], [data-slider-next]').on('click', function () {
         var sliderSelector = $(this).data('slider-prev') || $(this).data('slider-next');
         var targetSlider = $(sliderSelector);
-    
+
         if (targetSlider.length) {
             var swiper = targetSlider[0].swiper;
-    
+
             if (swiper) {
                 if ($(this).data('slider-prev')) {
                     swiper.slidePrev();
@@ -367,7 +367,7 @@
                 }
             }
         }
-    }); 
+    });
 
     /*----------- 08. Ajax Contact Form ----------*/
     var form = ".ajax-contact";
@@ -510,7 +510,7 @@
     /* magnificPopup img view */
     $(".popup-image").magnificPopup({
         type: "image",
-        mainClass: 'mfp-zoom-in', 
+        mainClass: 'mfp-zoom-in',
         removalDelay: 260,
         gallery: {
             enabled: true,
@@ -522,12 +522,12 @@
             }
         }
     });
-    
+
 
     /* magnificPopup video view */
     $(".popup-video").magnificPopup({
         type: "iframe",
-        mainClass: 'mfp-zoom-in', 
+        mainClass: 'mfp-zoom-in',
     });
 
     /* magnificPopup video view */
@@ -723,17 +723,17 @@
     }
 
     $(".svg-img").inlineSvg();
-    
+
     /*---------- 19. Circle Progress ----------*/
     document.addEventListener("DOMContentLoaded", function () {
         const progressBars = document.querySelectorAll('.circular-progress');
-    
+
         progressBars.forEach(progressBar => {
             const circle = progressBar.querySelector('.circle');
             const percentageDisplay = progressBar.querySelector('.percentage');
             const target = parseInt(progressBar.getAttribute('data-target'), 10);
             let progressValue = 0;
-    
+
             const animateProgress = () => {
                 if (progressValue <= target) {
                     const offset = 100 - (progressValue * 100) / 100;
@@ -743,7 +743,7 @@
                     requestAnimationFrame(animateProgress);
                 }
             };
-    
+
             animateProgress();
         });
     });
@@ -832,11 +832,11 @@
 		if (a.length) {
 			$(a).each(function(i, item) {
 				inject += '<span class="'+klass+(i+1)+'">'+item+'</span>'+after;
-			});	
+			});
 			t.empty().append(inject);
 		}
 	}
-	
+
 	var methods = {
 		init : function() {
 
@@ -853,14 +853,14 @@
 			});
 
 		},
-		
+
 		lines : function() {
 
 			return this.each(function() {
 				var r = "eefec303079ad17405c889e092e105b0";
 				// Because it's hard to split a <br/> tag consistently across browsers,
-				// (*ahem* IE *ahem*), we replaces all <br/> instances with an md5 hash 
-				// (of the word "split").  If you're trying to use this plugin on that 
+				// (*ahem* IE *ahem*), we replaces all <br/> instances with an md5 hash
+				// (of the word "split").  If you're trying to use this plugin on that
 				// md5 hash string, it will fail because you're being ridiculous.
 				injector($(this).children("br").replaceWith(r).end(), r, 'line', '');
 			});
@@ -982,7 +982,7 @@
     });
     $(".from").text("$" + $(".price_slider").slider("values", 0));
     $(".to").text("$" + $(".price_slider").slider("values", 1));
-    
+
     // /*----------- 00. Right Click Disable ----------*/
     //   window.addEventListener('contextmenu', function (e) {
     //     // do something here...
@@ -1007,7 +1007,7 @@
     //       return false;
     //     }
     //   }
-    
+
 })(jQuery);
 
 // Language Switcher Functionality
@@ -1018,24 +1018,24 @@ $(document).ready(function() {
     const mobileLanguageToggle = document.getElementById('mobileLanguageToggle');
     const mobileLanguageDropdown = document.getElementById('mobileLanguageDropdown');
     const currentLangMobile = document.querySelector('.current-lang-mobile');
-    
+
     // Function to handle language switching
     function handleLanguageSwitch(lang) {
         // Update current language display
         if (currentLang) currentLang.textContent = lang.toUpperCase();
         if (currentLangMobile) currentLangMobile.textContent = lang.toUpperCase();
-        
+
         // Store language preference
         localStorage.setItem('selectedLanguage', lang);
-        
+
         // Translate content
         translateContent(lang);
-        
+
         // Close all dropdowns
         if (languageDropdown) languageDropdown.classList.remove('active');
         if (mobileLanguageDropdown) mobileLanguageDropdown.classList.remove('active');
     }
-    
+
     // Desktop language switcher
     if (languageToggle && languageDropdown) {
         languageToggle.addEventListener('click', function(e) {
@@ -1043,7 +1043,7 @@ $(document).ready(function() {
             languageDropdown.classList.toggle('active');
         });
     }
-    
+
     // Mobile language switcher
     if (mobileLanguageToggle && mobileLanguageDropdown) {
         mobileLanguageToggle.addEventListener('click', function(e) {
@@ -1051,13 +1051,13 @@ $(document).ready(function() {
             mobileLanguageDropdown.classList.toggle('active');
         });
     }
-    
+
     // Close dropdowns when clicking outside
     document.addEventListener('click', function() {
         if (languageDropdown) languageDropdown.classList.remove('active');
         if (mobileLanguageDropdown) mobileLanguageDropdown.classList.remove('active');
     });
-    
+
     // Language selection for both desktop and mobile
     document.querySelectorAll('.lang-option').forEach(option => {
         option.addEventListener('click', function(e) {
@@ -1066,7 +1066,7 @@ $(document).ready(function() {
             handleLanguageSwitch(lang);
         });
     });
-    
+
     // Load saved language preference
     const savedLang = localStorage.getItem('selectedLanguage');
     if (savedLang) {
@@ -1074,17 +1074,20 @@ $(document).ready(function() {
         if (currentLangMobile) currentLangMobile.textContent = savedLang.toUpperCase();
         translateContent(savedLang);
     }
-    
+
     // Translation function
     function translateContent(lang) {
         const translations = {
             en: {
+                // Team/Core Technologies Section
+                'core-technologies': 'Core Technologies',
+                'core-technologies-subtitle': 'From frontend finesse to backend brilliance',
                 // Hero Section
                 'hero-title': 'Transform Ideas into High-Impact Digital Products',
                 'hero-text': 'From concept to code — we craft fast and beautifully designed web solutions tailored to your business goals.',
                 'discover-more': 'Services',
                 'contact-us': 'Contact Us',
-                
+
                 // Navigation
                 'home': 'Home',
                 'about-us': 'About Us',
@@ -1093,7 +1096,7 @@ $(document).ready(function() {
                 'blog': 'Blog',
                 'get-started': 'Get Started Now',
                 'contact-us-nav': 'Contact Us',
-                
+
                 // About Section
                 'who-we-are': 'Who We Are?',
                 'about-text': 'OMNIframe is your tech partner for building modern websites that are fast, beautiful, and tailored to your goals.',
@@ -1101,7 +1104,7 @@ $(document).ready(function() {
                 'quality-assurance': 'Quality Assurance',
                 'about-feature-text-1': 'We deliver high-quality, scalable web solutions that exceed expectations.',
                 'about-feature-text-2': 'Our team of experienced developers and QA specialists ensure precision, performance, and long-term reliability.',
-                
+
                 // Services Section
                 'our-services': 'OUR SERVICES',
                 'services-title': 'we offer modern web development services',
@@ -1122,7 +1125,7 @@ $(document).ready(function() {
                 'ai-cybersecurity': 'Website Migration & Redesign',
                 'ai-cybersecurity-text': 'Move from old platforms or redesign for better UX and speed.',
                 'read-more': 'Read More',
-                
+
                 // Why Choose Us Section
                 'why-choose-us': 'WHY CHOOSE US',
                 'why-choose-title': 'We don’t just build websites — we create meaningful digital experiences',
@@ -1135,7 +1138,7 @@ $(document).ready(function() {
                 'why-text-2': 'We minimize complexity and deliver results with focused precision.',
                 'why-text-3': 'Our work reflects your goals, timelines, and internal standards.',
                 'why-text-4': 'Need something changed? We adapt quickly and with a smile.',
-                
+
                 // Project Section
                 'case-study': 'Case Study',
                 'ai-projects-case': 'Web Projects',
@@ -1144,13 +1147,13 @@ $(document).ready(function() {
                 'ai-machine-learning': 'AI Machine Learning',
                 'user-research': 'User Research',
                 'speech-recognizer': 'Speech recognizer using deep learning',
-                
+
                 // Testimonial Section
                 'testimonials': 'Testimonials',
                 'what-clients-say': 'What Our Clients Say About us',
                 'co-founder': 'Co-founder',
                 'co-founder-xyz': 'Co-founder, XYZ',
-                
+
                 // Feature Section
                 'advanced-technology': 'What We Offer',
                 'future-is-here': 'The Future is Here: Advance AI Technology',
@@ -1162,7 +1165,7 @@ $(document).ready(function() {
                 'feature-text-2': 'Integrate smart workflows that save time and reduce human repetition.',
                 'feature-text-3': 'We design scalable, consistent, and modern interfaces tailored to brands.',
                 'feature-text-4': 'Build custom chat experiences that engage, guide, and convert users.',
-                
+
                 // Blog/News Section
                 'news': 'News',
                 'our-latest-news': 'Our Latest News & Blog',
@@ -1191,7 +1194,7 @@ $(document).ready(function() {
                 'faq-answer-6': 'Definitely! We modernize websites for better UX, speed, and mobile usability.',
                 'faq-answer-7': 'We specialize in fully custom solutions — no generic templates used.',
                 'faq-answer-8': 'Next.js, React, Tailwind CSS, WordPress, Headless CMS, REST APIs, and more.',
-                
+
                 // Pricing Section
                 'pricing-plan': 'PRICING PLAN',
                 'affordable-pricing': 'Affordable Pricing Plan',
@@ -1205,7 +1208,7 @@ $(document).ready(function() {
                 'scouting-app': 'Scouting app/module',
                 'satellite-moisture': 'Satellite relative crop moisture',
                 'choose-your-plan': 'Choose Your plan',
-                
+
                 // Blog Section
                 'news': 'News',
                 'latest-news': 'Our Latest News & Blog',
@@ -1214,7 +1217,7 @@ $(document).ready(function() {
                 'blog-title-1': 'The rise of AI and Robotics in retail customer experiences',
                 'blog-title-2': 'How AI is Transforming Businesses Across Industries',
                 'blog-title-3': 'Understanding Deep Learning and Neural Networks in AI',
-                
+
                 // Footer
                 'get-started-footer': 'Get Started',
                 'lets-make-great': 'Let\'s Make Something Great Together',
@@ -1268,12 +1271,15 @@ $(document).ready(function() {
                 'tags': 'Tags:'
             },
             ka: {
+                // Team/Core Technologies Section
+                'core-technologies': 'ძირითადი ტექნოლოგიები',
+                'core-technologies-subtitle': 'Frontend-ის სიზუსტიდან Backend-ის სიძლიერემდე',
                 // Hero Section
                 'hero-title': 'გარდაქმენი იდეები მაღალეფექტურ ციფრულ პროდუქტებად',
                 'hero-text': 'იდეიდან კოდამდე — ვქმნით სწრაფ და ესთეტიკურ ვებგადაწყვეტილებებს, მორგებულს შენს ბიზნეს მიზნებზე.',
                 'discover-more': 'სერვისები',
                 'contact-us': 'კონტაქტი',
-                
+
                 // Navigation
                 'home': 'მთავარი',
                 'about-us': 'ჩვენს შესახებ',
@@ -1282,7 +1288,7 @@ $(document).ready(function() {
                 'blog': 'ბლოგი',
                 'get-started': 'დავიწყოთ ახლა',
                 'contact-us-nav': 'კონტაქტი',
-                
+
                 // About Section
                 'who-we-are': 'ვინ ვართ ჩვენ?',
                 'about-text': 'OMNIframe არის შენი ტექნოლოგიური პარტნიორი თანამედროვე ვებსაიტების შესაქმნელად — სწრაფი, ლამაზი და ზუსტად მიზნებზე მორგებული.',
@@ -1290,7 +1296,7 @@ $(document).ready(function() {
                 'quality-assurance': 'ხარისხის გარანტია',
                 'about-feature-text-1': 'ჩვენ ვაწვდით მაღალი ხარისხის, მასშტაბირებად ვებ გამოთვლის, რომელიც გადააჭარბებს მოლოდინებს.',
                 'about-feature-text-2': 'ჩვენი გამოცდილი გუნდითა და ხარისხის კონტროლის სპეციალისტებით, ვსასტურებთ ზუსტ, სწრაფ და ხანგრძლივი წარმატების გარანტიას.',
-                
+
                 // Services Section
                 'our-services': 'ჩვენი სერვისები',
                 'services-title': 'ჩვენ გთავაზობთ თანამედროვე ვებ დეველოპმენტ სერვისებს',
@@ -1311,7 +1317,7 @@ $(document).ready(function() {
                 'ai-cybersecurity': 'ვებსაიტის მიგრაცია და რედიზაინი',
                 'ai-cybersecurity-text': 'პლატფორმიდან პლატფორმაზე გადატანა და UX-ზე მორგებული რედიზაინი.',
                 'read-more': 'მეტის ნახვა',
-                
+
                 // Why Choose Us Section
                 'why-choose-us': 'რატომ გვირჩევენ ჩვენ',
                 'why-choose-title': 'ჩვენ არ ვქმნით უბრალოდ ვებსაიტებს — ჩვენ ვქმნით მნიშვნელოვან ციფრულ გამოცდილებას',
@@ -1324,7 +1330,7 @@ $(document).ready(function() {
                 'why-text-2': 'ჩვენ ვუმცირებთ სირთულეს და შედეგს ვაწვდით ფოკუსირებული სიზუსტით.',
                 'why-text-3': 'ჩვენი სამუშაო ასახავს თქვენს მიზნებს, ვადებს და შიდა სტანდარტებს.',
                 'why-text-4': 'რაღაც შეიცვალა? ჩვენ ადვილად მოვერგებით და გაგიღიმებთაც.',
-                
+
                 // Project Section
                 'case-study': 'ქეისის შესწავლა',
                 'ai-projects-case': 'ვებ პროექტები',
@@ -1333,13 +1339,13 @@ $(document).ready(function() {
                 'ai-machine-learning': 'AI მანქანური სწავლება',
                 'user-research': 'მომხმარებელთა კვლევა',
                 'speech-recognizer': 'საუბრის ამომცნობი ღრმა სწავლების გამოყენებით',
-                
+
                 // Testimonial Section
                 'testimonials': 'მიმოხილვები',
                 'what-clients-say': 'რას ამბობენ ჩვენი კლიენტები',
                 'co-founder': 'თანადამფუძნებელი',
                 'co-founder-xyz': 'თანადამფუძნებელი, XYZ',
-                
+
                 // Feature Section
                 'advanced-technology': 'რას ვთავაზობთ',
                 'future-is-here': 'მომავალი აქ არის: მოწინავე AI ტექნოლოგია',
@@ -1351,7 +1357,7 @@ $(document).ready(function() {
                 'feature-text-2': 'ჭკვიანი სამუშაო ნაკადების ინტეგრაცია, რომლებიც დროს ზოგავენ და ამცირებენ განმეორებით ქმედებებს.',
                 'feature-text-3': 'ვქმნით მასშტაბირებად, თანმიმდევრულ და თანამედროვე ინტერფეისებს, თქვენს ბრენდზე მორგებულს.',
                 'feature-text-4': 'ვქმნით მორგებულ ჩათ გამოცდილებებს, რომლებიც რთავენ, მიმართულებას აძლევენ და ზრდიან კონვერსიას.',
-                
+
                 // Blog/News Section
                 'news': 'სიახლეები',
                 'our-latest-news': 'ჩვენი ბოლო სიახლეები და ბლოგი',
@@ -1380,7 +1386,7 @@ $(document).ready(function() {
                 'faq-answer-6': 'რა თქმა უნდა! განვაახლებთ საიტს UX‑ის, სიჩქარის და მობილური ვერსიისთვის.',
                 'faq-answer-7': 'ვაკეთებთ მხოლოდ მორგებულ ვებსაიტებს — მზა შაბლონებს არ ვიყენებთ.',
                 'faq-answer-8': 'Next.js, React, Tailwind CSS, WordPress, Headless CMS და სხვა ტექნოლოგიები.',
-                
+
                 // Pricing Section
                 'pricing-plan': 'ფასების გეგმა',
                 'affordable-pricing': 'ხელმისაწვდომი ფასების გეგმა',
@@ -1394,7 +1400,7 @@ $(document).ready(function() {
                 'scouting-app': 'შეგროვების აპლიკაცია/მოდული',
                 'satellite-moisture': 'სატელიტური ფარდობითი კულტურის ტენიანობა',
                 'choose-your-plan': 'აირჩიეთ თქვენი გეგმა',
-                
+
                 // Blog Section
                 'news': 'სიახლეები',
                 'latest-news': 'ჩვენი უახლესი სიახლეები და ბლოგი',
@@ -1403,7 +1409,7 @@ $(document).ready(function() {
                 'blog-title-1': 'AI-ისა და რობოტიკის აღმავლობა საცალო ვაჭრობის მომხმარებელთა გამოცდილებაში',
                 'blog-title-2': 'როგორ ცვლის AI ბიზნესებს ყველა ინდუსტრიაში',
                 'blog-title-3': 'ღრმა სწავლებისა და ნეირონული ქსელების გაგება AI-ში',
-                
+
                 // Footer
                 'get-started-footer': 'დავიწყოთ',
                 'lets-make-great': 'მოდი რაღაც დიდი შევქმნათ ერთად',
@@ -1457,7 +1463,7 @@ $(document).ready(function() {
                 'tags': 'ტეგები:'
             }
         };
-        
+
         const t = translations[lang] || translations.en;
 
         // Update <html lang=".."> for a11y/SEO
@@ -1472,25 +1478,25 @@ $(document).ready(function() {
                 el.textContent = t[key];
             }
         });
-        
+
         // Function to translate text content
         function translateTextContent(element, key) {
             if (element && t[key]) {
                 element.textContent = t[key];
             }
         }
-        
+
         // Function to translate HTML content
         function translateHTMLContent(element, key) {
             if (element && t[key]) {
                 element.innerHTML = t[key];
             }
         }
-        
+
         // Hero Section
         translateTextContent(document.querySelector('.hero-title'), 'hero-title');
         translateTextContent(document.querySelector('.hero-text'), 'hero-text');
-        
+
         // Navigation
         const navLinks = {
             'a[href="index.html"]': 'home',
@@ -1499,7 +1505,7 @@ $(document).ready(function() {
             'a[href="blog.html"]': 'blog',
             'a[href="contact.html"]': 'contact-us-nav'
         };
-        
+
         Object.keys(navLinks).forEach(selector => {
             const elements = document.querySelectorAll(selector);
             elements.forEach(element => {
@@ -1508,25 +1514,25 @@ $(document).ready(function() {
                 }
             });
         });
-        
+
         // Hero buttons
         const heroButtons = {
             '.th-btn.style2[href="service.html"]': 'discover-more',
             '.th-btn.style-border2[href="contact.html"]': 'contact-us',
             '.th-btn.style2[href="contact.html"]': 'get-started'
         };
-        
+
         Object.keys(heroButtons).forEach(selector => {
             const element = document.querySelector(selector);
             if (element) {
                 translateTextContent(element, heroButtons[selector]);
             }
         });
-        
+
         // About Section
         translateTextContent(document.querySelector('.sub-title.style2.before-none'), 'who-we-are');
         translateTextContent(document.querySelector('.sec-title[data-cue="slideInLeft"][data-delay="300"]'), 'about-text');
-        
+
         // About feature cards (keep if exists)
         const aboutCards = document.querySelectorAll('.about-feature-card .box-title');
         aboutCards.forEach((card, index) => {
@@ -1541,22 +1547,22 @@ $(document).ready(function() {
             const key = index === 0 ? 'about-feature-text-1' : 'about-feature-text-2';
             translateTextContent(el, key);
         });
-        
+
         // Services Section (handled via data-translate if present)
-        
+
         // Service cards
         const serviceCards = document.querySelectorAll('.service-card');
         const serviceKeys = [
-            'ai-development', 'data-analytics', 'machine-learning', 
+            'ai-development', 'data-analytics', 'machine-learning',
             'ai-consulting', 'automation-process', 'education-science',
             'ai-research', 'ai-cybersecurity'
         ];
-        
+
         serviceCards.forEach((card, index) => {
             const titleElement = card.querySelector('.box-title a');
             const textElement = card.querySelector('.box-text');
             const readMoreElement = card.querySelector('.link-btn');
-            
+
             if (titleElement && serviceKeys[index]) {
                 translateTextContent(titleElement, serviceKeys[index]);
                 translateTextContent(textElement, serviceKeys[index] + '-text');
@@ -1565,9 +1571,9 @@ $(document).ready(function() {
                 }
             }
         });
-        
+
         // Why Choose Us Section (handled via data-translate if present)
-        
+
         const whyCards = document.querySelectorAll('.why-card');
         const whyTitles = ['technology-integration', 'certified-experts', 'effortless-engagement', 'future-vision'];
         whyCards.forEach((card, index) => {
@@ -1576,11 +1582,11 @@ $(document).ready(function() {
                 translateTextContent(titleElement, whyTitles[index]);
             }
         });
-        
+
         // Project Section (handled via data-translate if present)
-        
+
         // Feature Section (handled via data-translate if present)
-        
+
         const featureCards = document.querySelectorAll('.feature-card');
         const featureTitles = ['tech-support', 'robo-genius', 'image-generation', 'chatbots'];
         featureCards.forEach((card, index) => {
@@ -1592,9 +1598,9 @@ $(document).ready(function() {
                 translateTextContent(textElement, featureTextKeys[index]);
             }
         });
-        
+
         // FAQ Section (handled via data-translate if present)
-        
+
         const faqQuestions = document.querySelectorAll('.accordion-button');
         const faqKeys = ['faq-question-1','faq-question-2','faq-question-3','faq-question-4','faq-question-5','faq-question-6','faq-question-7','faq-question-8'];
         faqQuestions.forEach((question, index) => {
@@ -1602,15 +1608,15 @@ $(document).ready(function() {
                 translateTextContent(question, faqKeys[index]);
             }
         });
-        
+
         const faqAnswers = document.querySelectorAll('.faq-text');
         faqAnswers.forEach((answer, index) => {
             const answerKeys = ['faq-answer-1','faq-answer-2','faq-answer-3','faq-answer-4','faq-answer-5','faq-answer-6','faq-answer-7','faq-answer-8'];
             if (answerKeys[index]) translateTextContent(answer, answerKeys[index]);
         });
-        
+
         // Pricing Section (handled via data-translate if present)
-        
+
         const pricingCards = document.querySelectorAll('.price-card');
         const pricingTitles = ['basic', 'standard', 'premium'];
         pricingCards.forEach((card, index) => {
@@ -1619,7 +1625,7 @@ $(document).ready(function() {
             const durationElement = card.querySelector('.duration');
             const subtitleElement = card.querySelector('.box-subtitle');
             const planButton = card.querySelector('.th-btn');
-            
+
             if (titleElement && pricingTitles[index]) {
                 translateTextContent(titleElement, pricingTitles[index]);
                 translateTextContent(textElement, 'pricing-text');
@@ -1628,11 +1634,11 @@ $(document).ready(function() {
                 translateTextContent(planButton, 'choose-your-plan');
             }
         });
-        
+
         // Blog Section (handled via data-translate if present)
-        
+
         // Footer (handled via data-translate if present)
-        
+
         // --- Helpers ---
         function translateTextBySelector(selector, key) {
             var el = document.querySelector(selector);
