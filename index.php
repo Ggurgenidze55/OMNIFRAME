@@ -51,7 +51,9 @@
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
     <!-- Theme Custom CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css"
+    <!-- Page overrides -->
+    <link rel="stylesheet" href="assets/css/custom.css">
 
 </head>
 
