@@ -1104,7 +1104,7 @@ $(document).ready(function() {
                 
                 // Services Section
                 'our-services': 'OUR SERVICES',
-                'services-title': 'Intelligent Innovations: Tailored AI Solutions',
+                'services-title': 'we offer modern web development services',
                 'ai-development': 'AI Development',
                 'ai-development-text': 'Creating & optimizing models using proprietary or customer data. AI model tailored to specific business.',
                 'data-analytics': 'Data Analytics',
@@ -1267,7 +1267,7 @@ $(document).ready(function() {
                 
                 // Services Section
                 'our-services': 'ჩვენი სერვისები',
-                'services-title': 'ინტელექტუალური ინოვაციები: მორგებული AI გადაწყვეტილებები',
+                'services-title': 'ჩვენ გთავაზობთ თანამედროვე ვებ დეველოპმენტ სერვისებს',
                 'ai-development': 'AI განვითარება',
                 'ai-development-text': 'შექმნა და ოპტიმიზაცია მოდელების, გამოყენებით საკუთარი ან მომხმარებლის მონაცემების. AI მოდელი მორგებული კონკრეტულ ბიზნესზე.',
                 'data-analytics': 'მონაცემთა ანალიტიკა',
