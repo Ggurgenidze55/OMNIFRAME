@@ -1128,10 +1128,13 @@ $(document).ready(function() {
                 'why-choose-title': 'Our goal is to build a world where technology serves humanity.',
                 'years-experience': 'Years Of Experience',
                 'technology-integration': 'Reliability',
-                'certified-experts': 'Certified Experts',
-                'effortless-engagement': 'Effortless Engagement',
-                'future-vision': 'Future Vision and Mission',
+                'certified-experts': 'Efficiency',
+                'effortless-engagement': 'Alignment',
+                'future-vision': 'Flexibility',
                 'why-text-1': 'Trusted by teams who need stability, quality, and long-term partnerships.',
+                'why-text-2': 'We minimize complexity and deliver results with focused precision.',
+                'why-text-3': 'Our work reflects your goals, timelines, and internal standards.',
+                // 'why-text-4' intentionally omitted in EN to keep HTML default text
                 
                 // Project Section
                 'case-study': 'Case Study',
@@ -1292,10 +1295,13 @@ $(document).ready(function() {
                 'why-choose-title': 'ჩვენი მიზანია ვაშენოთ სამყარო, სადაც ტექნოლოგია ემსახურება კაცობრიობას.',
                 'years-experience': 'წლის გამოცდილება',
                 'technology-integration': 'სანდოობა',
-                'certified-experts': 'სერტიფიცირებული ექსპერტები',
-                'effortless-engagement': 'უმარტივესი ურთიერთობა',
-                'future-vision': 'მომავლის ხედვა და მისია',
+                'certified-experts': 'ეფექტურობა',
+                'effortless-engagement': 'მიზნებთან გასწორება',
+                'future-vision': 'მოქნილობა',
                 'why-text-1': 'გვენდობიან მათ, ვისაც სჭირდება სტაბილურობა და ხარისხი.',
+                'why-text-2': 'ჩვენ ვუმცირებთ სირთულეს და შედეგს ვაწვდით ფოკუსირებული სიზუსტით.',
+                'why-text-3': 'ჩვენი სამუშაო ასახავს თქვენს მიზნებს, ვადებს და შიდა სტანდარტებს.',
+                'why-text-4': 'რაღაც შეიცვალა? ჩვენ ადვილად მოვერგებით და გაგიღიმებთაც.',
                 
                 // Project Section
                 'case-study': 'ქეისის შესწავლა',
