@@ -1,0 +1,15 @@
+/* Page-specific overrides */
+
+/* Who We Are? image shrink */
+.about-small-img {
+  max-width: 420px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 575.98px) {
+  .about-small-img { max-width: 320px; }
+}
+
+
