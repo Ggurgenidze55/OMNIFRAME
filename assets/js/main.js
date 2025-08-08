@@ -1163,6 +1163,15 @@ $(document).ready(function() {
                 'feature-text-3': 'We design scalable, consistent, and modern interfaces tailored to brands.',
                 'feature-text-4': 'Build custom chat experiences that engage, guide, and convert users.',
                 
+                // Blog/News Section
+                'news': 'News',
+                'our-latest-news': 'Our Latest News & Blog',
+                'view-all-post': 'View All Post',
+                'by-admin': 'by admin',
+                'blog-title-1': 'The rise of AI and Robotics in retail customer experiences',
+                'blog-title-2': 'How AI is Transforming Businesses Across Industries',
+                'blog-title-3': 'Understanding Deep Learning and Neural Networks in AI',
+
                 // FAQ Section
                 'faqs': 'Faq\'s',
                 'frequently-asked': 'Frequently asked questions',
@@ -1343,6 +1352,15 @@ $(document).ready(function() {
                 'feature-text-3': 'ვქმნით მასშტაბირებად, თანმიმდევრულ და თანამედროვე ინტერფეისებს, თქვენს ბრენდზე მორგებულს.',
                 'feature-text-4': 'ვქმნით მორგებულ ჩათ გამოცდილებებს, რომლებიც რთავენ, მიმართულებას აძლევენ და ზრდიან კონვერსიას.',
                 
+                // Blog/News Section
+                'news': 'სიახლეები',
+                'our-latest-news': 'ჩვენი ბოლო სიახლეები და ბლოგი',
+                'view-all-post': 'მთელი ბლოგი',
+                'by-admin': 'ავტორი: ადმინი',
+                'blog-title-1': 'როობოტიკა და AI საცალო სექტორის მომხმარებელთა გამოცდილებაში',
+                'blog-title-2': 'როგორ ცვლის AI ბიზნესებს სხვადასხვა ინდუსტრიაში',
+                'blog-title-3': 'დ ღრმა სწავლისა და ნეირონული ქსელების გაგება AI-ში',
+
                 // FAQ Section
                 'faqs': 'ხშირად დასმული კითხვები',
                 'frequently-asked': 'ხშირად დასმული კითხვები',
