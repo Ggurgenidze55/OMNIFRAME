@@ -42,3 +42,23 @@
 }
 
 
+/* Who We Are? main line: make it smaller and balanced */
+#about-sec .sec-title.mb-0 {
+  font-size: 32px;
+  line-height: 1.25;
+}
+@media (max-width: 767.98px) {
+  #about-sec .sec-title.mb-0 { font-size: 24px; }
+}
+
+/* Marquee: make OMNIframe text #8d908b and keep strong size */
+.marquee-card a {
+  color: #8d908b !important;
+  font-size: 42px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.marquee-card a:hover {
+  color: #8d908b !important;
+}
+
