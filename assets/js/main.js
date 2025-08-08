@@ -1138,8 +1138,8 @@ $(document).ready(function() {
                 
                 // Project Section
                 'case-study': 'Case Study',
-                'ai-projects-case': 'AI Projects Case Study',
-                'case-study-text': 'An AI agency is a specialized organization dedicated to helping businesses and organizations leverage artificial intelligence to achieve their goals.',
+                'ai-projects-case': 'Web Projects',
+                'case-study-text': 'We’ll show you how we helped various businesses refresh their digital presence.',
                 'robotics-program': 'Robotics, Program',
                 'ai-machine-learning': 'AI Machine Learning',
                 'user-research': 'User Research',
@@ -1305,8 +1305,8 @@ $(document).ready(function() {
                 
                 // Project Section
                 'case-study': 'ქეისის შესწავლა',
-                'ai-projects-case': 'AI პროექტების ქეისის შესწავლა',
-                'case-study-text': 'AI სააგენტო არის სპეციალიზებული ორგანიზაცია, რომელიც ეძღვნება ბიზნესებისა და ორგანიზაციების დახმარებას ხელოვნური ინტელექტის გამოყენებით მათი მიზნების მისაღწევად.',
+                'ai-projects-case': 'ვებ პროექტები',
+                'case-study-text': 'ჩვენ გაჩვენებთ, როგორ დავეხმარეთ სხვადასხვა ბიზნესს ციფრული სახის განახლებაში',
                 'robotics-program': 'რობოტიკა, პროგრამა',
                 'ai-machine-learning': 'AI მანქანური სწავლება',
                 'user-research': 'მომხმარებელთა კვლევა',
