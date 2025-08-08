@@ -10,6 +10,12 @@
   display: block;
   margin: 0 auto;
 }
+/* Index page stacked images: reduce to 50% */
+.about-stack-img {
+  width: 50% !important;
+  height: auto;
+  display: block;
+}
 /* Align image-feature pairs vertically centered and tighten spacing */
 .about-feature-card.mb-0 { margin-bottom: 0; align-items: center; display: flex; gap: 16px; }
 .img-box1.mb-0 { margin-bottom: 0; }
