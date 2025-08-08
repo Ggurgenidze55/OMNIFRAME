@@ -1,3 +1,9 @@
+.marquee-text {
+  font-weight: 700;
+  font-size: 42px;
+  color: #6D30FB;
+  white-space: nowrap;
+}
 .about-two-col {
   display: grid;
   grid-template-columns: 1fr 1fr;
