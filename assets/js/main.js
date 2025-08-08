@@ -1097,9 +1097,9 @@ $(document).ready(function() {
                 // About Section
                 'who-we-are': 'Who We Are?',
                 'about-text': 'OMNIframe is your tech partner for building modern websites that are fast, beautiful, and tailored to your goals.',
-                'customers-satisfaction': '100% Customers Satisfaction',
-                'quality-assurance': 'Quality Assurance Guarantee',
-                'about-feature-text': 'We bring a team of experienced AI specialists, data scientists, and industry experts committed to pushing boundaries.',
+                'customers-satisfaction': '100% Satisfaction',
+                'quality-assurance': 'Quality Assurance',
+                'about-feature-text': 'We deliver high-quality, scalable web solutions that exceed expectations.',
                 
                 // Services Section
                 'our-services': 'OUR SERVICES',
@@ -1259,9 +1259,9 @@ $(document).ready(function() {
                 // About Section
                 'who-we-are': 'ვინ ვართ ჩვენ?',
                 'about-text': 'OMNIframe არის შენი ტექნოლოგიური პარტნიორი თანამედროვე ვებსაიტების შესაქმნელად — სწრაფი, ლამაზი და ზუსტად მიზნებზე მორგებული.',
-                'customers-satisfaction': '100% მომხმარებელთა კმაყოფილება',
+                'customers-satisfaction': '100% კმაყოფილება',
                 'quality-assurance': 'ხარისხის გარანტია',
-                'about-feature-text': 'ჩვენ ვმუშაობთ გამოცდილი AI სპეციალისტების, მონაცემთა მეცნიერების და ინდუსტრიის ექსპერტების გუნდთან, რომლებიც მზად არიან საზღვრების გადასალახად.',
+                'about-feature-text': 'ჩვენ ვაწვდით მაღალი ხარისხის, მასშტაბირებად ვებ გამოთვლის, რომელიც გადააჭარბებს მოლოდინებს.',
                 
                 // Services Section
                 'our-services': 'ჩვენი სერვისები',
