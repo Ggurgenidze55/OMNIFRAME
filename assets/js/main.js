@@ -1,44 +1,5 @@
 (function ($) {
     "use strict";
-    // --- Dynamic includes: inject shared header/footer across all pages ---
-    (function setupSharedIncludes(){
-        var style = document.createElement('style');
-        style.innerHTML = 
-            '.th-header, .footer-wrapper{display:none!important}' +
-            ' #included-header .th-header{display:block!important}' +
-            ' #included-footer .footer-wrapper{display:block!important}';
-        document.head.appendChild(style);
-
-        function fetchAndInject(url, containerId, insertPosition){
-            return fetch(url, {cache:'no-cache'})
-                .then(function(res){ return res.text(); })
-                .then(function(html){
-                    var wrapper = document.getElementById(containerId);
-                    if (!wrapper){
-                        wrapper = document.createElement('div');
-                        wrapper.id = containerId;
-                        if (insertPosition === 'start') {
-                            document.body.insertBefore(wrapper, document.body.firstChild);
-                        } else {
-                            document.body.appendChild(wrapper);
-                        }
-                    }
-                    wrapper.innerHTML = html;
-                })
-                .catch(function(){ /* silently ignore include errors */ });
-        }
-
-        // Ensure runs after DOM parsed
-        document.addEventListener('DOMContentLoaded', function(){
-            Promise.all([
-                fetchAndInject('includes/header.html', 'included-header', 'start'),
-                fetchAndInject('includes/footer.html', 'included-footer', 'end')
-            ]).then(function(){
-                // Fire event so other scripts can (re)bind header-dependent logic
-                document.dispatchEvent(new CustomEvent('includes:ready'));
-            });
-        });
-    })();
     /*=================================
         JS Index Here
     ==================================*/
