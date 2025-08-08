@@ -81,3 +81,7 @@
   margin-bottom: auto; /* push Read More to the bottom for consistent layout */
 }
 
+#service-sec .service-card .link-btn {
+  margin-top: 12px; /* extra space above Read More link */
+}
+
