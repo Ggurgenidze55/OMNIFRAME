@@ -1,3 +1,17 @@
+.about-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.about-two-col .about-feature-card-wrap { margin: 0; }
+.about-two-col .about-feature-card { margin-bottom: 20px; }
+.about-two-col .about-feature-card:last-child { margin-bottom: 0; }
+
+@media (max-width: 1199.98px) {
+  .about-two-col { grid-template-columns: 1fr; }
+}
 .about-feature-card.mb-0 .box-title { margin-bottom: 6px; }
 .about-feature-card.mb-0 .box-text { margin-bottom: 0; }
 /* Page-specific overrides */
@@ -9,12 +23,6 @@
   height: auto;
   display: block;
   margin: 0 auto;
-}
-/* Index page stacked images: reduce to 50% */
-.about-stack-img {
-  width: 50% !important;
-  height: auto;
-  display: block;
 }
 /* Align image-feature pairs vertically centered and tighten spacing */
 .about-feature-card.mb-0 { margin-bottom: 0; align-items: center; display: flex; gap: 16px; }
