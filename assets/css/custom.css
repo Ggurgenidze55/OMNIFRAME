@@ -144,6 +144,13 @@
   gap: 10px 14px;
   padding: 12px;
 }
+
+/* center align only for desktop header dropdown */
+.menu-area .services-dropdown > .sub-menu.services-grid {
+  left: 50% !important;
+  transform: translateX(-50%);
+  right: auto !important;
+}
 .sub-menu.services-grid > li {
   background: #ffffff;
   border: 1px solid rgba(0,0,0,0.08);
