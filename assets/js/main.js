@@ -636,8 +636,8 @@
 
     /*----------- 14. Counter Up ----------*/
     $(".counter-number").counterUp({
-        delay: 10,
-        time: 1000,
+        delay: 20,
+        time: 1600,
     });
 
     /*----------- 15. Shape Mockup ----------*/
@@ -1291,9 +1291,9 @@ $(document).ready(function() {
                 'read-more': 'მეტის ნახვა',
                 
                 // Why Choose Us Section
-                'why-choose-us': 'რატომ აირჩიოთ ჩვენ',
+                'why-choose-us': 'რატომ გვირჩევენ ჩვენ',
                 'why-choose-title': 'ჩვენ არ ვქმნით უბრალოდ ვებსაიტებს — ჩვენ ვქმნით მნიშვნელოვან ციფრულ გამოცდილებას',
-                'years-experience': 'წლის გამოცდილება',
+                'years-experience': 'წლიანი გამოცდილება',
                 'technology-integration': 'სანდოობა',
                 'certified-experts': 'ეფექტურობა',
                 'effortless-engagement': 'მიზნებთან გასწორება',
