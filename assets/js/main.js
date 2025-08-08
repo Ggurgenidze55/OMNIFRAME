@@ -1125,7 +1125,7 @@ $(document).ready(function() {
                 
                 // Why Choose Us Section
                 'why-choose-us': 'WHY CHOOSE US',
-                'why-choose-title': 'Our goal is to build a world where technology serves humanity.',
+                'why-choose-title': 'We don’t just build websites — we create meaningful digital experiences',
                 'years-experience': 'Years Of Experience',
                 'technology-integration': 'Reliability',
                 'certified-experts': 'Efficiency',
@@ -1292,7 +1292,7 @@ $(document).ready(function() {
                 
                 // Why Choose Us Section
                 'why-choose-us': 'რატომ აირჩიოთ ჩვენ',
-                'why-choose-title': 'ჩვენი მიზანია ვაშენოთ სამყარო, სადაც ტექნოლოგია ემსახურება კაცობრიობას.',
+                'why-choose-title': 'ჩვენ არ ვქმნით უბრალოდ ვებსაიტებს — ჩვენ ვქმნით მნიშვნელოვან ციფრულ გამოცდილებას',
                 'years-experience': 'წლის გამოცდილება',
                 'technology-integration': 'სანდოობა',
                 'certified-experts': 'ეფექტურობა',
