@@ -1,15 +1,16 @@
 /* Page-specific overrides */
 
-/* Who We Are? image shrink */
+/* Who We Are? image shrink (match FAQ scale) */
 .about-small-img {
-  max-width: 420px;
-  width: 100%;
+  max-width: 320px !important; /* match FAQ visual scale */
+  width: auto !important;
   height: auto;
   display: block;
+  margin: 0 auto;
 }
 
 @media (max-width: 575.98px) {
-  .about-small-img { max-width: 320px; }
+  .about-small-img { max-width: 260px !important; }
 }
 
 
