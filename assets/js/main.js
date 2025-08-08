@@ -1099,7 +1099,8 @@ $(document).ready(function() {
                 'about-text': 'OMNIframe is your tech partner for building modern websites that are fast, beautiful, and tailored to your goals.',
                 'customers-satisfaction': '100% Satisfaction',
                 'quality-assurance': 'Quality Assurance',
-                'about-feature-text': 'We deliver high-quality, scalable web solutions that exceed expectations.',
+                'about-feature-text-1': 'We deliver high-quality, scalable web solutions that exceed expectations.',
+                'about-feature-text-2': 'Our team of experienced developers and QA specialists ensure precision, performance, and long-term reliability.',
                 
                 // Services Section
                 'our-services': 'OUR SERVICES',
@@ -1261,7 +1262,8 @@ $(document).ready(function() {
                 'about-text': 'OMNIframe არის შენი ტექნოლოგიური პარტნიორი თანამედროვე ვებსაიტების შესაქმნელად — სწრაფი, ლამაზი და ზუსტად მიზნებზე მორგებული.',
                 'customers-satisfaction': '100% კმაყოფილება',
                 'quality-assurance': 'ხარისხის გარანტია',
-                'about-feature-text': 'ჩვენ ვაწვდით მაღალი ხარისხის, მასშტაბირებად ვებ გამოთვლის, რომელიც გადააჭარბებს მოლოდინებს.',
+                'about-feature-text-1': 'ჩვენ ვაწვდით მაღალი ხარისხის, მასშტაბირებად ვებ გამოთვლის, რომელიც გადააჭარბებს მოლოდინებს.',
+                'about-feature-text-2': 'ჩვენი გამოცდილი გუნდითა და ხარისხის კონტროლის სპეციალისტებით, ვსასტურებთ ზუსტ, სწრაფ და ხანგრძლივი წარმატების გარანტიას.',
                 
                 // Services Section
                 'our-services': 'ჩვენი სერვისები',
@@ -1483,8 +1485,9 @@ $(document).ready(function() {
         });
 
         const aboutTexts = document.querySelectorAll('.about-feature-card .box-text');
-        aboutTexts.forEach((el) => {
-            translateTextContent(el, 'about-feature-text');
+        aboutTexts.forEach((el, index) => {
+            const key = index === 0 ? 'about-feature-text-1' : 'about-feature-text-2';
+            translateTextContent(el, key);
         });
         
         // Services Section (handled via data-translate if present)
