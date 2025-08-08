@@ -8,6 +8,12 @@
   display: block;
   margin: 0 auto;
 }
+/* Align image-feature pairs vertically centered and tighten spacing */
+.about-feature-card.mb-0 { margin-bottom: 0; }
+.img-box1.mb-0 { margin-bottom: 0; }
+.about-wrap1 .row.align-items-center { --pair-gap: 24px; }
+.about-wrap1 .row.align-items-center > [class*="col-"] { margin-bottom: var(--pair-gap); }
+
 
 @media (max-width: 575.98px) {
   .about-small-img { max-width: 260px !important; }
