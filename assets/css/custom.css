@@ -83,5 +83,13 @@
 
 #service-sec .service-card .link-btn {
   margin-top: 12px; /* extra space above Read More link */
+  align-self: flex-start; /* prevent stretching to full card width */
+  width: auto !important;
+  display: inline-flex;
+}
+
+#service-sec .service-card .link-btn::before,
+#service-sec .service-card .link-btn::after {
+  right: auto !important; /* keep underline length equal to text width */
 }
 
