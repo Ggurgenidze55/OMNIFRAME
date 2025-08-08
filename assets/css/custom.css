@@ -67,3 +67,17 @@
   filter: brightness(0) !important; /* make icon black while keeping transparency */
 }
 
+/* --- Services grid: equal card heights across languages --- */
+#service-sec .row.gy-4 > [class*="col-"] {
+  display: flex;
+}
+#service-sec .row.gy-4 > [class*="col-"] .service-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+#service-sec .service-card .box-text {
+  margin-bottom: auto; /* push Read More to the bottom for consistent layout */
+}
+
