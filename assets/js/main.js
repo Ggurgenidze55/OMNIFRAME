@@ -1105,8 +1105,8 @@ $(document).ready(function() {
                 // Services Section
                 'our-services': 'OUR SERVICES',
                 'services-title': 'we offer modern web development services',
-                'ai-development': 'AI Development',
-                'ai-development-text': 'Creating & optimizing models using proprietary or customer data. AI model tailored to specific business.',
+                'ai-development': 'WordPress Development',
+                'ai-development-text': 'Custom WordPress sites with fast performance and flexible editing.',
                 'data-analytics': 'Data Analytics',
                 'data-analytics-text': 'Providing insights for time-sensitive decisions. Forecasting trends, risks, and opportunities.',
                 'machine-learning': 'Machine Learning',
@@ -1268,8 +1268,8 @@ $(document).ready(function() {
                 // Services Section
                 'our-services': 'ჩვენი სერვისები',
                 'services-title': 'ჩვენ გთავაზობთ თანამედროვე ვებ დეველოპმენტ სერვისებს',
-                'ai-development': 'AI განვითარება',
-                'ai-development-text': 'შექმნა და ოპტიმიზაცია მოდელების, გამოყენებით საკუთარი ან მომხმარებლის მონაცემების. AI მოდელი მორგებული კონკრეტულ ბიზნესზე.',
+                'ai-development': 'WordPress განვითარება',
+                'ai-development-text': 'სწრაფი და მარტივად სამართავი WordPress ვებსაიტების შექმნა.',
                 'data-analytics': 'მონაცემთა ანალიტიკა',
                 'data-analytics-text': 'შეხედულებების მიწოდება დროებითი გადაწყვეტილებებისთვის. ტენდენციების, რისკების და შესაძლებლობების პროგნოზირება.',
                 'machine-learning': 'მანქანური სწავლება',
