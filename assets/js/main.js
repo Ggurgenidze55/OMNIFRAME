@@ -1166,12 +1166,16 @@ $(document).ready(function() {
                 // FAQ Section
                 'faqs': 'Faq\'s',
                 'frequently-asked': 'Frequently asked questions',
-                'faq-question-1': 'What is an AI startup, and what services do you offer?',
-                'faq-question-2': 'Do you offer pre-built AI models or create everything from scratch?',
-                'faq-question-3': 'What is the process for developing an AI solution for my business?',
-                'faq-question-4': 'What is an AI startup, and what services do you offer?',
-                'faq-question-5': 'How do you ensure data privacy and compliance with regulations?',
-                'faq-answer': 'An AI Software as a Service startup combines the scalability of cloud-based platforms with the power of artificial intelligence to deliver innovative, on-demand solutions. These startups cater to a wide range of industries by offering AI-driven tools and applications that solve specific business challenges, enhance efficiency, and drive data-informed decisions. The AI industry is rapidly expanding, with opportunities to disrupt traditional industries and create entirely new markets. Continuous advancements in hardware and algorithms position AI startups to play a pivotal role in shaping the future.',
+                'faq-question-1': 'What web development services do you offer?',
+                'faq-question-2': 'Do you build with WordPress, Shopify, or custom frameworks?',
+                'faq-question-3': 'How long does a typical website project take?',
+                'faq-question-4': 'Can you migrate my existing website to a new platform?',
+                'faq-question-5': 'Do you provide ongoing maintenance and SEO?',
+                'faq-answer-1': 'We build modern, fast websites using Next.js/React, WordPress, and Shopify—tailored to your goals and budget.',
+                'faq-answer-2': 'Yes. We choose the right stack per project: WordPress for content-driven sites, Shopify for e-commerce, or custom React/Next.js for full flexibility.',
+                'faq-answer-3': 'Most small–medium sites take 2–6 weeks depending on scope, content readiness, and feedback speed.',
+                'faq-answer-4': 'Yes. We safely migrate content, URLs, and tracking, preserving SEO and improving performance.',
+                'faq-answer-5': 'Yes. We offer support plans covering updates, backups, monitoring, and technical SEO.',
                 
                 // Pricing Section
                 'pricing-plan': 'PRICING PLAN',
@@ -1334,14 +1338,18 @@ $(document).ready(function() {
                 'feature-text-4': 'ვქმნით მორგებულ ჩათ გამოცდილებებს, რომლებიც რთავენ, მიმართულებას აძლევენ და ზრდიან კონვერსიას.',
                 
                 // FAQ Section
-                'faqs': 'ხშირი კითხვები',
+                'faqs': 'ხშირად დასმული კითხვები',
                 'frequently-asked': 'ხშირად დასმული კითხვები',
-                'faq-question-1': 'რა არის AI სტარტაპი და რა სერვისებს გთავაზობთ?',
-                'faq-question-2': 'გთავაზობთ წინასწარ შექმნილ AI მოდელებს თუ ყველაფერს ნულიდან ქმნით?',
-                'faq-question-3': 'რა არის AI გადაწყვეტილების შემუშავების პროცესი ჩემი ბიზნესისთვის?',
-                'faq-question-4': 'რა არის AI სტარტაპი და რა სერვისებს გთავაზობთ?',
-                'faq-question-5': 'როგორ უზრუნველყოფთ მონაცემთა კონფიდენციალურობას და შესაბამისობას რეგულაციებთან?',
-                'faq-answer': 'AI Software as a Service სტარტაპი აერთიანებს ღრუბლოვანი პლატფორმების მასშტაბურობას ხელოვნური ინტელექტის ძალასთან, რათა მიაწოდოს ინოვაციური, მოთხოვნაზე დაფუძნებული გადაწყვეტილებები. ეს სტარტაპები ემსახურება ფართო სპექტრის ინდუსტრიებს AI-ზე დაფუძნებული ინსტრუმენტებისა და აპლიკაციების შეთავაზებით, რომლებიც წყვეტენ კონკრეტულ ბიზნეს გამოწვევებს, აუმჯობესებენ ეფექტურობას და ხელს უწყობენ მონაცემებზე დაფუძნებულ გადაწყვეტილებებს. AI ინდუსტრია სწრაფად ფართოვდება, შესაძლებლობებით ტრადიციული ინდუსტრიების დარღვევისა და სრულიად ახალი ბაზრების შექმნის. უწყვეტი წინსვლა ჰარდვერში და ალგორითმებში AI სტარტაპებს საშუალებას აძლევს მნიშვნელოვან როლს ითამაშონ მომავლის ჩამოყალიბებაში.',
+                'faq-question-1': 'რა ვებ დეველოპმენტ სერვისებს სთავაზობთ?',
+                'faq-question-2': 'მუშაობთ WordPress‑ით, Shopify‑ით თუ კასტომ ფრეიმვორკებით?',
+                'faq-question-3': 'რამდენ ხანში მზადდება ვებ პროექტი?',
+                'faq-question-4': 'შეგიძლიათ არსებული საიტის ახალი პლატფორმაზე გადატანა?',
+                'faq-question-5': 'გთავაზობთ ტექნიკურ მომსახურებას და SEO‑ს?',
+                'faq-answer-1': 'ვქმნით თანამედროვე, სწრაფ ვებსაიტებს Next.js/React‑ზე, WordPress‑ზე და Shopify‑ზე — თქვენს მიზნებზე და ბიუჯეტზე მორგებულად.',
+                'faq-answer-2': 'კი. პროექტის მიხედვით ვირჩევთ სტეკს: კონტენტზე ორიენტირებულისთვის — WordPress, ე‑ქომერციისთვის — Shopify, სრული მოქნილობისთვის — React/Next.js.',
+                'faq-answer-3': 'მცირე და საშუალო საიტები ჩვეულებრივ 2–6 კვირაში სრულდება — მოცულობაზე, კონტენტზე და ფიდბექის სისწრაფეზეა დამოკიდებული.',
+                'faq-answer-4': 'კი. უსაფრთხოდ გადავიტანთ კონტენტს, URL‑ებს და ანალიტიკას, შევინარჩუნებთ SEO‑ს და გავაუმჯობესებთ სიჩქარეს.',
+                'faq-answer-5': 'კი. გვაქვს სერვის გეგმები, სადაც შედის განახლებები, ბექაფები, მონიტორინგი და ტექნიკური SEO.',
                 
                 // Pricing Section
                 'pricing-plan': 'ფასების გეგმა',
@@ -1550,7 +1558,8 @@ $(document).ready(function() {
             const textElement = card.querySelector('.box-text');
             if (titleElement && featureTitles[index]) {
                 translateTextContent(titleElement, featureTitles[index]);
-                translateTextContent(textElement, 'feature-text');
+                const featureTextKeys = ['feature-text-1','feature-text-2','feature-text-3','feature-text-4'];
+                translateTextContent(textElement, featureTextKeys[index]);
             }
         });
         
@@ -1565,8 +1574,9 @@ $(document).ready(function() {
         });
         
         const faqAnswers = document.querySelectorAll('.faq-text');
-        faqAnswers.forEach(answer => {
-            translateTextContent(answer, 'faq-answer');
+        faqAnswers.forEach((answer, index) => {
+            const answerKeys = ['faq-answer-1','faq-answer-2','faq-answer-3','faq-answer-4','faq-answer-5'];
+            translateTextContent(answer, answerKeys[index]);
         });
         
         // Pricing Section (handled via data-translate if present)
