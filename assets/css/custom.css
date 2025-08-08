@@ -1,7 +1,7 @@
 .marquee-text {
   font-weight: 700;
   font-size: 42px;
-  color: #6D30FB;
+  color: #000000; /* black */
   white-space: nowrap;
 }
 .about-two-col {
@@ -53,12 +53,12 @@
 
 /* Marquee: make OMNIframe text #8d908b and keep strong size */
 .marquee-card a {
-  color: #8d908b !important;
+  color: #000000 !important; /* black */
   font-size: 42px;
   font-weight: 700;
   text-decoration: none;
 }
 .marquee-card a:hover {
-  color: #8d908b !important;
+  color: #000000 !important;
 }
 
