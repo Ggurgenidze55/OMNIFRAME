@@ -62,3 +62,8 @@
   color: #000000 !important;
 }
 
+/* Marquee star icon to black */
+.marquee-card .marquee-icon img {
+  filter: brightness(0) !important; /* make icon black while keeping transparency */
+}
+
