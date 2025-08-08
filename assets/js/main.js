@@ -1152,13 +1152,16 @@ $(document).ready(function() {
                 'co-founder-xyz': 'Co-founder, XYZ',
                 
                 // Feature Section
-                'advanced-technology': 'advanced technology',
+                'advanced-technology': 'What We Offer',
                 'future-is-here': 'The Future is Here: Advance AI Technology',
-                'tech-support': 'Tech support',
-                'robo-genius': 'Robo Genius',
-                'image-generation': 'Image Generation',
-                'chatbots': 'Chatbots',
-                'feature-text': 'To empower businesses with intelligent, scalable, and impactful solutions that drive progress',
+                'tech-support': 'Tech Support',
+                'robo-genius': 'Custom Automations',
+                'image-generation': 'UI Design Systems',
+                'chatbots': 'Chat Integrations',
+                'feature-text-1': 'Ongoing website updates, bug fixes, hosting, and client-side assistance included.',
+                'feature-text-2': 'Integrate smart workflows that save time and reduce human repetition.',
+                'feature-text-3': 'We design scalable, consistent, and modern interfaces tailored to brands.',
+                'feature-text-4': 'Build custom chat experiences that engage, guide, and convert users.',
                 
                 // FAQ Section
                 'faqs': 'Faq\'s',
@@ -1319,13 +1322,16 @@ $(document).ready(function() {
                 'co-founder-xyz': 'თანადამფუძნებელი, XYZ',
                 
                 // Feature Section
-                'advanced-technology': 'მოწინავე ტექნოლოგია',
+                'advanced-technology': 'რას ვთავაზობთ',
                 'future-is-here': 'მომავალი აქ არის: მოწინავე AI ტექნოლოგია',
                 'tech-support': 'ტექნიკური მხარდაჭერა',
-                'robo-genius': 'რობო გენიუსი',
-                'image-generation': 'სურათის გენერაცია',
-                'chatbots': 'ჩატბოტები',
-                'feature-text': 'ბიზნესების უფლებამოსილების გაზრდა ინტელექტუალური, მასშტაბური და ეფექტური გადაწყვეტილებებით, რომლებიც ხელს უწყობენ პროგრესს',
+                'robo-genius': 'მორგებული ავტომატიზაციები',
+                'image-generation': 'UI დიზაინის სისტემები',
+                'chatbots': 'ჩატის ინტეგრაციები',
+                'feature-text-1': 'ვებსაიტის მუდმივი განახლებები, ბაგების გამოსწორება, ჰოსტინგი და მომხმარებლის მხარეს დახმარება.',
+                'feature-text-2': 'ჭკვიანი სამუშაო ნაკადების ინტეგრაცია, რომლებიც დროს ზოგავენ და ამცირებენ განმეორებით ქმედებებს.',
+                'feature-text-3': 'ვქმნით მასშტაბირებად, თანმიმდევრულ და თანამედროვე ინტერფეისებს, თქვენს ბრენდზე მორგებულს.',
+                'feature-text-4': 'ვქმნით მორგებულ ჩათ გამოცდილებებს, რომლებიც რთავენ, მიმართულებას აძლევენ და ზრდიან კონვერსიას.',
                 
                 // FAQ Section
                 'faqs': 'ხშირი კითხვები',
