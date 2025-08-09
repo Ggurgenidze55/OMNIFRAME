@@ -253,17 +253,39 @@
 }
 
 /* About page: responsive second image sizing */
-.img-box4 .img2 img { width: 100%; height: auto; display:block; }
+.img-box4 .img2 img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 @media (min-width: 1200px) {
-  .img-box4 .img2 { width: 50%; }
+  .img-box4 .img2 {
+    width: 50%;
+  }
 }
 @media (min-width: 768px) and (max-width: 1199.98px) {
-  .img-box4 .img2 { width: 70%; }
+  .img-box4 .img2 {
+    width: 70%;
+  }
 }
 @media (max-width: 767.98px) {
-  .img-box4 .img2 { width: 100%; }
+  .img-box4 .img2 {
+    width: 100%;
+  }
 }
 
 /* Ensure other images scale nicely on small screens */
 .img-box4 .img1 img,
-.img-box4 .img3 img { max-width: 100%; height: auto; display:block; }
+.img-box4 .img3 img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Hide specific About images on mobile only */
+@media (max-width: 767.98px) {
+  #about-sec .img-box4 .img1,
+  #about-sec .img-box4 .img2 {
+    display: none !important;
+  }
+}

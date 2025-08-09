@@ -1100,6 +1100,8 @@ $(document).ready(function() {
                 // About Section
                 'who-we-are': 'Who We Are?',
                 'about-text': 'OMNIframe is your tech partner for building modern websites that are fast, beautiful, and tailored to your goals.',
+                'about-title': 'Turning Ideas into Digital Experiences',
+                'about-paragraph': 'At OMNIframe, we don’t just build websites — we bring ideas to life. We start with your vision, add our creativity, and blend it with modern tech to make something people will remember. Every click, every page, every detail is crafted to feel smooth, fast, and inspiring.',
                 'customers-satisfaction': '100% Satisfaction',
                 'quality-assurance': 'Quality Assurance',
                 'about-feature-text-1': 'We deliver high-quality, scalable web solutions that exceed expectations.',
@@ -1148,6 +1150,13 @@ $(document).ready(function() {
                 'user-research': 'User Research',
                 'speech-recognizer': 'Speech recognizer using deep learning',
 
+                // Counter Area
+                'project-completed': 'Projects Completed',
+                'creative-minds': 'Creative Minds',
+                'happy-customers': 'Happy Customers',
+                'innovative-projects': 'Innovative Projects',
+                'collaborative-team': 'Collaborative Team',
+
                 // Testimonial Section
                 'testimonials': 'Testimonials',
                 'what-clients-say': 'What Our Clients Say About us',
@@ -1178,6 +1187,29 @@ $(document).ready(function() {
                 // FAQ Section
                 'faqs': 'Faq\'s',
                 'frequently-asked': 'Frequently asked questions',
+                // Contact page
+                'quick-contact-info': 'Quick contact info',
+                'contact-information': 'Contact Information',
+                'location': 'Location',
+                'email-us': 'Email us',
+                'free-call': 'Free Call',
+                'opening-hour': 'Opening hour',
+                'select-subject': 'Select Subject',
+                'get-in-touch': 'Get In Touch!',
+                'submit-message': 'Submit Message',
+                // Footer CTA (Get Started)
+                'get-started-section': 'Get Started',
+                'lets-make-something': "Let's Make Something Great Together",
+                // Work Process (About page)
+                'work-process': 'OMNIframe – Work Process',
+                'how-does-it-work': 'How Does It Work?',
+                'work-process-intro': 'Choosing OMNIframe means teaming up with creative minds who care about your success as much as you do. Together, we’ll use the power of modern web technologies (and AI when it’s needed) to take your business to the next level.',
+                'step-1-title': 'Discovery & Strategy',
+                'step-1-text': 'We start by learning about your goals, challenges, and workflow, so we know exactly what will make the biggest impact.',
+                'step-2-title': 'Development & Implementation',
+                'step-2-text': 'From design to coding, we build your project step by step, making sure everything runs smoothly and works exactly as you imagined.',
+                'step-3-title': 'Launch & Optimization',
+                'step-3-text': 'We bring your project to life, monitor performance, and fine-tune it so it keeps delivering results long after launch.',
                 'faq-question-1': 'How long does it take to build a website?',
                 'faq-question-2': 'Do you offer website maintenance after launch?',
                 'faq-question-3': 'Can I update the website myself?',
@@ -1292,6 +1324,8 @@ $(document).ready(function() {
                 // About Section
                 'who-we-are': 'ვინ ვართ ჩვენ?',
                 'about-text': 'OMNIframe არის შენი ტექნოლოგიური პარტნიორი თანამედროვე ვებსაიტების შესაქმნელად — სწრაფი, ლამაზი და ზუსტად მიზნებზე მორგებული.',
+                'about-title': 'იდეების გადაქცევა ციფრულ გამოცდილებად',
+                'about-paragraph': 'OMNIframe-ში ჩვენ უბრალოდ საიტებს არ ვაკეთებთ — ჩვენ ვცოცხლებთ იდეებს. ვიწყებთ თქვენი ხედვით, ვამატებთ ჩვენს კრეატივს და ვაერთიანებთ თანამედროვე ტექნოლოგიებთან, რომ შევქმნათ ისეთი რამ, რაც ყველას დაამახსოვრდება. თითოეული კლიკი, გვერდი და დეტალი შექმნილია, რომ იყოს გლუვი, სწრაფი და შთამაგონებელი.',
                 'customers-satisfaction': '100% კმაყოფილება',
                 'quality-assurance': 'ხარისხის გარანტია',
                 'about-feature-text-1': 'ჩვენ ვაწვდით მაღალი ხარისხის, მასშტაბირებად ვებ გამოთვლის, რომელიც გადააჭარბებს მოლოდინებს.',
@@ -1340,6 +1374,13 @@ $(document).ready(function() {
                 'user-research': 'მომხმარებელთა კვლევა',
                 'speech-recognizer': 'საუბრის ამომცნობი ღრმა სწავლების გამოყენებით',
 
+                // Counter Area
+                'project-completed': 'დასრულებული პროექტები',
+                'creative-minds': 'შემოქმედები',
+                'happy-customers': 'კმაყოფილი კლიენტები',
+                'innovative-projects': 'ინოვაციური პროექტები',
+                'collaborative-team': 'თანამშრომლური გუნდი',
+
                 // Testimonial Section
                 'testimonials': 'მიმოხილვები',
                 'what-clients-say': 'რას ამბობენ ჩვენი კლიენტები',
@@ -1370,6 +1411,29 @@ $(document).ready(function() {
                 // FAQ Section
                 'faqs': 'ხშირად დასმული კითხვები',
                 'frequently-asked': 'ხშირად დასმული კითხვები',
+                // Contact page
+                'quick-contact-info': 'სწრაფი საკონტაქტო ინფორმაცია',
+                'contact-information': 'საკონტაქტო ინფორმაცია',
+                'location': 'მისამართი',
+                'email-us': 'ელფოსტა',
+                'free-call': 'ზარი',
+                'opening-hour': 'სამუშაო საათები',
+                'select-subject': 'აირჩიეთ თემა',
+                'get-in-touch': 'დაგვიკავშირდით!',
+                'submit-message': 'შეტყობინების გაგზავნა',
+                // Footer CTA (Get Started)
+                'get-started-section': 'დავიწყოთ',
+                'lets-make-something': 'მოდით ერთად შევქმნათ რაღაც შესანიშნავი',
+                // Work Process (About page)
+                'work-process': 'OMNIframe – სამუშაო პროცესი',
+                'how-does-it-work': 'როგორ მუშაობს?',
+                'work-process-intro': 'OMNIframe-ს არჩევა ნიშნავს თანამშრომლობას შემოქმედებით გუნდთან, რომელსაც თქვენი წარმატება ისეთივე მნიშვნელოვანია, როგორც თქვენთვის. ერთად გამოვიყენებთ თანამედროვე ვებ ტექნოლოგიების (და საჭიროების შემთხვევაში AI-ის) ძალას, რომ თქვენი ბიზნესი ახალ დონეზე ავიყვანოთ.',
+                'step-1-title': 'აღმოჩენა და სტრატეგია',
+                'step-1-text': 'ვიწყებთ თქვენი მიზნების, გამოწვევებისა და სამუშაო პროცესის კარგად შესწავლით, რომ ზუსტად ვიცოდეთ, რა მოუტანს ყველაზე დიდ შედეგს.',
+                'step-2-title': 'განვითარება და დანერგვა',
+                'step-2-text': 'დიზაინიდან კოდირებამდე, ვქმნით პროექტს ეტაპობრივად, რომ ყველაფერი იყოს გლუვი და ზუსტად ისე იმუშაოს, როგორც თქვენ წარმოგიდგენიათ.',
+                'step-3-title': 'გაშვება და ოპტიმიზაცია',
+                'step-3-text': 'პროექტს ვუშვებთ რეალურ გარემოში, ვაკვირდებით მუშაობას და ვასწორებთ დეტალებს, რომ შედეგები მუდმივად იზრდებოდეს.',
                 'faq-question-1': 'რამდენ ხანში მზადდება ვებსაიტი?',
                 'faq-question-2': 'ვთავაზობთ თუ არა მომსახურებას გაშვების შემდეგ?',
                 'faq-question-3': 'შემიძლია თუ არა თვითონ განვაახლო საიტის კონტენტი?',
