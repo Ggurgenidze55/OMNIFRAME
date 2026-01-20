@@ -1,0 +1,50 @@
+<svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="techGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e3ff00;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b8cc00;stop-opacity:1" />
+    </linearGradient>
+    
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+      <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#e3ff00" stroke-width="0.5" opacity="0.3"/>
+    </pattern>
+  </defs>
+  
+  <!-- Background with grid pattern -->
+  <rect x="0" y="0" width="200" height="60" fill="#0a0a0a"/>
+  <rect x="0" y="0" width="200" height="60" fill="url(#grid)"/>
+  
+  <!-- Main logo container -->
+  <g filter="url(#glow)">
+    <!-- Hexagonal background -->
+    <polygon points="20,30 40,15 160,15 180,30 160,45 40,45" fill="none" stroke="#e3ff00" stroke-width="2" opacity="0.8"/>
+    
+    <!-- OMNIframe text -->
+    <text x="100" y="35" font-family="'Courier New', monospace" font-size="18" font-weight="bold" text-anchor="middle" fill="url(#techGradient)" letter-spacing="2">
+      OMNIframe
+    </text>
+    
+    <!-- Binary code accent -->
+    <text x="100" y="50" font-family="'Courier New', monospace" font-size="8" font-weight="400" text-anchor="middle" fill="#e3ff00" opacity="0.6" letter-spacing="1">
+      10101010
+    </text>
+  </g>
+  
+  <!-- Tech circuit lines -->
+  <path d="M 10 20 L 30 20 L 30 25 L 40 25" stroke="#e3ff00" stroke-width="1" fill="none" opacity="0.7"/>
+  <path d="M 160 25 L 170 25 L 170 20 L 190 20" stroke="#e3ff00" stroke-width="1" fill="none" opacity="0.7"/>
+  
+  <!-- Corner indicators -->
+  <rect x="5" y="5" width="3" height="3" fill="#e3ff00" opacity="0.8"/>
+  <rect x="192" y="5" width="3" height="3" fill="#e3ff00" opacity="0.8"/>
+  <rect x="5" y="52" width="3" height="3" fill="#e3ff00" opacity="0.8"/>
+  <rect x="192" y="52" width="3" height="3" fill="#e3ff00" opacity="0.8"/>
+</svg>

@@ -1,0 +1,33 @@
+<svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e3ff00;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c4e600;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background rectangle with rounded corners -->
+  <rect x="5" y="5" width="190" height="50" rx="8" ry="8" fill="#1a1a1a" stroke="#e3ff00" stroke-width="2"/>
+  
+  <!-- OMNIframe text -->
+  <text x="100" y="35" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="url(#logoGradient)" filter="url(#glow)">
+    OMNIframe
+  </text>
+  
+  <!-- Decorative elements -->
+  <circle cx="25" cy="30" r="3" fill="#e3ff00" opacity="0.8"/>
+  <circle cx="175" cy="30" r="3" fill="#e3ff00" opacity="0.8"/>
+  
+  <!-- Tech-inspired lines -->
+  <line x1="15" y1="15" x2="25" y2="15" stroke="#e3ff00" stroke-width="1.5" opacity="0.6"/>
+  <line x1="175" y1="15" x2="185" y2="15" stroke="#e3ff00" stroke-width="1.5" opacity="0.6"/>
+  <line x1="15" y1="45" x2="25" y2="45" stroke="#e3ff00" stroke-width="1.5" opacity="0.6"/>
+  <line x1="175" y1="45" x2="185" y2="45" stroke="#e3ff00" stroke-width="1.5" opacity="0.6"/>
+</svg>
