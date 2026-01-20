@@ -11,11 +11,11 @@ export const common = {
     },
     about: {
         en: "About",
-        ka: "ჩვენ შესახებ"
+        ka: "ჩვენს შესახებ"
     },
     services: {
         en: "Services",
-        ka: "სერვისები"
+        ka: "მომსახურება"
     },
     projects: {
         en: "Projects",
@@ -37,15 +37,15 @@ export const common = {
     // Common Actions
     learnMore: {
         en: "Learn More",
-        ka: "გაიგე მეტი"
+        ka: "გაიგეთ მეტი"
     },
     getStarted: {
         en: "Get Started",
-        ka: "დაიწყე"
+        ka: "დაიწყეთ"
     },
     getInTouch: {
         en: "Get In Touch",
-        ka: "დაგვიკავშირდი"
+        ka: "დაგვიკავშირდით"
     },
     readMore: {
         en: "Read More",
@@ -77,23 +77,23 @@ export const common = {
     // Services (Header menu)
     allServices: {
         en: "All Services",
-        ka: "ყველა სერვისი"
+        ka: "ყველა მომსახურება"
     },
     frontendDevelopment: {
         en: "Frontend Development",
-        ka: "ფრონტენდ განვითარება"
+        ka: "Frontend დეველოპმენტი"
     },
     backendDevelopment: {
         en: "Backend Development",
-        ka: "ბექენდ განვითარება"
+        ka: "Backend დეველოპმენტი"
     },
     ecommerceSolutions: {
         en: "E-commerce Solutions",
-        ka: "ელ. კომერციის გადაწყვეტები"
+        ka: "E-commerce გადაწყვეტილებები"
     },
     webMaintenance: {
         en: "Web Maintenance",
-        ka: "ვებ მხარდაჭერა"
+        ka: "ვებ-მხარდაჭერა"
     },
     
     // Time & Dates
@@ -119,11 +119,11 @@ export const common = {
     },
     ourServices: {
         en: "Our Services",
-        ka: "ჩვენი სერვისები"
+        ka: "ჩვენი მომსახურება"
     },
     ourBlogs: {
         en: "Our Blogs",
-        ka: "ჩვენი ბლოგები"
+        ka: "ჩვენი ბლოგი"
     },
     followUs: {
         en: "Follow Us",
@@ -133,19 +133,19 @@ export const common = {
     // Hero section
     web: {
         en: "Web",
-        ka: "ვებ"
+        ka: "Web"
     },
     development: {
         en: "Development",
-        ka: "განვითარება"
+        ka: "დეველოპმენტი"
     },
     clientsTrust: {
         en: "100+ Clients Trust OMNIframe",
-        ka: "100+ კლიენტი ენდობა OMNIframe-ს"
+        ka: "100-ზე მეტი კლიენტი ენდობა OMNIframe-ს"
     },
     yearsOfExperience: {
         en: "years of experience",
-        ka: "წლის გამოცდილება"
+        ka: "წლიანი გამოცდილება"
     },
     completedProjects: {
         en: "completed projects",
@@ -159,7 +159,7 @@ export const common = {
     },
     english: {
         en: "English",
-        ka: "ინგლისური"
+        ka: "English"
     },
     georgian: {
         en: "Georgian",
@@ -169,7 +169,7 @@ export const common = {
     // Footer / Newsletter
     aboutUs: {
         en: "About Us",
-        ka: "ჩვენ შესახებ"
+        ka: "ჩვენს შესახებ"
     },
     newsletter: {
         en: "Newsletter",
@@ -177,7 +177,7 @@ export const common = {
     },
     newsletterDescription: {
         en: "Sign up to our weekly newsletter to get the latest updates.",
-        ka: "გამოიწერეთ ჩვენი ყოველკვირეული სიახლეები, რომ არ გამოგრჩეთ ახალი ინფორმაცია."
+        ka: "გამოიწერეთ ჩვენი ყოველკვირეული დაიჯესტი და იყავით საქმის კურსში."
     },
     enterEmail: {
         en: "Enter Email Address",
@@ -185,11 +185,11 @@ export const common = {
     },
     aboutTextShort: {
         en: "We build modern, high‑performance websites and digital products tailored to your business.",
-        ka: "ვქმნით თანამედროვე, მაღალი ხარისხის ვებსაიტებს და ციფრულ პროდუქტებს, მორგებულს თქვენს ბიზნესზე."
+        ka: "ჩვენ ვქმნით თანამედროვე, მაღალი წარმადობის ვებსაიტებსა და ციფრულ პროდუქტებს, რომლებიც ზუსტად ერგება თქვენი ბიზნესის საჭიროებებს."
     },
     footerAboutLong: {
         en: "OMNIframe is your trusted partner for innovative web development solutions. We create fast, secure and modern digital experiences that help your business grow.",
-        ka: "OMNIframe არის თქვენი სანდო პარტნიორი ინოვაციური ვებ განვითარების გადაწყვეტილებებისთვის. ჩვენ ვქმნით სწრაფ, უსაფრთხო და თანამედროვე ციფრულ გამოცდილებას, რომელიც ეხმარება თქვენს ბიზნესს ზრდაში."
+        ka: "OMNIframe თქვენი სანდო პარტნიორია ინოვაციური ვებ-გადაწყვეტილებების სფეროში. ჩვენ ვქმნით სწრაფ, უსაფრთხო და თანამედროვე ციფრულ გამოცდილებას, რომელიც თქვენი ბიზნესის ზრდის გარანტია."
     },
     letsTalk: {
         en: "Let's talk!",
@@ -205,6 +205,7 @@ export const common = {
     },
     newsletterLong: {
         en: "Sign up to receive our weekly newsletter for the latest updates on web development trends and OMNIframe news.",
-        ka: "გამოიწერეთ ჩვენი ყოველკვირეული სიახლეები, რომ მიიღოთ უახლესი ინფორმაცია ვებ განვითარების ტენდენციებზე და OMNIframe‑ის жаңობებზე."
+        ka: "გამოიწერეთ ჩვენი ყოველკვირეული სიახლეები და მიიღეთ ინფორმაცია ვებ-დეველოპმენტის ტენდენციებისა და OMNIframe-ის სიახლეების შესახებ."
     }
+}
 }

@@ -39,9 +39,9 @@ const swiperOptions = {
 }
 
 const newMotorsiTexts = {
-    breadcrumb: { en: "New Motorsi - Warehouse Solutions", ka: "New Motorsi - საწყობის გადაწყვეტილებები" },
+    breadcrumb: { en: "New Motorsi - Warehouse Solutions", ka: "New Motorsi - სასაწყობო სისტემები" },
     categoryLabel: { en: "Category:", ka: "კატეგორია:" },
-    categoryValue: { en: "E-commerce & Warehouse", ka: "ელ. კომერსია და საწყობები" },
+    categoryValue: { en: "E-commerce & Warehouse", ka: "E-commerce და სასაწყობო სისტემები" },
     technologiesLabel: { en: "Technologies:", ka: "ტექნოლოგიები:" },
     technologiesValue: { en: "Next.js, React, Tailwind CSS", ka: "Next.js, React, Tailwind CSS" },
     clientLabel: { en: "Client:", ka: "კლიენტი:" },
@@ -53,21 +53,21 @@ const newMotorsiTexts = {
     visitWebsite: { en: "Visit Website", ka: "საიტის ნახვა" },
     mainTitle: {
         en: "Professional Warehouse Solutions & Stelazh Systems",
-        ka: "პროფესიონალური საწყობის გადაწყვეტილებები და სტელაჟის სისტემები"
+        ka: "პროფესიონალური სასაწყობო გადაწყვეტილებები და სტელაჟების სისტემები"
     },
     paragraph1: {
         en: "New Motorsi is a leading provider of professional warehouse solutions and stelazh systems in Georgia. We developed a comprehensive website that showcases their extensive product catalog including warehouse shelving, market displays, accessories, and commercial equipment.",
-        ka: "New Motorsi არის პროფესიონალური საწყობის გადაწყვეტილებების და სტელაჟის სისტემების წამყვანი მიმწოდებელი საქართველოში. ჩვენ შევქმენით ყოვლისმომცველი ვებსაიტი, რომელიც აჩვენებს მათ ფართო პროდუქციის კატალოგს: საწყობის თაროები, მარკეტის სტენდები, აქსესუარები და კომერციული აღჭურვილობა."
+        ka: "New Motorsi საქართველოში პროფესიონალური სასაწყობო გადაწყვეტილებებისა და სტელაჟების სისტემების წამყვანი მიმწოდებელია. ჩვენ შევქმენით ყოვლისმომცველი ვებსაიტი, რომელიც სრულად ასახავს მათ ფართო პროდუქციას: სასაწყობო თაროებს, მარკეტის სტენდებს, აქსესუარებსა და კომერციულ აღჭურვილობას."
     },
     paragraph2: {
         en: "The website features a modern, responsive design optimized for both desktop and mobile devices, with intuitive navigation and detailed product information. Key features include product categorization, contact forms, and comprehensive company information.",
-        ka: "ვებსაიტს აქვს თანამედროვე, რესპონსიური დიზაინი, ოპტიმიზირებული როგორც დესკტოპის, ასევე მობილური მოწყობილობებისთვის, ინტუიციური ნავიგაციით და პროდუქციის დეტალური აღწერებით. ძირითადი შესაძლებლობებია პროდუქციის კატეგორიზაცია, საკონტაქტო ფორმები და კომპანიის ამომწურავი ინფორმაცია."
+        ka: "ვებსაიტს აქვს თანამედროვე, Responsive დიზაინი, რომელიც ოპტიმიზებულია ნებისმიერი მოწყობილობისთვის. ინტუიციური ნავიგაცია და პროდუქციის დეტალური აღწერა მომხმარებელს სასურველი ნივთის მარტივად პოვნაში ეხმარება. პლატფორმა მოიცავს პროდუქციის კატეგორიზაციას, საკონტაქტო ფორმებსა და კომპანიის შესახებ სრულ ინფორმაციას."
     },
     keyFeatures: { en: "Key Features", ka: "მთავარი ფუნქციები" },
-    feature1: { en: "Modern E-commerce Platform", ka: "თანამედროვე ელ. კომერციის პლატფორმა" },
+    feature1: { en: "Modern E-commerce Platform", ka: "თანამედროვე E-commerce პლატფორმა" },
     feature2: { en: "Multi-language Support (Georgian, English, Russian)", ka: "მრავალენოვანი მხარდაჭერა (ქართული, ინგლისური, რუსული)" },
     feature3: { en: "Advanced Product Catalog & Search", ka: "გაფართოებული კატალოგი და ძიება" },
-    feature4: { en: "Responsive Design & Mobile-First Approach", ka: "რესპონსიული დიზაინი და mobile-first მიდგომა" },
+    feature4: { en: "Responsive Design & Mobile-First Approach", ka: "Responsive დიზაინი და Mobile-first მიდგომა" },
     feature5: { en: "SEO Optimized with Schema Markup", ka: "SEO ოპტიმიზაცია Schema Markup-ით" },
     feature6: { en: "Contact Forms & Location Services", ka: "საკონტაქტო ფორმები და მდებარეობის სერვისები" },
     technicalImplementation: { en: "Technical Implementation", ka: "ტექნიკური განხორციელება" },

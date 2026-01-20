@@ -4,7 +4,7 @@ import Link from "next/link"
 import { useTranslation } from "@/contexts/LanguageContext"
 
 const blogListTexts = {
-    breadcrumb: { en: "Blog List", ka: "ბლოგის სია" },
+    breadcrumb: { en: "Blog List", ka: "ბლოგი" },
     writtenBy: { en: "Written by:", ka: "ავტორი:" },
     viewAllArticles: { en: "View All Articles", ka: "ყველა სტატიის ნახვა" },
     search: { en: "Search", ka: "ძიება" },
@@ -12,26 +12,26 @@ const blogListTexts = {
     categories: { en: "Categories", ka: "კატეგორიები" },
     recentPosts: { en: "Recent Posts", ka: "ბოლო სტატიები" },
     tags: { en: "Tags", ka: "ტეგები" },
-    frontendDevelopment: { en: "Frontend Development", ka: "ფრონტენდ განვითარება" },
-    backendDevelopment: { en: "Backend Development", ka: "ბექენდ განვითარება" },
+    frontendDevelopment: { en: "Frontend Development", ka: "Frontend დეველოპმენტი" },
+    backendDevelopment: { en: "Backend Development", ka: "Backend დეველოპმენტი" },
     performance: { en: "Performance", ka: "წარმადობა" },
-    ecommerce: { en: "E-commerce", ka: "ელ. კომერცია" },
-    bestPractices: { en: "Best Practices", ka: "საუკეთესო პრაქტიკები" },
+    ecommerce: { en: "E-commerce", ka: "E-commerce" },
+    bestPractices: { en: "Best Practices", ka: "საუკეთესო პრაქტიკა" },
     // Blog Post 1
     post1Title: { en: "JavaScript Frameworks 2024: Complete Guide", ka: "JavaScript ფრეიმვორკები 2024: სრული გზამკვლევი" },
-    post1Description: { en: "The JavaScript ecosystem continues to evolve at a rapid pace, with new frameworks emerging and existing ones maturing. In 2024, developers face increasingly complex choices.", ka: "JavaScript ეკოსისტემა განაგრძობს სწრაფ განვითარებას, ახალი ფრეიმვორკების გამოჩენითა და არსებული ფრეიმვორკების გაუმჯობესებით. 2024 წელს დეველოპერები აწყდებიან უფრო რთულ არჩევანს." },
+    post1Description: { en: "The JavaScript ecosystem continues to evolve at a rapid pace, with new frameworks emerging and existing ones maturing. In 2024, developers face increasingly complex choices.", ka: "JavaScript ეკოსისტემა სწრაფად ვითარდება - ჩნდება ახალი ფრეიმვორკები, არსებულები კი უფრო იხვეწება. 2024 წელს დეველოპერებს არჩევანის გაკეთება კიდევ უფრო რთულ პირობებში უწევთ." },
     // Blog Post 2
     post2Title: { en: "React vs Vue 2024: Which Framework to Choose", ka: "React vs Vue 2024: რომელი ფრეიმვორკი ავირჩიოთ" },
-    post2Description: { en: "The debate between React and Vue continues to be one of the most discussed topics in the web development community in 2024. Both frameworks have evolved significantly.", ka: "დებატი React-სა და Vue-ს შორის კვლავ რჩება ერთ-ერთ ყველაზე განხილულ თემად ვებ განვითარების საზოგადოებაში 2024 წელს. ორივე ფრეიმვორკი მნიშვნელოვნად განვითარდა." },
+    post2Description: { en: "The debate between React and Vue continues to be one of the most discussed topics in the web development community in 2024. Both frameworks have evolved significantly.", ka: "React-სა და Vue-ს შორის დაპირისპირება 2024 წელსაც ვებ-დეველოპმენტის ერთ-ერთი ყველაზე აქტუალური თემაა. ორივე ფრეიმვორკმა განვითარების გრძელი გზა გაიარა." },
     // Blog Post 3
     post3Title: { en: "Next.js Performance Optimization Tips", ka: "Next.js წარმადობის ოპტიმიზაციის რჩევები" },
-    post3Description: { en: "Next.js is one of the most popular React frameworks that offers numerous possibilities for performance optimization in modern web applications.", ka: "Next.js არის ერთ-ერთი ყველაზე პოპულარული React ფრეიმვორკი, რომელიც გთავაზობთ მრავალ შესაძლებლობას თანამედროვე ვებ აპლიკაციების წარმადობის ოპტიმიზაციისთვის." },
+    post3Description: { en: "Next.js is one of the most popular React frameworks that offers numerous possibilities for performance optimization in modern web applications.", ka: "Next.js ერთ-ერთი ყველაზე პოპულარული React ფრეიმვორკია, რომელიც თანამედროვე ვებ-აპლიკაციების წარმადობის ოპტიმიზაციისთვის უამრავ შესაძლებლობას გვთავაზობს." },
     // Blog Post 4
-    post4Title: { en: "Modern CSS Techniques for 2024", ka: "თანამედროვე CSS ტექნიკები 2024-ისთვის" },
-    post4Description: { en: "CSS continues to evolve constantly, and 2024 brings numerous new possibilities for modern web design with cutting-edge techniques.", ka: "CSS განაგრძობს მუდმივ განვითარებას, და 2024 წელი მოაქვს მრავალ ახალ შესაძლებლობას თანამედროვე ვებ დიზაინისთვის მოწინავე ტექნიკებით." },
+    post4Title: { en: "Modern CSS Techniques for 2024", ka: "თანამედროვე CSS ტექნიკები 2024 წლისთვის" },
+    post4Description: { en: "CSS continues to evolve constantly, and 2024 brings numerous new possibilities for modern web design with cutting-edge techniques.", ka: "CSS მუდმივად ვითარდება. 2024 წელს თანამედროვე ვებ-დიზაინისთვის უამრავი ახალი და საინტერესო ტექნიკა გაჩნდა." },
     // Blog Post 5
-    post5Title: { en: "API Design Best Practices", ka: "API დიზაინის საუკეთესო პრაქტიკები" },
-    post5Description: { en: "Well-designed APIs are fundamental to the success of modern applications. In this article, we explore the best practices for creating robust APIs.", ka: "კარგად დაპროექტებული API-ები ფუნდამენტურია თანამედროვე აპლიკაციების წარმატებისთვის. ამ სტატიაში ჩვენ განვიხილავთ საუკეთესო პრაქტიკებს მძლავრი API-ების შექმნისთვის." },
+    post5Title: { en: "API Design Best Practices", ka: "API დიზაინის საუკეთესო პრაქტიკა" },
+    post5Description: { en: "Well-designed APIs are fundamental to the success of modern applications. In this article, we explore the best practices for creating robust APIs.", ka: "კარგად დაპროექტებული API ნებისმიერი თანამედროვე აპლიკაციის წარმატების საფუძველია. ამ სტატიაში განვიხილავთ მძლავრი API-ების შექმნის საუკეთესო პრაქტიკებს." },
     // Recent Posts
     recentPost1Title: { en: "React vs Vue 2024 Comparison", ka: "React vs Vue 2024 შედარება" },
     recentPost2Title: { en: "Next.js Performance Tips", ka: "Next.js წარმადობის რჩევები" },

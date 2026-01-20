@@ -3,19 +3,19 @@ import { useTranslation } from "@/contexts/LanguageContext"
 import { common } from "@/data/translations/common"
 
 const product1Texts = {
-    ourExpertise: { en: "OUR EXPERTISE", ka: "ჩვენი ექსპერტიზა" },
-    webDevelopment: { en: "Web Development", ka: "ვებ განვითარება" },
+    ourExpertise: { en: "OUR EXPERTISE", ka: "ჩვენი გამოცდილება" },
+    webDevelopment: { en: "Web Development", ka: "ვებ-დეველოპმენტის" },
     company: { en: "Company", ka: "კომპანია" },
     description: {
         en: "We specialize in creating cutting-edge web solutions that drive business growth. Our team of expert developers delivers innovative, scalable, and user-friendly applications using the latest technologies and best practices.",
-        ka: "ჩვენ სპეციალიზირებული ვართ თანამედროვე ვებ გადაწყვეტილებების შექმნაში, რომლებიც ზრდის ბიზნესის განვითარებას. ჩვენი გუნდი, რომელიც შედგება ექსპერტ დეველოპერებისგან, ქმნის ინოვაციურ, მასშტაბირებად და მომხმარებლისთვის მოსახერხებელ აპლიკაციებს უახლესი ტექნოლოგიებისა და საუკეთესო პრაქტიკების გამოყენებით."
+        ka: "ჩვენი სპეციალიზაცია თანამედროვე ვებ-გადაწყვეტილებების შექმნაა, რომლებიც ბიზნესის ზრდას უწყობს ხელს. ჩვენი გუნდი, მაღალკვალიფიციური დეველოპერებით, ქმნის ინოვაციურ, მასშტაბირებად და მომხმარებელზე ორიენტირებულ აპლიკაციებს უახლესი ტექნოლოგიებისა და საუკეთესო პრაქტიკის გამოყენებით."
     },
-    reactExpert: { en: "React Expert", ka: "React ექსპერტი" },
-    reactDescription: { en: "Advanced React Development", ka: "მოწინავე React განვითარება" },
-    nextjsPro: { en: "Next.js Pro", ka: "Next.js პროფესიონალი" },
-    nextjsDescription: { en: "Full-Stack Development", ka: "Full-Stack განვითარება" },
-    uiuxMaster: { en: "UI/UX Master", ka: "UI/UX მასტერი" },
-    uiuxDescription: { en: "User Experience Design", ka: "მომხმარებლის გამოცდილების დიზაინი" },
+    reactExpert: { en: "React Expert", ka: "React ექსპერტიზა" },
+    reactDescription: { en: "Advanced React Development", ka: "React დეველოპმენტი" },
+    nextjsPro: { en: "Next.js Pro", ka: "Next.js პროფესიონალიზმი" },
+    nextjsDescription: { en: "Full-Stack Development", ka: "Full-Stack დეველოპმენტი" },
+    uiuxMaster: { en: "UI/UX Master", ka: "UI/UX დიზაინი" },
+    uiuxDescription: { en: "User Experience Design", ka: "User Experience დიზაინი" },
 }
 
 export default function Product1() {

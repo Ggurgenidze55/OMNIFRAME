@@ -8,47 +8,47 @@ import { common } from "@/data/translations/common"
 const serviceTexts = {
     ourServicesBadge: {
         en: "OUR SERVICES",
-        ka: "ჩვენი სერვისები"
+        ka: "ჩვენი მომსახურება"
     },
     servicesTitle: {
         en: "OMNIframe web development services",
-        ka: "OMNIframe-ის ვებ განვითარების სერვისები"
+        ka: "OMNIframe-ის ვებ-დეველოპმენტის მომსახურება"
     },
     viewAllServicesBtn: {
         en: "View All Services",
-        ka: "ყველა სერვისის ნახვა"
+        ka: "ყველა მომსახურების ნახვა"
     },
     feTitle: {
         en: "Frontend Development",
-        ka: "ფრონტენდ განვითარება"
+        ka: "Frontend დეველოპმენტი"
     },
     feDesc: {
         en: "We create modern, responsive user interfaces using cutting-edge technologies like React, Next.js, and Vue.js for exceptional user experiences.",
-        ka: "ვქმნით თანამედროვე,_RESPONSIVE ინტერფეისებს React‑ის, Next.js‑ის და Vue.js‑ის მსგავსი უახლესი ტექნოლოგიებით, რათა მომხმარებელს შევთავაზოთ გამორჩეული გამოცდილება."
+        ka: "ჩვენ ვქმნით თანამედროვე და ადაპტირებულ (Responsive) ინტერფეისებს React-ის, Next.js-ის და Vue.js-ის გამოყენებით, რაც მომხმარებლისთვის საუკეთესო გამოცდილებას უზრუნველყოფს."
     },
     beTitle: {
         en: "Backend Development",
-        ka: "ბექენდ განვითარება"
+        ka: "Backend დეველოპმენტი"
     },
     beDesc: {
         en: "We build robust, scalable backend systems using Node.js, Python, and modern databases to power your web applications.",
-        ka: "ვ ავითარებთ მდგრად და მასშტაბირებად ბექენდ სისტემებს Node.js‑ით, Python‑ით და თანამედროვე მონაცემთა ბაზებით, რომლითაც आपकी ვებ-აპლიკაციები საიმედოდ იმუშავებს."
+        ka: "ჩვენ ვაშენებთ მძლავრ და მასშტაბირებად Backend სისტემებს Node.js-ის, Python-ისა და თანამედროვე მონაცემთა ბაზების გამოყენებით, რაც თქვენი აპლიკაციების გამართულ მუშაობას განაპირობებს."
     },
     ecomTitle: {
         en: "E-commerce Solutions",
-        ka: "ელ. კომერციის გადაწყვეტები"
+        ka: "E-commerce გადაწყვეტები"
     },
     ecomDesc: {
         en: "We develop custom e-commerce platforms with secure payment gateways, inventory management, and seamless shopping experiences.",
-        ka: "ვქმნით საბაჟო ელ. კომერციის პლატფორმებს უსაფრთხო გადახდის სისტემებით, მარაგის მართვით და კომფორტული შოპინგის გამოცდილებით."
+        ka: "ჩვენ ვქმნით ინდივიდუალურ E-commerce პლატფორმებს უსაფრთხო გადახდის სისტემებით, მარაგების მართვის ფუნქციითა და შოპინგის საუკეთესო გამოცდილებით."
     },
     maintenanceTitle: {
         en: "Web Maintenance",
-        ka: "ვებ მხარდაჭერა"
+        ka: "ვებ-მხარდაჭერა"
     },
     maintenanceDesc: {
         en: "We provide ongoing support, updates, and maintenance to ensure your website runs smoothly and stays secure at all times.",
-        ka: "ვთავაზობთ მუდმივ მხარდაჭერას, განახლებებს და ტექნიკურ მომსახურებას, რომ თქვენი ვებსაიტი ყოველთვის სტაბილურად და უსაფრთხოდ იმუშაოს."
+        ka: "ჩვენ გთავაზობთ მუდმივ მხარდაჭერას, განახლებებსა და ტექნიკურ მომსახურებას, რათა თქვენი ვებსაიტი ყოველთვის გამართულად და უსაფრთხოდ ფუნქციონირებდეს."
     }
 }
 

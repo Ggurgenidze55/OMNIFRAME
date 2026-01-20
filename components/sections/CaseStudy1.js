@@ -1,7 +1,16 @@
 
 import Link from "next/link"
+import { useTranslation } from "@/contexts/LanguageContext"
+
+const caseTexts = {
+    ecommerce: { en: "E-commerce", ka: "E-commerce" },
+    construction: { en: "Construction", ka: "მშენებლობა" },
+    medicalTourism: { en: "Medical Tourism", ka: "სამედიცინო ტურიზმი" },
+    engineering: { en: "Engineering", ka: "ინჟინერია" },
+}
 
 export default function CaseStudy1() {
+    const { t } = useTranslation()
     return (
         <>
 
@@ -18,7 +27,7 @@ export default function CaseStudy1() {
                                 <div className="blog-cont">
                                     <div className="d-flex align-items-center gap-xxl-5 gap-xl-4 gap-3 mb-xxl-5 mb-xl-4 mb-3">
                                         <Link href="/newmotorsi" className="radius-btn cmn-border radius100 py-xxl-2 py-2 px-xxl-4 px-3 theme-clr style-2">
-                                            E-commerce
+                                            {t('ecommerce', caseTexts.ecommerce)}
                                             <span className="rot60 d-inline-block ml-10">
                                                 <i className="fas fa-arrow-up theme-clr" />
                                             </span>
@@ -45,7 +54,7 @@ export default function CaseStudy1() {
                                 <div className="blog-cont">
                                     <div className="d-flex align-items-center gap-xxl-5 gap-xl-4 gap-3 mb-xxl-5 mb-xl-4 mb-3">
                                         <Link href="/grandegroup" className="radius-btn cmn-border radius100 py-xxl-2 py-2 px-xxl-4 px-3 theme-clr style-2">
-                                            Construction
+                                            {t('construction', caseTexts.construction)}
                                             <span className="rot60 d-inline-block ml-10">
                                                 <i className="fas fa-arrow-up theme-clr" />
                                             </span>
@@ -72,7 +81,7 @@ export default function CaseStudy1() {
                                 <div className="blog-cont">
                                     <div className="d-flex align-items-center gap-xxl-5 gap-xl-4 gap-3 mb-xxl-5 mb-xl-4 mb-3">
                                         <Link href="/heal" className="radius-btn cmn-border radius100 py-xxl-2 py-2 px-xxl-4 px-3 theme-clr style-2">
-                                            Medical Tourism
+                                            {t('medicalTourism', caseTexts.medicalTourism)}
                                             <span className="rot60 d-inline-block ml-10">
                                                 <i className="fas fa-arrow-up theme-clr" />
                                             </span>
@@ -99,7 +108,7 @@ export default function CaseStudy1() {
                                 <div className="blog-cont">
                                     <div className="d-flex align-items-center gap-xxl-5 gap-xl-4 gap-3 mb-xxl-5 mb-xl-4 mb-3">
                                         <Link href="/meppers" className="radius-btn cmn-border radius100 py-xxl-2 py-2 px-xxl-4 px-3 theme-clr style-2">
-                                            Engineering
+                                            {t('engineering', caseTexts.engineering)}
                                             <span className="rot60 d-inline-block ml-10">
                                                 <i className="fas fa-arrow-up theme-clr" />
                                             </span>

@@ -39,9 +39,9 @@ const swiperOptions = {
 }
 
 const meppersTexts = {
-    breadcrumb: { en: "Meppers - Digital Solutions", ka: "Meppers - ციფრული გადაწყვეტილებები" },
+    breadcrumb: { en: "Meppers - Digital Solutions", ka: "Meppers - ციფრული ტრანსფორმაცია" },
     categoryLabel: { en: "Category:", ka: "კატეგორია:" },
-    categoryValue: { en: "Digital & Technology", ka: "ციფრული და ტექნოლოგია" },
+    categoryValue: { en: "Digital & Technology", ka: "ციფრული ტექნოლოგიები" },
     technologiesLabel: { en: "Technologies:", ka: "ტექნოლოგიები:" },
     technologiesValue: { en: "WordPress, Divi Theme, PHP", ka: "WordPress, Divi Theme, PHP" },
     clientLabel: { en: "Client:", ka: "კლიენტი:" },
@@ -53,27 +53,27 @@ const meppersTexts = {
     visitWebsite: { en: "Visit Website", ka: "ვებსაიტის ნახვა" },
     mainTitle: {
         en: "Innovative Digital Solutions & Technology Platform",
-        ka: "ინოვაციური ციფრული გადაწყვეტილებები და ტექნოლოგიის პლატფორმა"
+        ka: "ინოვაციური ციფრული გადაწყვეტილებები და ტექნოლოგიური პლატფორმა"
     },
     paragraph1: {
         en: "Meppers is a cutting-edge technology company specializing in innovative digital solutions and software development. We developed a modern, tech-forward website that showcases their expertise in digital transformation and technology consulting.",
-        ka: "Meppers არის მოწინავე ტექნოლოგიური კომპანია, რომელიც სპეციალიზირებულია ინოვაციურ ციფრულ გადაწყვეტილებებში და პროგრამული უზრუნველყოფის განვითარებაში. ჩვენ შევქმენით თანამედროვე, ტექნოლოგიურად მოწინავე ვებსაიტი, რომელიც აჩვენებს მათ ექსპერტიზას ციფრულ ტრანსფორმაციაში და ტექნოლოგიურ კონსულტაციებში."
+        ka: "Meppers მოწინავე ტექნოლოგიური კომპანიაა, რომელიც სპეციალიზებულია ინოვაციურ ციფრულ გადაწყვეტილებებსა და პროგრამული უზრუნველყოფის დეველოპმენტში. ჩვენ შევქმენით თანამედროვე, ტექნოლოგიურად მოწინავე პლატფორმა, რომელიც ასახავს მათ ექსპერტიზას ციფრული ტრანსფორმაციისა და ტექნოლოგიური კონსულტაციების მიმართულებით."
     },
     paragraph2: {
         en: "The website features a sleek, contemporary design with interactive elements, detailed service descriptions, and portfolio showcases. The design emphasizes innovation and technical expertise, perfect for attracting technology clients and partners.",
-        ka: "ვებსაიტს აქვს ელეგანტური, თანამედროვე დიზაინი ინტერაქტიური ელემენტებით, დეტალური სერვისების აღწერებითა და პორტფოლიოს წარდგენით. დიზაინი ხაზს უსვამს ინოვაციასა და ტექნიკურ ექსპერტიზას, რაც იდეალურია ტექნოლოგიური კლიენტებისა და პარტნიორების მოსაზიდად."
+        ka: "ვებსაიტს აქვს ელეგანტური, თანამედროვე დიზაინი ინტერაქტიური ელემენტებით, მომსახურების დეტალური აღწერითა და პორტფოლიოს პრეზენტაციით. დიზაინი ხაზს უსვამს ინოვაციურობასა და ტექნიკურ ექსპერტიზას, რაც იდეალურია ტექნოლოგიური პარტნიორებისა და კლიენტების მოსაზიდად."
     },
     keyFeatures: { en: "Key Features", ka: "ძირითადი მახასიათებლები" },
     feature1: { en: "Engineering Communications Platform", ka: "საინჟინრო კომუნიკაციების პლატფორმა" },
     feature2: { en: "Digital Solutions Showcase", ka: "ციფრული გადაწყვეტილებების წარდგენა" },
     feature3: { en: "Service Portfolio & Expertise", ka: "სერვისების პორტფოლიო და ექსპერტიზა" },
     feature4: { en: "Contact Forms & Consultation", ka: "საკონტაქტო ფორმები და კონსულტაციები" },
-    feature5: { en: "Mobile Responsive Design", ka: "მობილური რესპონსივი დიზაინი" },
-    feature6: { en: "SEO Optimized Content", ka: "SEO-ზე ოპტიმიზებული კონტენტი" },
+    feature5: { en: "Mobile Responsive Design", ka: "Responsive დიზაინი" },
+    feature6: { en: "SEO Optimized Content", ka: "SEO-ოპტიმიზებული კონტენტი" },
     technicalImplementation: { en: "Technical Implementation", ka: "ტექნიკური განხორციელება" },
     tech1: { en: "WordPress CMS Platform", ka: "WordPress CMS პლატფორმა" },
     tech2: { en: "Divi Theme & Page Builder", ka: "Divi Theme და Page Builder" },
-    tech3: { en: "PHP Backend Development", ka: "PHP ბექენდ განვითარება" },
+    tech3: { en: "PHP Backend Development", ka: "PHP ბექენდ დეველოპმენტი" },
     tech4: { en: "MySQL Database", ka: "MySQL მონაცემთა ბაზა" },
     tech5: { en: "SEO Optimization & Plugins", ka: "SEO ოპტიმიზაცია და პლაგინები" },
     tech6: { en: "Security & Performance Optimization", ka: "უსაფრთხოებისა და წარმადობის ოპტიმიზაცია" },

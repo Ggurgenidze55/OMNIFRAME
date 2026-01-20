@@ -3,20 +3,20 @@ import Link from "next/link"
 import { useTranslation } from "@/contexts/LanguageContext"
 
 const blog1Texts = {
-    badge: { en: "BLOG & News", ka: "ბლოგი & სიახლეები" },
-    titleLine1: { en: "Check Our", ka: "გაიცანი ჩვენი" },
-    titleCompany: { en: "Company", ka: "კომპანია" },
-    titleLine2: { en: "Inside Story", ka: "შიდა ამბები" },
-    viewAll: { en: "View all Articles", ka: "ნახე ყველა სტატია" },
+    badge: { en: "BLOG & News", ka: "ბლოგი და სიახლეები" },
+    titleLine1: { en: "Check Our", ka: "გაეცანით ჩვენი" },
+    titleCompany: { en: "Company", ka: "კომპანიის" },
+    titleLine2: { en: "Inside Story", ka: "სიახლეებს" },
+    viewAll: { en: "View all Articles", ka: "ყველა სტატიის ნახვა" },
     catJavascript: { en: "JavaScript", ka: "JavaScript" },
-    catFrontend: { en: "Frontend", ka: "ფრონტენდი" },
+    catFrontend: { en: "Frontend", ka: "Frontend" },
     catPerformance: { en: "Performance", ka: "წარმადობა" },
     catCSS: { en: "CSS", ka: "CSS" },
-    catBackend: { en: "Backend", ka: "ბექენდი" },
+    catBackend: { en: "Backend", ka: "Backend" },
     catPwa: { en: "PWA", ka: "PWA" },
     catSecurity: { en: "Security", ka: "უსაფრთხოება" },
     catDesign: { en: "Design", ka: "დიზაინი" },
-    catEcommerce: { en: "E-commerce", ka: "ელ. კომერცია" },
+    catEcommerce: { en: "E-commerce", ka: "E-commerce" },
     jsTitle: {
         en: "JavaScript Frameworks 2024: Complete Guide",
         ka: "JavaScript ფრეიმვორკები 2024: სრული გზამკვლევი",
@@ -39,19 +39,23 @@ const blog1Texts = {
     },
     pwaTitle: {
         en: "Progressive Web Apps Complete Guide",
-        ka: "პროგრესული ვებ აპების სრულყოფილი გზამკვლევი",
+        ka: "პროგრესული ვებ-აპლიკაციების (PWA) სრული გზამკვლევი",
     },
     webPerfTitle: {
         en: "Web Performance Optimization",
-        ka: "ვებ წარმადობის ოპტიმიზაცია",
+        ka: "ვებ-წარმადობის ოპტიმიზაცია",
+    },
+    secTitle: {
+        en: "Web Security Best Practices",
+        ka: "ვებ-უსაფრთხოების საუკეთესო პრაქტიკა",
     },
     responsiveTitle: {
         en: "Responsive Design Principles",
-        ka: "რესპონსიული დიზაინის პრინციპები",
+        ka: "Responsive დიზაინის პრინციპები",
     },
     ecommerceTitle: {
         en: "E-commerce Development Trends",
-        ka: "E-commerce განვითარების ტრენდები",
+        ka: "E-commerce ტენდენციები",
     },
 }
 
@@ -278,7 +282,7 @@ export default function Blog1() {
                                     </div>
                                     <h5>
                                         <Link href="/web-security-best-practices" className="white-clr">
-                                            {t('webPerfTitle', blog1Texts.webPerfTitle)}
+                                            {t('secTitle', blog1Texts.secTitle)}
                                         </Link>
                                     </h5>
                                 </div>

@@ -4,6 +4,37 @@ import Link from "next/link"
 import { Tilt } from 'react-tilt'
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
+import { useTranslation } from "@/contexts/LanguageContext"
+import { common } from "@/data/translations/common"
+
+const aboutTexts = {
+    breadcrumb: { en: "About Us", ka: "ჩვენს შესახებ" },
+    aboutBadge: { en: "ABOUT OMNIFRAME", ka: "OMNIFRAME-ის შესახებ" },
+    aboutTitle: { en: "To Create Artistic & Creative Design", ka: "ვქმნით კრეატიულ და დახვეწილ დიზაინს" },
+    aboutDesc: { 
+        en: "We combine strategic thinking with creative excellence to deliver digital solutions that stand out. Our goal is to transform your vision into a powerful online presence that drives results.", 
+        ka: "ჩვენ ვაერთიანებთ სტრატეგიულ ხედვასა და კრეატიულობას, რათა შევქმნათ გამორჩეული ციფრული გადაწყვეტილებები. ჩვენი მიზანია, თქვენი ხედვა ვაქციოთ მძლავრ ონლაინ პლატფორმად, რომელიც რეალურ შედეგებს მოგიტანთ." 
+    },
+    brandingDesign: { en: "Branding Design", ka: "ბრენდინგი" },
+    business: { en: "Business Solutions", ka: "ბიზნეს გადაწყვეტილებები" },
+    ourExperts: { en: "OUR EXPERTS", ka: "ჩვენი ექსპერტები" },
+    staffTitle: { en: "Meet our creative staff", ka: "გაიცანით ჩვენი გუნდი" },
+    viewAllTeams: { en: "view all teams", ka: "გუნდის ნახვა" },
+    testimonialsBadge: { en: "Testimonials", ka: "შეფასებები" },
+    testimonialsTitle: { en: "What Our Respected Clients Say", ka: "რას ამბობენ ჩვენი კლიენტები" },
+    reviews: { en: "reviews", ka: "შეფასება" },
+    testimonialText: {
+        en: "OMNIframe transformed our digital presence with their innovative approach and technical expertise. Their team is dedicated, responsive, and truly understands business goals.",
+        ka: "OMNIframe-მა სრულად შეცვალა ჩვენი ციფრული ხედვა თავისი ინოვაციური მიდგომითა და ტექნიკური ექსპერტიზით. მათი გუნდი არის პასუხისმგებლიანი და ზუსტად ესმით ბიზნესის მიზნები."
+    },
+    productDesign: { en: "Product Design", ka: "პროდუქტის დიზაინი" },
+    uiux: { en: "UI/UX Experience", ka: "UI/UX დიზაინი" },
+    digitalMarketing: { en: "Digital Marketing", ka: "ციფრული მარკეტინგი" },
+    ecommerce: { en: "Ecommerce Solutions", ka: "E-commerce გადაწყვეტები" },
+    customSolutions: { en: "Custom Solutions", ka: "ინდივიდუალური გადაწყვეტები" },
+    mobileApp: { en: "Mobile App", ka: "მობილური აპლიკაცია" },
+    creativeDesign: { en: "Creative Design", ka: "კრეატიული დიზაინი" }
+}
 
 const swiperOptions = {
     modules: [Autoplay, Pagination, Navigation],
@@ -38,11 +69,12 @@ const toltOptions = {
     easing: "cubic-bezier(.03,.98,.52,.99)",
 }
 export default function About() {
+    const { t } = useTranslation()
 
     return (
         <>
 
-            <Layout headerStyle={2} footerStyle={3} breadcrumbTitle="About Agency" coverImage="/assets/img/covers/about-cover.jpg">
+            <Layout headerStyle={2} footerStyle={3} breadcrumbTitle={t('breadcrumb', aboutTexts.breadcrumb)} coverImage="/assets/img/covers/about-cover.jpg">
                 <div>
                     <section className="pt-space pb-space section-bg">
                         <div className="container">
@@ -63,23 +95,20 @@ export default function About() {
                                     <div className="about-samll-content">
                                         <div className="pricing-title">
                                             <div className="radius-btn text-uppercase cmn-border d-inline-flex radius100 py-xxl-2 py-2 px-xxl-4 px-4 theme-clr gap-xxl-4 gap-3 mb-xxl-8 mb-xl-6 mb-5" data-aos="zoom-in-left" data-aos-duration={1400}>
-                                                ABOUT XSTAR
+                                                {t('aboutBadge', aboutTexts.aboutBadge)}
                                             </div>
                                             <h2 className="stitle d-flex align-items-center mb-xxl-8 mb-xl-7 mb-lg-6 mb-5 gap-xxl-7 gap-xl-5 gap-3" data-aos="zoom-in-left" data-aos-duration={1700}>
                                                 <img src="/assets/img/element/arrow-right-storke.png" alt="img" data-aos="zoom-in-up" data-aos-duration={2000} />
-                                                To Create Artistic &amp; Creative Design
+                                                {t('aboutTitle', aboutTexts.aboutTitle)}
                                             </h2>
                                             <p className="white-clr mb-xxl-8 mb-xl-8 mb-5" data-aos="zoom-in-up" data-aos-duration={1400}>
-                                                Bring to the table win-win survival strategies to ensure proactive domination. At
-                                                the end of the day, going forward, a
-                                                new normal that has evolved from generation on the runway heading towards a
-                                                streamlined cloud.
+                                                {t('aboutDesc', aboutTexts.aboutDesc)}
                                             </p>
                                             <div className="result-progress-wrap" data-aos="zoom-in-up" data-aos-duration={1800}>
                                                 <div className="progres-item mb-xxl-6 mb-xl-5 mb-4">
                                                     <div className="d-flex align-items-center justify-content-between mb-xxl-4 mb-3">
                                                         <span className="conssub">
-                                                            Branding Design
+                                                            {t('brandingDesign', aboutTexts.brandingDesign)}
                                                         </span>
                                                         <span className="cons">88%</span>
                                                     </div>
@@ -90,7 +119,7 @@ export default function About() {
                                                 <div className="progres-item">
                                                     <div className="d-flex align-items-center justify-content-between mb-xxl-4 mb-3">
                                                         <span className="conssub">
-                                                            Business
+                                                            {t('business', aboutTexts.business)}
                                                         </span>
                                                         <span className="cons">96%</span>
                                                     </div>
@@ -118,7 +147,7 @@ export default function About() {
                                                 <i className="fa-solid fa-arrow-right" />
                                             </span>
                                         </span>
-                                        Product Design
+                                        {t('productDesign', aboutTexts.productDesign)}
                                         <span className="digital-thumb">
                                             <img src="/assets/img/service/tab1.png" alt="img" />
                                         </span>
@@ -130,7 +159,7 @@ export default function About() {
                                                 <i className="fa-solid fa-arrow-right" />
                                             </span>
                                         </span>
-                                        UI/UX Experience
+                                        {t('uiux', aboutTexts.uiux)}
                                         <span className="digital-thumb">
                                             <img src="/assets/img/service/tab2.png" alt="img" />
                                         </span>
@@ -142,7 +171,7 @@ export default function About() {
                                                 <i className="fa-solid fa-arrow-right" />
                                             </span>
                                         </span>
-                                        Digital Marketing
+                                        {t('digitalMarketing', aboutTexts.digitalMarketing)}
                                         <span className="digital-thumb">
                                             <img src="/assets/img/service/tab3.png" alt="img" />
                                         </span>
@@ -156,7 +185,7 @@ export default function About() {
                                                 <i className="fa-solid fa-arrow-right" />
                                             </span>
                                         </span>
-                                        Product Design
+                                        {t('productDesign', aboutTexts.productDesign)}
                                         <span className="digital-thumb">
                                             <img src="/assets/img/service/tab4.png" alt="img" />
                                         </span>
@@ -168,7 +197,7 @@ export default function About() {
                                                 <i className="fa-solid fa-arrow-right" />
                                             </span>
                                         </span>
-                                        UI/UX Experience
+                                        {t('uiux', aboutTexts.uiux)}
                                         <span className="digital-thumb">
                                             <img src="/assets/img/service/tab1.png" alt="img" />
                                         </span>
@@ -180,7 +209,7 @@ export default function About() {
                                                 <i className="fa-solid fa-arrow-right" />
                                             </span>
                                         </span>
-                                        Digital Marketing
+                                        {t('digitalMarketing', aboutTexts.digitalMarketing)}
                                         <span className="digital-thumb">
                                             <img src="/assets/img/service/tab3.png" alt="img" />
                                         </span>
@@ -196,7 +225,7 @@ export default function About() {
                                                 <i className="fa-solid fa-arrow-right" />
                                             </span>
                                         </span>
-                                        Ecommerce Solutions
+                                        {t('ecommerce', aboutTexts.ecommerce)}
                                         <span className="digital-thumb">
                                             <img src="/assets/img/service/tab1.png" alt="img" />
                                         </span>
@@ -208,7 +237,7 @@ export default function About() {
                                                 <i className="fa-solid fa-arrow-right" />
                                             </span>
                                         </span>
-                                        Custom Solutions
+                                        {t('customSolutions', aboutTexts.customSolutions)}
                                         <span className="digital-thumb">
                                             <img src="/assets/img/service/tab2.png" alt="img" />
                                         </span>
@@ -220,7 +249,7 @@ export default function About() {
                                                 <i className="fa-solid fa-arrow-right" />
                                             </span>
                                         </span>
-                                        Ecommerce
+                                        {t('ecommerce', aboutTexts.ecommerce)}
                                         <span className="digital-thumb">
                                             <img src="/assets/img/service/tab3.png" alt="img" />
                                         </span>
@@ -234,7 +263,7 @@ export default function About() {
                                                 <i className="fa-solid fa-arrow-right" />
                                             </span>
                                         </span>
-                                        Custom Solutions
+                                        {t('customSolutions', aboutTexts.customSolutions)}
                                         <span className="digital-thumb">
                                             <img src="/assets/img/service/tab4.png" alt="img" />
                                         </span>
@@ -246,7 +275,7 @@ export default function About() {
                                                 <i className="fa-solid fa-arrow-right" />
                                             </span>
                                         </span>
-                                        Mobile app
+                                        {t('mobileApp', aboutTexts.mobileApp)}
                                         <span className="digital-thumb">
                                             <img src="/assets/img/service/tab1.png" alt="img" />
                                         </span>
@@ -258,7 +287,7 @@ export default function About() {
                                                 <i className="fa-solid fa-arrow-right" />
                                             </span>
                                         </span>
-                                        Creative Design
+                                        {t('creativeDesign', aboutTexts.creativeDesign)}
                                         <span className="digital-thumb">
                                             <img src="/assets/img/service/tab3.png" alt="img" />
                                         </span>
@@ -270,14 +299,14 @@ export default function About() {
                             <div className="d-flex align-items-center justify-content-between flex-wrap gap-5 mb-xxl-15 mb-xl-12 mb-lg-10 mb-md-10 mb-sm-10 mb-9">
                                 <div className="pricing-title">
                                     <div className="radius-btn text-uppercase cmn-border d-inline-flex radius100 py-xxl-2 py-2 px-xxl-4 px-4 theme-clr gap-xxl-4 gap-3 mb-xxl-8 mb-xl-6 mb-5">
-                                        oUR experts
+                                        {t('ourExperts', aboutTexts.ourExperts)}
                                     </div>
                                     <h2 className="stitle">
-                                        Meet our <span className="fw-400">creative</span> staff
+                                        {t('staffTitle', aboutTexts.staffTitle)}
                                     </h2>
                                 </div>
-                                <Link href="/service-details" className="radius-btn d-inline-flex radius100 py-xxl-2 py-2 px-xxl-5 px-5 theme-border theme-clr gap-xxl-4 gap-3 mb-xxl-8 mb-xl-6 mb-5 style-2">
-                                    view all teams
+                                <Link href="/team" className="radius-btn d-inline-flex radius100 py-xxl-2 py-2 px-xxl-5 px-5 theme-border theme-clr gap-xxl-4 gap-3 mb-xxl-8 mb-xl-6 mb-5 style-2">
+                                    {t('viewAllTeams', aboutTexts.viewAllTeams)}
                                     <span className="rot60 d-inline-block">
                                         <i className="fas fa-arrow-up theme-clr" />
                                     </span>
@@ -476,10 +505,10 @@ export default function About() {
                                     <div className="d-flex align-items-center justify-content-between flex-wrap gap-5">
                                         <div className="pricing-title">
                                             <div className="radius-btn text-uppercase cmn-border d-inline-flex radius100 py-xxl-2 py-2 px-xxl-4 px-4 theme-clr gap-xxl-4 gap-3 mb-xxl-8 mb-xl-6 mb-5" data-aos="zoom-in-left" data-aos-duration={1500}>
-                                                Testimonials
+                                                {t('testimonialsBadge', aboutTexts.testimonialsBadge)}
                                             </div>
                                             <h2 className="stitle" data-aos="zoom-in" data-aos-duration={1800}>
-                                                Some Of Our <span className="fw-400">Respected</span> Happy Clients Say
+                                                {t('testimonialsTitle', aboutTexts.testimonialsTitle)}
                                             </h2>
                                         </div>
                                     </div>
@@ -510,7 +539,7 @@ export default function About() {
                                                     <i className="fa-regular fa-star" />
                                                 </div>
                                                 <span className="texts">
-                                                    450+ reviews
+                                                    450+ {t('reviews', aboutTexts.reviews)}
                                                 </span>
                                             </div>
                                         </div>
@@ -533,11 +562,7 @@ export default function About() {
                                                         <path d="M34.2852 0V25.8H47.1423L38.5708 43H51.4279L59.9994 25.8V0H34.2852Z" fill="#E3FF04" />
                                                     </svg>
                                                     <p className="pra-clr mt-xxl-10 mt-xl-8 mt-lg-7 mt-6 mb-xxl-10 mb-xl-8 mb-lg-7 mb-6">
-                                                        "Welcome to our digital agency We specialize in helping business most like
-                                                        yours
-                                                        succeed
-                                                        online. From website design and
-                                                        development to digital marketing agency"
+                                                        {t('testimonialText', aboutTexts.testimonialText)}
                                                     </p>
                                                     <div className="d-flex flex-wrap gap-4 align-items-center justify-content-between">
                                                         <div className="d-flex align-items-center gap-xxl-4 gap-xl-3 gap-3">
@@ -571,11 +596,7 @@ export default function About() {
                                                         <path d="M34.2852 0V25.8H47.1423L38.5708 43H51.4279L59.9994 25.8V0H34.2852Z" fill="#E3FF04" />
                                                     </svg>
                                                     <p className="pra-clr mt-xxl-10 mt-xl-8 mt-lg-7 mt-6 mb-xxl-10 mb-xl-8 mb-lg-7 mb-6">
-                                                        "Welcome to our digital agency We specialize in helping business most like
-                                                        yours
-                                                        succeed
-                                                        online. From website design and
-                                                        development to digital marketing agency"
+                                                        {t('testimonialText', aboutTexts.testimonialText)}
                                                     </p>
                                                     <div className="d-flex flex-wrap gap-4 align-items-center justify-content-between">
                                                         <div className="d-flex align-items-center gap-xxl-4 gap-xl-3 gap-3">

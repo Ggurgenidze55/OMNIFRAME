@@ -39,30 +39,30 @@ const swiperOptions = {
 }
 
 const ecommerceTexts = {
-    breadcrumb: { en: "E-commerce Solutions", ka: "ელ. კომერციის გადაწყვეტები" },
-    mainTitle: { en: "Custom E-commerce Solutions for Online Business Success.", ka: "მორგებული ელ. კომერციის გადაწყვეტილებები თქვენი ონლაინ ბიზნესის წარმატებისთვის." },
-    payment: { en: "Payment", ka: "გადახდა" },
-    inventory: { en: "Inventory", ka: "მარაგები" },
-    analytics: { en: "Analytics", ka: "ანალიტიკა" },
-    mobile: { en: "Mobile", ka: "მობილური" },
-    serviceOverview: { en: "Service Overview", ka: "სერვისის მიმოხილვა" },
+    breadcrumb: { en: "E-commerce Solutions", ka: "E-commerce გადაწყვეტილებები" },
+    mainTitle: { en: "Custom E-commerce Solutions for Online Business Success.", ka: "ინდივიდუალური E-commerce გადაწყვეტილებები თქვენი ონლაინ ბიზნესის წარმატებისთვის." },
+    payment: { en: "Payment", ka: "გადახდის სისტემები" },
+    inventory: { en: "Inventory", ka: "მარაგების მართვა" },
+    analytics: { en: "Analytics", ka: "ანალიტიკა და რეპორტინგი" },
+    mobile: { en: "Mobile", ka: "მობილური ადაპტაცია" },
+    serviceOverview: { en: "Service Overview", ka: "მომსახურების მიმოხილვა" },
     paragraph1: {
         en: "Our e-commerce development services focus on creating custom online shopping experiences that drive sales and customer satisfaction. We build secure, scalable e-commerce platforms with integrated payment gateways, inventory management, and advanced analytics.",
-        ka: "ჩვენი ელ. კომერციის განვითარების სერვისები ორიენტირებულია მორგებული ონლაინ შოპინგის გამოცდილებების შექმნაზე, რომლებიც ზრდის გაყიდვებს და მომხმარებლის კმაყოფილებას. ჩვენ ვაშენებთ უსაფრთხო, მასშტაბირებად ელ. კომერციის პლატფორმებს ინტეგრირებული გადახდის სისტემებით, მარაგების მართვით და განვითარებული ანალიტიკით."
+        ka: "ჩვენი E-commerce მომსახურება ორიენტირებულია ონლაინ გაყიდვების ზრდასა და მომხმარებელთა კმაყოფილებაზე. ჩვენ ვქმნით უსაფრთხო, მასშტაბირებად პლატფორმებს ინტეგრირებული საგადახდო სისტემებით, მარაგების მართვის ფუნქციითა და დეტალური ანალიტიკით."
     },
     paragraph2: {
         en: "We understand the unique challenges of online retail and create solutions that optimize the customer journey from browsing to checkout. Our platforms are designed for mobile-first experiences and include features like secure payment processing, order management, and customer relationship tools.",
-        ka: "ჩვენ კარგად გვესმის ონლაინ რითეილის უნიკალური გამოწვევები და ვქმნით გადაწყვეტილებებს, რომლებიც ოპტიმიზაციას უკეთებს მომხმარებლის გზას პროდუქტის დათვალიერებიდან გადახდამდე. ჩვენი პლატფორმები შექმნილია mobile-first მიდგომით და მოიცავს ფუნქციებს, როგორიცაა უსაფრთხო გადახდის დამუშავება, შეკვეთების მართვა და კლიენტებთან ურთიერთობის ინსტრუმენტები."
+        ka: "ჩვენ კარგად გვესმის ონლაინ ვაჭრობის სპეციფიკა და ვქმნით გადაწყვეტილებებს, რომლებიც ოპტიმიზაციას უკეთებს მომხმარებლის გზას პროდუქტის შერჩევიდან ყიდვამდე. ჩვენი პლატფორმები სრულად ადაპტირებულია მობილური მოწყობილობებისთვის და მოიცავს ბიზნესის მართვისთვის საჭირო ყველა ინსტრუმენტს."
     },
-    benefitsTitle: { en: "Benefits With Our E-commerce Solutions", ka: "ჩვენი ელ. კომერციის გადაწყვეტილებების უპირატესობები" },
-    benefit1: { en: "Custom e-commerce platform development", ka: "მორგებული ელ. კომერციის პლატფორმების შექმნა" },
-    benefit2: { en: "Secure payment gateway integration", ka: "უსაფრთხო გადახდის სისტემების ინტეგრაცია" },
+    benefitsTitle: { en: "Benefits With Our E-commerce Solutions", ka: "ჩვენი E-commerce გადაწყვეტილებების უპირატესობები" },
+    benefit1: { en: "Custom e-commerce platform development", ka: "ინდივიდუალური E-commerce პლატფორმების შექმნა" },
+    benefit2: { en: "Secure payment gateway integration", ka: "უსაფრთხო საგადახდო სისტემების ინტეგრაცია" },
     benefit3: { en: "Inventory & order management", ka: "მარაგებისა და შეკვეთების მართვა" },
-    benefit4: { en: "Mobile-optimized shopping experience", ka: "მობილურზე ოპტიმიზირებული შოპინგის გამოცდილება" },
-    benefit5: { en: "Customer analytics & insights", ka: "კლიენტების ანალიტიკა და ინსაითები" },
+    benefit4: { en: "Mobile-optimized shopping experience", ka: "მობილურზე ადაპტირებული შოპინგის გამოცდილება" },
+    benefit5: { en: "Customer analytics & insights", ka: "მომხმარებელთა ანალიტიკა და რეპორტინგი" },
     benefit6: { en: "24/7 technical support", ka: "24/7 ტექნიკური მხარდაჭერა" },
     conversionRate: { en: "Conversion Rate", ka: "კონვერსიის მაჩვენებელი" },
-    userExperience: { en: "User Experience", ka: "მომხმარებლის გამოცდილება" },
+    userExperience: { en: "User Experience", ka: "User Experience" },
     previous: { en: "previous", ka: "წინა" },
     next: { en: "Next", ka: "შემდეგი" },
 }

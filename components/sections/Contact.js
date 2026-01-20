@@ -1,4 +1,29 @@
+import { useTranslation } from "@/contexts/LanguageContext"
+import { common } from "@/data/translations/common"
+
+const contactTexts = {
+    phoneFax: { en: "Phone & Fax", ka: "ტელეფონი და ფაქსი" },
+    mobile: { en: "Mobile", ka: "მობილური" },
+    fax: { en: "Fax", ka: "ფაქსი" },
+    mailAddress: { en: "Mail Address", ka: "ელ. ფოსტა" },
+    ourLocation: { en: "Our Location", ka: "ჩვენი მდებარეობა" },
+    addressText: { en: "Tbilisi, Gabriel Salos Street 120", ka: "თბილისი, ბერი გაბრიელ სალოსის გამზ. 120" },
+    georgia: { en: "Tbilisi, Georgia", ka: "თბილისი, საქართველო" },
+    officeHour: { en: "Office Hour", ka: "სამუშაო საათები" },
+    monFri: { en: "Mon - Fri", ka: "ორშ - პარ" },
+    satSun: { en: "Sat - Sun", ka: "შაბ - კვი" },
+    leaveMessage: { en: "Leave A Message", ka: "მოგვწერეთ" },
+    namePlaceholder: { en: "Name", ka: "სახელი" },
+    emailPlaceholder: { en: "Email", ka: "ელ. ფოსტა" },
+    selectSubject: { en: "Select Subject", ka: "აირჩიეთ თემა" },
+    consultation: { en: "Consultation", ka: "კონსულტაცია" },
+    other: { en: "Other", ka: "სხვა" },
+    messagePlaceholder: { en: "Message", ka: "შეტყობინება" },
+    sendMessage: { en: "Send Message", ka: "გაგზავნა" }
+}
+
 export default function Contact() {
+    const { t } = useTranslation()
     return (
         <>
             <section className="contact-section pt-space pb-space">
@@ -12,13 +37,13 @@ export default function Contact() {
                                     <path d="M46.4242 16.4252L37.5742 7.5752" stroke="#E3FF04" strokeWidth={4} strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
                                 <h5 className="white mt-xxl-7 mt-6 mb-xxl-7 mb-6">
-                                    Phone &amp; Fax
+                                    {t('phoneFax', contactTexts.phoneFax)}
                                 </h5>
                                 <span className="msub d-block mb-2">
-                                    Mobile : +995 544 445 221
+                                    {t('mobile', contactTexts.mobile)} : +995 544 445 221
                                 </span>
                                 <span className="msub">
-                                    Fax : +995 32 544 445
+                                    {t('fax', contactTexts.fax)} : +995 32 544 445
                                 </span>
                             </div>
                         </div>
@@ -28,7 +53,7 @@ export default function Contact() {
                                     <path d="M3.04604 3.04604C3.69236 2.39975 4.58521 2 5.57143 2H62.7143C63.7004 2 64.5932 2.39975 65.2396 3.04604M3.04604 3.04604C2.39975 3.69236 2 4.58521 2 5.57143V48.4286C2 50.4011 3.599 52 5.57143 52H41.2857M3.04604 3.04604L9.14286 9.14307M65.2396 3.04604C65.8861 3.69236 66.2857 4.58521 66.2857 5.57143V48.4286C66.2857 50.4011 64.6868 52 62.7143 52H55.5714M65.2396 3.04604L39.1936 29.0918C36.4039 31.8814 31.8814 31.8814 29.0918 29.0918L19.8571 19.8571" stroke="#E3FF04" strokeWidth={4} strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
                                 <h5 className="white mt-xxl-7 mt-6 mb-xxl-7 mb-6">
-                                    Mail Address
+                                    {t('mailAddress', contactTexts.mailAddress)}
                                 </h5>
                                 <span className="msub d-block mb-2">
                                     info@omniframe.ge
@@ -44,13 +69,13 @@ export default function Contact() {
                                     <path d="M19.1781 -0.0175781C8.92969 -0.0175781 0.25 8.71211 0.25 19.0512C0.25 29.8793 10.3109 40.9527 17.0781 48.7355C17.1047 48.7668 18.1984 49.9809 19.5453 49.9809H19.6641C21.0125 49.9809 22.0984 48.7668 22.125 48.7355C28.475 41.4355 37.75 29.3965 37.75 19.0512C37.75 8.71055 30.9797 -0.0175781 19.1781 -0.0175781ZM19.8047 46.6387C19.75 46.6934 19.6703 46.7543 19.6 46.8059C19.5281 46.7559 19.45 46.6934 19.3922 46.6387L18.575 45.698C12.1594 38.3387 3.37344 28.259 3.37344 19.0496C3.37344 10.4059 10.6109 3.1043 19.1766 3.1043C29.8469 3.1043 34.6234 11.1121 34.6234 19.0496C34.6234 26.0402 29.6375 35.3246 19.8047 46.6387ZM19.0547 9.44336C13.8781 9.44336 9.67969 13.6402 9.67969 18.8184C9.67969 23.9965 13.8781 28.1934 19.0547 28.1934C24.2312 28.1934 28.4297 23.9949 28.4297 18.8184C28.4297 13.6418 24.2328 9.44336 19.0547 9.44336ZM19.0547 25.0684C15.6078 25.0684 12.7328 22.1965 12.7328 18.7496C12.7328 15.3027 15.5359 12.4996 18.9828 12.4996C22.4312 12.4996 25.2328 15.3027 25.2328 18.7496C25.2344 22.1965 22.5031 25.0684 19.0547 25.0684Z" fill="#E3FF04" />
                                 </svg>
                                 <h5 className="white mt-xxl-7 mt-6 mb-xxl-7 mb-6">
-                                    Our Location
+                                    {t('ourLocation', contactTexts.ourLocation)}
                                 </h5>
                                 <span className="msub d-block mb-2">
-                                    Tbilisi, Gabriel Salos Street 120
+                                    {t('addressText', contactTexts.addressText)}
                                 </span>
                                 <span className="msub">
-                                    Tbilisi, Georgia
+                                    {t('georgia', contactTexts.georgia)}
                                 </span>
                             </div>
                         </div>
@@ -60,13 +85,13 @@ export default function Contact() {
                                     <path d="M27 13.1111V27H40.8889M27 52C13.1929 52 2 40.8072 2 27C2 13.1929 13.1929 2 27 2C40.8072 2 52 13.1929 52 27C52 40.8072 40.8072 52 27 52Z" stroke="#E3FF04" strokeWidth={4} strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
                                 <h5 className="white mt-xxl-7 mt-6 mb-xxl-7 mb-6">
-                                    Office Hour
+                                    {t('officeHour', contactTexts.officeHour)}
                                 </h5>
                                 <span className="msub d-block mb-2">
-                                    Mon - Fri 09:00 - 18:00
+                                    {t('monFri', contactTexts.monFri)} 09:00 - 18:00
                                 </span>
                                 <span className="msub">
-                                    Sat - Sun 10:00 - 16:00
+                                    {t('satSun', contactTexts.satSun)} 10:00 - 16:00
                                 </span>
                             </div>
                         </div>
@@ -88,47 +113,47 @@ export default function Contact() {
                         <div className="col-lg-6" data-aos="zoom-in" data-aos-duration={2000}>
                             <div className="contact-content bg1-clr">
                                 <h3 className="white mb-xxl-15 mb-xl-10 mb-lg-7 mb-5">
-                                    Leave A Message
+                                    {t('leaveMessage', contactTexts.leaveMessage)}
                                 </h3>
                                 <form action="#">
                                     <div className="row g-xxl-8 g-xl-6 g-lg-4 g-4">
                                         <div className="col-lg-6">
-                                            <input type="text" placeholder="Name" />
+                                            <input type="text" placeholder={t('namePlaceholder', contactTexts.namePlaceholder)} />
                                         </div>
                                         <div className="col-lg-6">
-                                            <input type="email" placeholder="Email" />
+                                            <input type="email" placeholder={t('emailPlaceholder', contactTexts.emailPlaceholder)} />
                                         </div>
                                         <div className="col-lg-12">
                                             <select className="form-select">
                                                 <option value="">
-                                                    Select Subject
+                                                    {t('selectSubject', contactTexts.selectSubject)}
                                                 </option>
                                                 <option value="frontend-development">
-                                                    Frontend Development
+                                                    {t('frontendDevelopment', common.frontendDevelopment)}
                                                 </option>
                                                 <option value="backend-development">
-                                                    Backend Development
+                                                    {t('backendDevelopment', common.backendDevelopment)}
                                                 </option>
                                                 <option value="ecommerce-solutions">
-                                                    E-commerce Solutions
+                                                    {t('ecommerceSolutions', common.ecommerceSolutions)}
                                                 </option>
                                                 <option value="web-maintenance">
-                                                    Web Maintenance
+                                                    {t('webMaintenance', common.webMaintenance)}
                                                 </option>
                                                 <option value="consultation">
-                                                    Consultation
+                                                    {t('consultation', contactTexts.consultation)}
                                                 </option>
                                                 <option value="other">
-                                                    Other
+                                                    {t('other', contactTexts.other)}
                                                 </option>
                                             </select>
                                         </div>
                                         <div className="col-lg-12">
-                                            <textarea name="messages" rows={5} placeholder="Message" />
+                                            <textarea name="messages" rows={5} placeholder={t('messagePlaceholder', contactTexts.messagePlaceholder)} />
                                         </div>
                                         <div className="col-lg-5">
                                             <button type="submit" className="submit-btn">
-                                                Send Message
+                                                {t('sendMessage', contactTexts.sendMessage)}
                                             </button>
                                         </div>
                                     </div>

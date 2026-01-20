@@ -1,5 +1,9 @@
 import Link from 'next/link'
+import { useTranslation } from "@/contexts/LanguageContext"
+import { common } from "@/data/translations/common"
+
 export default function Sidebar({ isSidebar, handleSidebar }) {
+    const { t } = useTranslation()
     return (
         <>
 
@@ -12,14 +16,13 @@ export default function Sidebar({ isSidebar, handleSidebar }) {
                         <img src="/assets/img/footer/let-arrow.png" alt="OMNIframe Logo" />
                     </Link>
                     <p>
-                        OMNIframe is your trusted partner for innovative web development solutions. We specialize in creating 
-                        cutting-edge digital experiences that drive business growth and deliver exceptional user experiences.
+                        {t('footerAboutLong', common.footerAboutLong)}
                     </p>
                     <div className="sub-contact-left d-grid">
                         <div className="sub__contac-item">
                             <div className="content">
                                 <span className="address d-block">
-                                    Address
+                                    {t('address', common.address)}
                                 </span>
                                 <span className="textp">
                                     Gabriel Salos Street 120, Tbilisi, Georgia.
@@ -29,7 +32,7 @@ export default function Sidebar({ isSidebar, handleSidebar }) {
                         <div className="sub__contac-item">
                             <div className="content">
                                 <span className="address d-block">
-                                    Email
+                                    {t('email', common.email)}
                                 </span>
                                 <Link href="mailto:info@omniframe.ge" className="textp">
                                     info@omniframe.ge
@@ -39,7 +42,7 @@ export default function Sidebar({ isSidebar, handleSidebar }) {
                         <div className="sub__contac-item">
                             <div className="content">
                                 <span className="address d-block">
-                                    Call now
+                                    {t('phone', common.phone)}
                                 </span>
                                 <Link href="tel:+995544445221" className="textp">
                                     +995 544 445 221
@@ -91,7 +94,7 @@ export default function Sidebar({ isSidebar, handleSidebar }) {
                             <i className="fas fa-arrow-up white" />
                         </span>
                         <span className="get-text">
-                            Let's Talk
+                            {t('letsTalk', common.letsTalk)}
                         </span>
                     </Link>
                 </div>

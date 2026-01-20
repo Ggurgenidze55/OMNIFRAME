@@ -4,18 +4,18 @@ import Link from "next/link"
 import { useTranslation } from "@/contexts/LanguageContext"
 
 const portfolioTexts = {
-    breadcrumb: { en: "Portfolio Projects", ka: "პორტფოლიო პროექტები" },
-    newmotorsiCategory: { en: "E-commerce", ka: "ელ. კომერცია" },
-    newmotorsiTitle: { en: "New Motorsi - Professional Warehouse Solutions", ka: "New Motorsi - პროფესიონალური საწყობის გადაწყვეტები" },
-    grandegroupCategory: { en: "Construction", ka: "აშენება და ინვესტიციები" },
-    grandegroupTitle: { en: "Grande Group - Business & Investment Solutions", ka: "Grande Group - ბიზნესისა და ინვესტიციების გადაწყვეტილებები" },
-    healCategory: { en: "Medical Tourism", ka: "მედიკური ტურიზმი" },
-    healTitle: { en: "Heal.ge - Modern Healthcare Platform", ka: "Heal.ge - თანამედროვე ჯანდაცვის პლატფორმა" },
-    igbCategory: { en: "Construction", ka: "ინვესტიციები" },
-    igbTitle: { en: "Invest Group Batumi - Investment Services", ka: "Invest Group Batumi - საინვესტიციო სერვისები" },
+    breadcrumb: { en: "Portfolio Projects", ka: "ჩვენი პროექტები" },
+    newmotorsiCategory: { en: "E-commerce", ka: "E-commerce" },
+    newmotorsiTitle: { en: "New Motorsi - Professional Warehouse Solutions", ka: "New Motorsi - სასაწყობო მეურნეობის მართვის სისტემა" },
+    grandegroupCategory: { en: "Construction", ka: "მშენებლობა და ინვესტიციები" },
+    grandegroupTitle: { en: "Grande Group - Business & Investment Solutions", ka: "Grande Group - ბიზნეს და საინვესტიციო გადაწყვეტილებები" },
+    healCategory: { en: "Medical Tourism", ka: "სამედიცინო ტურიზმი" },
+    healTitle: { en: "Heal.ge - Modern Healthcare Platform", ka: "Heal.ge - თანამედროვე სამედიცინო პლატფორმა" },
+    igbCategory: { en: "Construction", ka: "მშენებლობა და ინვესტიციები" },
+    igbTitle: { en: "Invest Group Batumi - Investment Services", ka: "Invest Group Batumi - საინვესტიციო მომსახურება" },
     thalassaCategory: { en: "Construction", ka: "ტურიზმი და ჰოსპიტალითი" },
     thalassaTitle: { en: "Thalassa Group - Tourism & Hospitality", ka: "Thalassa Group - ტურიზმი და ჰოსპიტალითი" },
-    meppersCategory: { en: "Engineering", ka: "ინჟინერია" },
+    meppersCategory: { en: "Engineering", ka: "საინჟინრო მომსახურება" },
     meppersTitle: { en: "Meppers - Innovative Digital Solutions", ka: "Meppers - ინოვაციური ციფრული გადაწყვეტილებები" }
 }
 
@@ -43,7 +43,7 @@ export default function Portfolio() {
                                     <div className="blog-cont">
                                         <div className="d-flex align-items-center gap-xxl-5 gap-xl-4 gap-3 mb-xxl-5 mb-xl-4 mb-3">
                                             <Link href="/newmotorsi" className="radius-btn cmn-border radius100 py-xxl-2 py-2 px-xxl-4 px-3 theme-clr style-2">
-                                                E-commerce
+                                                {t('newmotorsiCategory', portfolioTexts.newmotorsiCategory)}
                                                 <span className="rot60 d-inline-block ml-10">
                                                     <i className="fas fa-arrow-up theme-clr" />
                                                 </span>
@@ -51,7 +51,7 @@ export default function Portfolio() {
                                         </div>
                                         <h5>
                                             <Link href="/newmotorsi" className="white-clr d-flex align-items-center justify-content-between gap-3">
-                                                New Motorsi - Professional Warehouse Solutions
+                                                {t('newmotorsiTitle', portfolioTexts.newmotorsiTitle)}
                                                 <span className="rot60">
                                                     <i className="fas fa-arrow-up theme-clr" />
                                                 </span>
@@ -70,7 +70,7 @@ export default function Portfolio() {
                                     <div className="blog-cont">
                                         <div className="d-flex align-items-center gap-xxl-5 gap-xl-4 gap-3 mb-xxl-5 mb-xl-4 mb-3">
                                             <Link href="/grandegroup" className="radius-btn cmn-border radius100 py-xxl-2 py-2 px-xxl-4 px-3 theme-clr style-2">
-                                                Construction
+                                                {t('grandegroupCategory', portfolioTexts.grandegroupCategory)}
                                                 <span className="rot60 d-inline-block ml-10">
                                                     <i className="fas fa-arrow-up theme-clr" />
                                                 </span>
@@ -78,7 +78,7 @@ export default function Portfolio() {
                                         </div>
                                         <h5>
                                             <Link href="/grandegroup" className="white-clr d-flex align-items-center justify-content-between gap-3">
-                                                Grande Group - Business & Investment Solutions
+                                                {t('grandegroupTitle', portfolioTexts.grandegroupTitle)}
                                                 <span className="rot60">
                                                     <i className="fas fa-arrow-up theme-clr" />
                                                 </span>
@@ -97,7 +97,7 @@ export default function Portfolio() {
                                     <div className="blog-cont">
                                         <div className="d-flex align-items-center gap-xxl-5 gap-xl-4 gap-3 mb-xxl-5 mb-xl-4 mb-3">
                                             <Link href="/heal" className="radius-btn cmn-border radius100 py-xxl-2 py-2 px-xxl-4 px-3 theme-clr style-2">
-                                                Medical Tourism
+                                                {t('healCategory', portfolioTexts.healCategory)}
                                                 <span className="rot60 d-inline-block ml-10">
                                                     <i className="fas fa-arrow-up theme-clr" />
                                                 </span>
@@ -105,7 +105,7 @@ export default function Portfolio() {
                                         </div>
                                         <h5>
                                             <Link href="/heal" className="white-clr d-flex align-items-center justify-content-between gap-3">
-                                                Heal.ge - Modern Healthcare Platform
+                                                {t('healTitle', portfolioTexts.healTitle)}
                                                 <span className="rot60">
                                                     <i className="fas fa-arrow-up theme-clr" />
                                                 </span>
@@ -124,7 +124,7 @@ export default function Portfolio() {
                                     <div className="blog-cont">
                                         <div className="d-flex align-items-center gap-xxl-5 gap-xl-4 gap-3 mb-xxl-5 mb-xl-4 mb-3">
                                             <Link href="/investgroupbatumi" className="radius-btn cmn-border radius100 py-xxl-2 py-2 px-xxl-4 px-3 theme-clr style-2">
-                                                Construction
+                                                {t('igbCategory', portfolioTexts.igbCategory)}
                                                 <span className="rot60 d-inline-block ml-10">
                                                     <i className="fas fa-arrow-up theme-clr" />
                                                 </span>
@@ -132,7 +132,7 @@ export default function Portfolio() {
                                         </div>
                                         <h5>
                                             <Link href="/investgroupbatumi" className="white-clr d-flex align-items-center justify-content-between gap-3">
-                                                Invest Group Batumi - Investment Services
+                                                {t('igbTitle', portfolioTexts.igbTitle)}
                                                 <span className="rot60">
                                                     <i className="fas fa-arrow-up theme-clr" />
                                                 </span>
@@ -151,7 +151,7 @@ export default function Portfolio() {
                                     <div className="blog-cont">
                                         <div className="d-flex align-items-center gap-xxl-5 gap-xl-4 gap-3 mb-xxl-5 mb-xl-4 mb-3">
                                             <Link href="/thalassagroup" className="radius-btn cmn-border radius100 py-xxl-2 py-2 px-xxl-4 px-3 theme-clr style-2">
-                                                Construction
+                                                {t('thalassaCategory', portfolioTexts.thalassaCategory)}
                                                 <span className="rot60 d-inline-block ml-10">
                                                     <i className="fas fa-arrow-up theme-clr" />
                                                 </span>
@@ -159,7 +159,7 @@ export default function Portfolio() {
                                         </div>
                                         <h5>
                                             <Link href="/thalassagroup" className="white-clr d-flex align-items-center justify-content-between gap-3">
-                                                Thalassa Group - Tourism & Hospitality
+                                                {t('thalassaTitle', portfolioTexts.thalassaTitle)}
                                                 <span className="rot60">
                                                     <i className="fas fa-arrow-up theme-clr" />
                                                 </span>
@@ -178,7 +178,7 @@ export default function Portfolio() {
                                     <div className="blog-cont">
                                         <div className="d-flex align-items-center gap-xxl-5 gap-xl-4 gap-3 mb-xxl-5 mb-xl-4 mb-3">
                                             <Link href="/meppers" className="radius-btn cmn-border radius100 py-xxl-2 py-2 px-xxl-4 px-3 theme-clr style-2">
-                                                Engineering
+                                                {t('meppersCategory', portfolioTexts.meppersCategory)}
                                                 <span className="rot60 d-inline-block ml-10">
                                                     <i className="fas fa-arrow-up theme-clr" />
                                                 </span>
@@ -186,7 +186,7 @@ export default function Portfolio() {
                                         </div>
                                         <h5>
                                             <Link href="/meppers" className="white-clr d-flex align-items-center justify-content-between gap-3">
-                                                Meppers - Innovative Digital Solutions
+                                                {t('meppersTitle', portfolioTexts.meppersTitle)}
                                                 <span className="rot60">
                                                     <i className="fas fa-arrow-up theme-clr" />
                                                 </span>
