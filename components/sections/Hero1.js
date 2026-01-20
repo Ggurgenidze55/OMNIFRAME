@@ -148,7 +148,7 @@ export default function Hero1({ coverImage }) {
                     <div className="expri-thumb position-relative">
                         <img 
                             src="/assets/img/banner/bn-expri.png" 
-                            alt="img" 
+                            alt="OMNIframe Years of Experience" 
                             style={{
                                 animation: 'rotate 10s linear infinite'
                             }}

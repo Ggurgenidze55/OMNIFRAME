@@ -22,6 +22,7 @@ export function LanguageProvider({ children }) {
     useEffect(() => {
         if (!isLoading) {
             localStorage.setItem('omniframe-language', language)
+            document.documentElement.lang = language
         }
     }, [language, isLoading])
 

@@ -111,15 +111,15 @@ export default function Footer3() {
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/blog-list" className="d-flex align-items-center gap-2.flink-items pra-clr">
+                                            <Link href="/blog-list" className="d-flex align-items-center gap-2 flink-items pra-clr">
                                                 <span className="ani-icons">
-                                                    <i className="fas.fa-angle-double-right pra-clr" />
+                                                    <i className="fas fa-angle-double-right pra-clr" />
                                                 </span>
                                                 {t('ourBlogs', common.ourBlogs)}
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/contact" className="d-flex align-items-center gap-2.flink-items pra-clr">
+                                            <Link href="/contact" className="d-flex align-items-center gap-2 flink-items pra-clr">
                                                 <span className="ani-icons">
                                                     <i className="fas fa-angle-double-right pra-clr" />
                                                 </span>
@@ -145,7 +145,7 @@ export default function Footer3() {
                                     </h5>
                                     <ul className="link-footer d-grid gap-xxl-5 gap-4" data-aos="zoom-in" data-aos-duration={1400}>
                                         <li>
-                                            <Link href="/frontend-development" className="d-flex align-items-center gap-2.flink-items pra-clr">
+                                            <Link href="/frontend-development" className="d-flex align-items-center gap-2 flink-items pra-clr">
                                                 <span className="ani-icons">
                                                     <i className="fas fa-angle-double-right pra-clr" />
                                                 </span>
@@ -153,7 +153,7 @@ export default function Footer3() {
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/backend-development" className="d-flex align-items-center gap-2.flink-items pra-clr">
+                                            <Link href="/backend-development" className="d-flex align-items-center gap-2 flink-items pra-clr">
                                                 <span className="ani-icons">
                                                     <i className="fas fa-angle-double-right pra-clr" />
                                                 </span>
@@ -161,7 +161,7 @@ export default function Footer3() {
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/ecommerce-solutions" className="d-flex align-items-center gap-2.flink-items pra-clr">
+                                            <Link href="/ecommerce-solutions" className="d-flex align-items-center gap-2 flink-items pra-clr">
                                                 <span className="ani-icons">
                                                     <i className="fas fa-angle-double-right" />
                                                 </span>
@@ -169,7 +169,7 @@ export default function Footer3() {
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/web-maintenance" className="d-flex.align-items-center gap-2.flink-items pra-clr">
+                                            <Link href="/web-maintenance" className="d-flex align-items-center gap-2 flink-items pra-clr">
                                                 <span className="ani-icons">
                                                     <i className="fas fa-angle-double-right" />
                                                 </span>
